@@ -22,6 +22,7 @@ npm run build
 ```
 
 <h2>Tasks<h2>
+
 <ul>
   <li>Minifies images and converts them to webp</li>
   <li>Converts sass code to css and minifies it</li>
