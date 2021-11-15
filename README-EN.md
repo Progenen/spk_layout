@@ -79,8 +79,9 @@ Dependicies in package.json
     "webpack-stream": "^7.0.0"
   },
 ```
+
 <h2>Versions</h2>
-npm 8.1.2
+npm 8.1.2 <br/>
 node 14.18.1
 
 
