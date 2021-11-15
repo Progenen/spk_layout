@@ -2,7 +2,7 @@
 
 <h2>Description</h2>
 
-gulp-build is a build for building static html sites. At the heart of gulp-build is the gulp task-runner and the wepback module builder.<br/>
+gulp-build is a build for building static html sites. At the heart of gulp-build is the gulp task runner and the wepback module builder.<br/>
 This documentation was created to clarify points that are not sufficiently highlighted in the comments of the gulpfile.js file.
 
 <h2>How to start</h2>
