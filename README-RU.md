@@ -31,6 +31,32 @@ npm run build
   <li>Сборка JS модулей с помощью wepback, добавление полифилов и минификация</li>
   <li>Создания source-map для JS и CSS файлов (только в режиме разработки)</li>
 </ul>
+
+<h2>Карта директории</h2>
+Здесь указана только папка src так как папки build и dist не являются входными и не редактирутся
+```
+src
+--sass
+--images
+----content
+----graphics
+----icons
+----logo.webp
+--JS
+----modules
+----libs
+----index.js
+```
+
+<h3>sass</h3>
+
+```
+sass
+--blocks
+--style.scss
+--all.scss
+--script-classes.scss
+```
   
 <h2>Зависимотси и библиотеки</h2>
 
