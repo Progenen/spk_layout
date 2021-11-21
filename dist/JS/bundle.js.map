@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;;;AAAa;;AAEbA,QAAQ,CAACC,gBAAT,CAA0B,kBAA1B,EAA8C,YAAY,CACzD,CADD,E","sources":["webpack://project-a/./src/JS/index.js"],"sourcesContent":["'use strict';\r\n\r\ndocument.addEventListener('DOMContentLoaded', function () {\r\n});"],"names":["document","addEventListener"],"sourceRoot":""}
