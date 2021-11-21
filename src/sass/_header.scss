@@ -1,0 +1,47 @@
+.header {
+
+    &__top {
+        background: #192957;
+        padding: 6px 0;
+        color: #fff;
+    }
+
+    &__top-text {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    &__top-link {
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    &__top-icon {
+        margin-right: 8px;
+    }
+
+    &__top-link-text {
+    }
+}
+
+@media (max-width:992px){
+    .header {
+        &__top-text {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width:768px){
+    .header {
+
+        &__top-text {
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}

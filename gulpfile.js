@@ -135,6 +135,7 @@ function cleanFonts () {
 
 // Просто перенос шрифтов | Just transferring fonts
 function fonts () {
+    console.log(dir);
     return src('src/fonts/**/*')
         .pipe(dest(dir + '/fonts/'))
 }
@@ -147,5 +148,5 @@ exports.cleanImg = cleanImg;
 exports.cleanFonts = cleanFonts;
 exports.fonts = fonts;
 
-exports.default = parallel(style, html, scripts, fonts, images, cleanImg, cleanFonts, browsersync, startWatch);
+exports.default = parallel(style, html, scripts, fonts, cleanFonts, images, cleanImg, browsersync, startWatch);
 
