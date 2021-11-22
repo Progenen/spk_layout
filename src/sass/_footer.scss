@@ -1,0 +1,147 @@
+.footer {
+    background: #595959;
+    padding: 45px 0;
+    color: #fff;
+    &__top {
+    }
+
+    &__logo {
+        margin: auto;
+        display: block;
+        max-width: 120px;
+        max-height: 91px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__social-list {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 55px 0 0 0;
+    }
+
+    &__social-list-item {
+        margin-right: 25px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__social-list-link {
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+        margin-bottom: 20px;
+        padding: 0 0 16px 0;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background: #C4C4C4;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__col-menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__col-wrapper {
+    }
+
+    &__menu {
+    }
+
+    &__menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__menu-item {
+        margin: 0 0 6px 0;
+    }
+
+    &__menu-link {
+        color: #fff;
+        line-height: 16px;
+        font-size: 16px;
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__info {
+    }
+
+    &__info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__info-item {
+        margin-top: 30px;
+        padding-left: 32px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 1px;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__info-title {
+        font-size: 16px;
+        font-weight: bold;
+        max-width: 152px;
+    }
+
+    &__info-phone-link {
+        color: #fff;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    &__info-phone {
+        &::after {
+            background-image: url('../images/icons/phone-1.webp');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+    }
+
+    &__info-address {
+        &::after {
+            background-image: url('../images/icons/home-1.webp');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+    }
+
+    &__info-body {
+        line-height: 16px;
+        margin-top: 8px;
+        font-size: 14px;
+    }
+}
