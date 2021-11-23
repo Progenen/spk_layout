@@ -18,7 +18,13 @@
             <div class="breadcrumbs">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item">
+                    <a href="#">
+                      <svg>
+                        <use xlink:href="svg/dest/stack/sprite.svg#home"></use>
+                      </svg>
+                    </a>
+                  </li>
                   <li class="breadcrumb-item active" aria-current="page"><a href="#">Products</a></li>
                 </ol>
               </nav>
@@ -26,6 +32,9 @@
           </div>
           <div class="row">
             <div class="col-md-3">
+              <h2 class="products__title">
+                Products
+              </h2>
               <div class="filter" id="filter">
                 <div class="filter-field">
                   <label for="sortByRating">
@@ -116,49 +125,43 @@
                   </div>
                   <div class="filter-type">
                     <div class="filter-type__name">
-                      Flavors
+                      Category
                     </div>
                     <div class="filter-type__list">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="berry">
-                        <label class="form-check-label" for="berry">
-                          Berry
+                        <input class="form-check-input" type="checkbox" value="" id="cat1">
+                        <label class="form-check-label" for="cat1">
+                          Clear Liquid Nutrition
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="chocolate">
-                        <label class="form-check-label" for="chocolate">
-                          Chocolate
+                        <input class="form-check-input" type="checkbox" value="" id="cat2">
+                        <label class="form-check-label" for="cat2">
+                          Diabetes nutrition
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="orange">
-                        <label class="form-check-label" for="orange">
-                          Orange
+                        <input class="form-check-input" type="checkbox" value="" id="cat3">
+                        <label class="form-check-label" for="cat3">
+                          Everyday Nutrition
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="Peach">
-                        <label class="form-check-label" for="Peach">
-                          Peach
+                        <input class="form-check-input" type="checkbox" value="" id="cat4">
+                        <label class="form-check-label" for="cat4">
+                          High Calorie
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="strawberry">
-                        <label class="form-check-label" for="strawberry">
-                          Strawberry
+                        <input class="form-check-input" type="checkbox" value="" id="cat5">
+                        <label class="form-check-label" for="cat5">
+                          High Protein
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="Vanilla">
-                        <label class="form-check-label" for="Vanilla">
-                          Vanilla
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="varietyPack">
-                        <label class="form-check-label" for="varietyPack">
-                          Variety Pack
+                        <input class="form-check-input" type="checkbox" value="" id="cat6">
+                        <label class="form-check-label" for="cat6">
+                          Specialized Nutrition
                         </label>
                       </div>
                     </div>
@@ -167,7 +170,7 @@
               </div>
             </div>
             <div class="col-md-9">
-              <div class="products">
+              <div class="products-list">
                 <div class="row">
                   <div class="col-md-4">
                     <div class="product">
@@ -175,7 +178,7 @@
                         BOOST® Original
                       </h4>
                       <div class="product__img">
-                        <img src="../images/product1.png" alt="product-image">
+                        <img src="../images/product1.webp" alt="product-image">
                         <span class="badge badge-danger">Sale</span>
                       </div>
                       <div class="product__options">
@@ -230,11 +233,10 @@
                   <div class="col-md-4">
                     <div class="product">
                       <h4 class="product__name">
-                        BOOST® Original
+                        BOOST Plus®
                       </h4>
                       <div class="product__img">
-                        <img src="../images/product1.png" alt="product-image">
-                        <span class="badge badge-danger">Sale</span>
+                        <img src="../images/product2.webp" alt="product-image">
                       </div>
                       <div class="product__options">
                         <div class="product-select">
@@ -288,11 +290,10 @@
                   <div class="col-md-4">
                     <div class="product">
                       <h4 class="product__name">
-                        BOOST® Original
+                        BOOST Glucose Control® MAX 30g Protein
                       </h4>
                       <div class="product__img">
-                        <img src="../images/product1.png" alt="product-image">
-                        <span class="badge badge-danger">Sale</span>
+                        <img src="../images/product3.webp" alt="product-image">
                       </div>
                       <div class="product__options">
                         <div class="product-select">
