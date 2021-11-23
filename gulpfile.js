@@ -14,6 +14,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulpIf = require('gulp-if');
 const webp = require('gulp-webp');
 const uglify = require('gulp-uglify');
+const sprite = require('svg-sprite');
 
 
 const isDevelopment = process.env.NODE_ENV == 'development' ? true : false; // Check work mode | Смотрим какой режим разработки выбран
@@ -23,7 +24,8 @@ const dir = isDevelopment ? 'dist' : 'build'; // Output folder dev = dist, prod 
 function browsersync () {
     browserSync.init({
         server: {
-            baseDir: dir
+            baseDir: dir,
+            index: "products.html"
         }
     });
 }

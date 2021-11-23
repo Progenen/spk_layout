@@ -93,3 +93,21 @@ footer {
         line-height: 24px;
     }
 }
+
+.breadcrumbs {
+
+    .breadcrumb {
+        background-color: transparent;
+
+        .breadcrumb-item {
+            
+            a {
+                color: $dark-gray;
+            }
+
+            + .breadcrumb-item:before {
+                color: #DCDCDC;
+            }
+        }
+    }
+}

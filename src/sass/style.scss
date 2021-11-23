@@ -2,14 +2,18 @@
 @import "libs/boostrap";
 
 // Main
+@import "vars";
 @import "support";
 @import "all";
 @import "script-classes";
 @import "header";
-@import "footer";
+@import "footer";;
 
 // Page Classes
 @import "pages/classes";
+
+//Page Products
+@import "pages/products";
 
 
 
