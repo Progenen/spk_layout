@@ -51,6 +51,11 @@ function html () {
         .pipe(dest(dir + '/'))
 }
 
+function video () {
+    return src('src/video/**/*')
+        .pipe(dest(dir + '/video/'))
+}
+
 // Сборка JS модулей с помощью webpack | Building JS modules using webpack
 function scripts () {
     return src([
@@ -110,6 +115,7 @@ function startWatch () {
     watch(['src/*.html']).on('change', browserSync.reload);
     watch(['src/images/**/*'], images);
     watch(['src/fonts/**/*'], fonts);
+    watch(['src/video/**/*'], video);
 }
 
 
@@ -147,6 +153,7 @@ exports.html = html;
 exports.cleanImg = cleanImg;
 exports.cleanFonts = cleanFonts;
 exports.fonts = fonts;
+exports.video = video;
 
-exports.default = parallel(style, html, scripts, fonts, cleanFonts, images, cleanImg, browsersync, startWatch);
+exports.default = parallel(style, html, scripts, fonts, cleanFonts, video, images, cleanImg, browsersync, startWatch);
 
