@@ -147,6 +147,10 @@
     color: $gray;
     cursor: pointer;
 
+    &.active:after {
+      transform: rotate(180deg);
+    }
+
     &:after {
       display: block;
       content: "";
@@ -154,8 +158,6 @@
       position: absolute;
       right: 15px;
       top: 18px;
-
-      transform: rotate(180deg);
 
       width: 17px;
       height: 9px;
