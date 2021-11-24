@@ -13,7 +13,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulpIf = require('gulp-if');
 const webp = require('gulp-webp');
 const uglify = require('gulp-uglify');
-const sprite = require('gulp-svg-sprite');
+const concat = require('gulp-concat');
 
 
 const isDevelopment = process.env.NODE_ENV == 'development' ? true : false; // Check work mode | Смотрим какой режим разработки выбран
@@ -56,9 +56,10 @@ function html() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
-        'libs/js/**/*',
-        'src/JS/**/*.js'
+        'src/JS/libs/jquery.nice-select.min.js',
+        'src/JS/index.js'
     ])
+    .pipe(concat('bundle.js'))
     .pipe(uglify())
     .pipe(dest(dir + '/JS/'))
 }

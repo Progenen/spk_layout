@@ -1,0 +1,1 @@
+import Menu from"./menu";export default function adaptive(){let n,o=window.innerWidth;if(window.addEventListener("scroll",()=>{n=window.scrollTop}),window.onresize=()=>{window.innerWidth!=o&&(location.reload(),window.scrollTo(n))},window.innerWidth<768){const i=new Menu;i.render()}}
