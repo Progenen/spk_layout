@@ -234,8 +234,112 @@
     }
 }
 
+.take-quiz {
+    background-image: url('../images/graphics/home/take-quiz-bg.webp');
+    background-size: 1115px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 35.5px 0 0 0;
+    padding: 44px 0 41px;
+
+    &__info {
+        padding: 0 0 0 54px;
+    }
+
+    &__photo {
+        margin-top: 35px;
+        display: block;
+        margin-left: auto;
+    }
+
+    &__title {
+    }
+
+    &__text {
+        max-width: 492px;
+        margin: 16px 0 0 0;
+    }
+
+    &__btn {
+        margin: auto;
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        &:hover {
+            color: #fff;
+        }
+    }
+    
+    &__btn-icon {
+        margin-left: 13px;
+    }
+}
+
+.home-review {
+    background-image: url('../../images/graphics/home/review-bg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 209px 0 187px 0;
+    margin: 60px 0 0 0;
+    position: relative;
+    z-index: 2;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: initial;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90.1deg, rgba(255, 255, 255, 0.5) 0.07%, rgba(255, 255, 255, 0) 99.89%);
+    }
+    &__text {
+        max-width: 520px;
+        font-size: 32px;
+        z-index: 2;
+        line-height: 48px;
+        color: #000000;
+        position: relative;
+    }
+
+    &__grade {
+        margin: 27px 0 21px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__autor {
+        font-weight: bold;
+        font-size: 16px;
+        position: relative;
+        z-index: 2;
+        line-height: 26px;
+        letter-spacing: 0.16px;
+        &::before {
+            content: '—';
+        }
+    }
+}
+
+
+
 @media (max-width:922px){
-    .offer {
+    .take-quiz {
+        background-position: bottom;
+        &__top {
+            display: flex;
+        }
+
+        &__photo {
+            margin-right: 20px;
+            width: 100%;
+        }
     }
 }
 
@@ -251,6 +355,10 @@
         &__item-title {
             font-size: 22px;
         }
+    }
+
+    .take-quiz {
+        background-size: cover;
     }
 }
 
@@ -314,6 +422,63 @@
             transform: translateY(40%);
         }
     }
+
+    .take-quiz {
+        background-size: 100%;
+        background-position: 10% center;
+        position: relative;
+        &::after {
+            content:'';
+            width: 100%;
+            height: 200px;
+            bottom: 0;
+            z-index: -1;
+            background: $color1;
+            position: absolute;
+        }
+        &__top {
+            align-items: center;
+        }
+
+        &__photo {
+            width: 50%;
+        }
+
+        &__info {
+            padding: 0 15px;
+        }
+        
+        &__btn {
+            margin: 29px 0 0 0;
+        }
+
+        &__title {
+            font-weight: 300;
+        }
+
+        &__text {
+            color: #Fff;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+    }
+
+    
+
+    .home-review {
+        background-size: cover;
+        background-position: center top;
+        padding: 40px 0 300px 0;
+        &::after {
+            background: linear-gradient(180.1deg, #F2E8E4 0.07%, #E3E0DF 32.51%, rgba(227, 224, 223, 0) 99.89%);
+            width: 100%;
+            height: 40%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+    }
 }
 
 @media (max-width:576px){
@@ -321,4 +486,57 @@
         padding: 166px 29px 252px 29px;
         text-align: center;
     }
+
+    .take-quiz {
+        background-position: 30% 10%;
+        &::after {
+            height: 350px;
+        }
+
+        &__top {
+            align-items: initial;
+        }
+
+        &__title {
+            max-width: 140px;
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        &__photo {
+            max-width: 111px;
+            margin: 33px 32px 0 0;
+        }
+    }
+
+    .home-review {
+        background-image: url('../../images/graphics/home/review-bg-mob.webp');
+        background-position: center;
+        padding: 60px 0 432px 0;
+        margin: 0 0 0 0;
+        &__text {
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        &__grade {
+            text-align: center;
+            margin: 25px auto 15px auto;
+        }
+
+        &__autor {
+            text-align: center;
+        }
+    }
 }
+
+@media (max-width:485px){
+    .take-quiz {
+        background-position: 30% 25%;
+    }
+}
+

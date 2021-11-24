@@ -43,12 +43,18 @@ footer {
     flex: 0 0 auto;
 }
 
-
+@media (max-width:576px){
+    .container-mob {
+        max-width: 360px;
+        width: 100%;
+        margin: auto;
+    }
+}
 
 .main-title {
     font-family: Oswald;
     font-size: 40px;
-    font-weight: regular;
+    font-weight: 400;
     text-transform: uppercase;
     &_big {
         font-size: 50px;
@@ -130,4 +136,11 @@ footer {
         color: inherit;
         text-decoration: none;
     }
+}
+
+.rating-result {
+	width: 265px;
+}
+.rating-result span.active svg path {
+    fill: #E2281B;
 }

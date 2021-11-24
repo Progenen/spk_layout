@@ -127,5 +127,5 @@ exports.cleanFonts = cleanFonts;
 exports.fonts = fonts;
 exports.svgsprite
 
-exports.default = parallel(style, svgsprite html, scripts, fonts, cleanFonts, images, cleanImg, browsersync, startWatch);
+exports.default = parallel(style, svgsprite, html, scripts, fonts, cleanFonts, images, cleanImg, browsersync, startWatch);
 
