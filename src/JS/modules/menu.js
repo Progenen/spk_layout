@@ -1,8 +1,11 @@
+
+
 class Menu {
     constructor () {
         this.menuBody = document.querySelector(".header-menu");
         this.menuBtn = document.querySelector(".burger-menu");
         this.menuOpenedFlag = this.menuBtn.classList.contains('burger-menu_active') && this.menuBody.classList.contains('header-menu_active') ? true : false;
+        this.subMenuPos = this.menuBody.clientLeft;
     }
     openMenu = () => {
        this.menuBody.classList.add('header-menu_active');

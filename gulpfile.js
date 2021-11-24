@@ -54,8 +54,6 @@ function html () {
 // Сборка JS модулей с помощью webpack | Building JS modules using webpack
 function scripts () {
     return src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'src/JS/libs/**.js',
         'src/JS/**/*.js'
     ])
 
@@ -74,9 +72,9 @@ function scripts () {
         // Подключаем библиотеки которые не поддерживают модульную систему | We connect libraries that do not support the modular system
         plugins: [
             new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery'
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery'
             })
         ],
 
