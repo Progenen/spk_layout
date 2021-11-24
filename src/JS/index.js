@@ -5,6 +5,6 @@ import adaptive from "./modules/adaptive";
 document.addEventListener('DOMContentLoaded', function () {
     adaptive();
 
-    // init 
-    $(".custom-select").niceSelect()
+    // init custom select
+    // $(".nice-select").niceSelect()
 });

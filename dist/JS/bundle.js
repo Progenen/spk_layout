@@ -166,7 +166,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  (0,_modules_adaptive__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_modules_adaptive__WEBPACK_IMPORTED_MODULE_0__["default"])(); // init custom select
+  // $(".nice-select").niceSelect()
 });
 }();
 /******/ })()

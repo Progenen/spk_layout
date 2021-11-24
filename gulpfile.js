@@ -57,8 +57,10 @@ function html () {
 function scripts () {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
-        'src/JS/libs/**.js',
-        'src/JS/**/*.js'
+        'src/JS/libs/jquery.nice-select.min.js',
+        'src/JS/modules/adaptive.js',
+        'src/JS/modules/menu.js',
+        'src/JS/index.js'
     ])
 
     // Настраиваем webpack в зависимости от режима разработки | Configuring webpack depending on the development mode
