@@ -3,6 +3,7 @@ const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
+const sprite       = require('gulp-svg-sprite');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
@@ -12,7 +13,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulpIf = require('gulp-if');
 const webp = require('gulp-webp');
 const uglify = require('gulp-uglify');
-const sprite = require('gulp-svg-sprite');
+const concat = require('gulp-concat');
 
 
 const isDevelopment = process.env.NODE_ENV == 'development' ? true : false; // Check work mode | Смотрим какой режим разработки выбран
@@ -22,7 +23,8 @@ const dir = isDevelopment ? 'dist' : 'build'; // Output folder dev = dist, prod 
 function browsersync() {
     browserSync.init({
         server: {
-            baseDir: dir
+            baseDir: dir,
+            index: "products.html"
         }
     });
 }
@@ -50,18 +52,15 @@ function html() {
         .pipe(dest(dir + '/'))
 }
 
-function video () {
-    return src('src/video/**/*')
-        .pipe(dest(dir + '/video/'))
-}
-
 // Сборка JS модулей с помощью webpack | Building JS modules using webpack
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
-        'libs/js/**/*',
-        'src/JS/**/*.js'
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'src/JS/libs/jquery.nice-select.min.js',
+        'src/JS/index.js'
     ])
+    .pipe(concat('bundle.js'))
     .pipe(uglify())
     .pipe(dest(dir + '/JS/'))
 }
@@ -73,6 +72,7 @@ function startWatch() {
     watch(['src/*.html'], html);
     watch(['src/*.html']).on('change', browserSync.reload);
     watch(['src/images/**/*'], images);
+    watch(['src/svg/src/**/*'], svgsprite);
     watch(['src/fonts/**/*'], fonts);
     watch(['src/svg/src/**/*'], svgsprite)
 }
@@ -86,6 +86,19 @@ function images() {
         .pipe(gulpIf(!isDevelopment, imagemin())) // Оптимизируем картинки если режим разработки prod | We optimize pictures if the prod mode
         .pipe(dest(dir + '/images/'))
 }
+
+// Спрайт для векторной графики
+function svgsprite() {
+    return src('src/svg/src/**/*')
+           .pipe(sprite({
+              mode: {
+                stack: {
+                    sprite: 'sprite.svg'  // sprite file name
+                }
+              },
+           }))
+           .pipe(dest(dir + '/svg/dest/'))
+  }
 
 // Удаление картинок в выходной папке, если те удалены в входящей | Deleting pictures in the output folder, if they were deleted in the input
 function cleanImg() {
@@ -125,7 +138,6 @@ exports.html = html;
 exports.cleanImg = cleanImg;
 exports.cleanFonts = cleanFonts;
 exports.fonts = fonts;
-exports.svgsprite
+exports.svgsprite = svgsprite;
 
-exports.default = parallel(style, svgsprite, html, scripts, fonts, cleanFonts, images, cleanImg, browsersync, startWatch);
-
+exports.default = parallel(style, html, scripts, fonts, cleanFonts, svgsprite, images, cleanImg, browsersync, startWatch);
