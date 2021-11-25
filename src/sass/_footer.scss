@@ -2,14 +2,31 @@
     background: #595959;
     padding: 45px 0;
     color: #fff;
+
     &__top {
+        
+        > div:first-of-type {
+            padding-bottom: 45px;
+        }
+
+        @include media-lg {
+        
+            > div:first-of-type {
+                padding-bottom: 0;
+            }
+        }
     }
 
     &__logo {
         margin: auto;
         display: block;
-        max-width: 120px;
+        max-width: 87px;
         max-height: 91px;
+
+        @include media-lg {
+            max-width: 120px;
+        }
+
         img {
             width: 100%;
         }
@@ -31,41 +48,75 @@
         }
     }
 
-    &__social-list-link {
-    }
-
     &__title {
-        font-weight: bold;
-        font-size: 20px;
+        font-weight: 400;
+        font-size: 18px;
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 0;
         padding: 0 0 16px 0;
+        text-align: center;
+
+
+        @include media-lg {
+            text-align: left;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
         &::after {
-            content: '';
+            content: none;
             position: absolute;
             width: 50px;
             height: 4px;
             background: #C4C4C4;
             left: 0;
             bottom: 0;
+
+            @include media-lg {
+                content: "";
+            }
         }
     }
 
     &__col-menu {
         display: flex;
         justify-content: center;
+
+        &:last-of-type {
+            margin-top: 15px;
+            padding-top: 26px;
+            border-top: 1px solid rgba(#fff, .24);
+
+            @include media-lg {
+                margin-top: 0;
+                padding-top: 0;
+                border-top: none;
+            }
+        }
     }
 
     &__col-wrapper {
     }
 
     &__menu {
+        display: none;
+        text-align: center;
+
+        @include media-lg {
+            display: block;
+            text-align: left;
+        }
     }
 
     &__menu-list {
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin: 0 0 35px 0;
+
+        @include media-lg {
+            margin-bottom: 0;
+        }
     }
 
     &__menu-item {
@@ -160,9 +211,17 @@
     &__bottom-list {
         margin: 18px 0 0 0;
         padding: 0;
-        display: flex;
         list-style: none;
         justify-content: center;
+
+        li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        @include media-lg {
+            display: flex;
+        }
     }
 
     &__bottom-item {
@@ -178,14 +237,6 @@
         text-decoration: underline;
         &:hover {
             color: #Fff;
-        }
-    }
-}
-
-@media (max-width:992px){
-    .footer {
-        &__title {
-            margin-top: 40px;
         }
     }
 }

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initSimpleUi()
   initMenu()
+  initFooter()
 
   function initSimpleUi() {
 
@@ -43,6 +44,13 @@ document.addEventListener('DOMContentLoaded', function () {
       if(window.outerWidth < 1200)
         $(this).toggleClass("active")
         $(".main-menu").slideToggle(500)
+    })
+  }
+
+  function initFooter() {
+
+    $(".footer__title").on("click", function() {
+      $(this).next().slideToggle(500)
     })
   }
 
