@@ -37,8 +37,8 @@ html {
     .container {
         max-width: 1350px;
     }
-    .container-new {
-        max-width: 1350px;
+    .container-fix {
+        max-width: 1140px;
     }
 }
 
@@ -68,6 +68,10 @@ footer {
         font-size: 30px;
         font-weight: 400;
         line-height: 40px;
+    }
+    &_middle {
+        font-size: 44px;
+        line-height: 54px;
     }
 }
 
@@ -111,16 +115,51 @@ footer {
 .main-btn {
     @include btn;
     width: 100%;
+    max-width: 181px;
     padding: 13px 0 12px 0;
     background: #E2281B;
     border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    &_long {
+        max-width: 232px;
+    }
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.input-main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    background: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    &::placeholder {
+        color: #666666;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+        
+        letter-spacing: 0.4px;
+    }
+    &:focus {
+        outline: none;
+    }
 }
 
 .anti-link {
     text-decoration: none;
     color: inherit;
     &:hover {
-        color: inherit;
         text-decoration: none;
     }
 }
@@ -143,7 +182,7 @@ footer {
     background-position: center;
 
     &__wrapper {
-        max-width: 492px;
+        max-width: 486px;
         margin: auto;
     }
 
@@ -158,7 +197,7 @@ footer {
 
     &__form-input {
         margin: 0 0 20px 0;
-        padding: 17px 20px;
+        padding: 12px 20px;
         font-size: 16px;
         background: #FFFFFF;
         border: 1px solid #CFCFCF;
@@ -175,6 +214,7 @@ footer {
         &:focus {
             outline: none;
         }
+
     }
 
     &__form-btn {
@@ -206,6 +246,46 @@ footer {
     }
 }
 
+.offer-block {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        margin: auto;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__text {
+        color: #E0251B;
+        margin: 28px auto 30px auto;
+        text-align: center;
+    }
+
+    &__btn {
+        margin: 0 auto 22px auto;
+    }
+
+    &__details {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        display: block;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+        color: #E2281B;      
+        &:hover {
+            color: $color1;
+        }  
+    }
+}
+
+
 .photos-preview {
     background: $color1;
     padding: 46px 0 88px;
@@ -234,6 +314,7 @@ footer {
         align-items: center;
         list-style: none;
         margin: 0;
+        padding: 0 0 0 15px;
     }
 
     &__list-link {
@@ -249,6 +330,7 @@ footer {
     &__list-item {
         margin-right: 24px;
         &:last-child {
+            margin: 0;
         }
     }
 
@@ -306,6 +388,12 @@ footer {
             margin-bottom: 25px;
         }
     }
+
+    .offer-block {
+        &__content {
+            align-items: center;
+        }
+    }
 }
 
 @media (max-width:576px){
@@ -336,7 +424,11 @@ footer {
         }
     }
     
-    .photos-preview__item-img {
+    .offers-block {
+        &__text {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 }
 
