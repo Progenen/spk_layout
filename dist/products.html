@@ -15,176 +15,190 @@
     <div class="content">
       <header class="header">
         <div class="header__top">
-          <div class="container-new container">
-            <div class="row">
-              <div class="col-lg-6 col-md-5">
-                <!-- Visible only on 320px -->
-                <p class="header__top-text d-block d-sm-none">
-                  20% Off Your first order
-                </p>
-                <p class="header__top-text d-none d-lg-block d-md-block d-sm-block">
-                  20% Off Your first order, subscribe and save 10%
-                </p>
+          <div class="container d-flex">
+            <p class="header__top-text d-lg-none mx-auto">
+              20% Off Your first order
+            </p>
+            <p class="header__top-text d-none d-lg-block">
+              20% Off Your first order, subscribe and save 10%
+            </p>
+            <a class="header__top-text header__top-link align-items-center justify-content-end ml-auto mr-5 d-none d-lg-flex" href="#">
+              <img class="header__top-icon" src="images/icons/address.webp" alt="address icon">
+              <span class="header__top-link-text">Find a Store</span>
+            </a>
+            <a class="header__top-text header__top-link align-items-center justify-content-end d-none d-lg-flex" href="#">
+              <img class="header__top-icon" src="images/icons/doctor.webp" alt="doctor icon">
+              <span class="header__top-link-text">For Healthcare Professionals</span>
+            </a>
+          </div>
+        </div>
+        <div class="header__navbar">
+          <div class="container">
+            <div class="navbar">
+              <div class="navbar__burger">
+                <div class="burger-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
               </div>
-              <div class="col-lg-2 offset-lg-1 col-md-3 d-none d-md-block">
-                <a class="header__top-text header__top-link d-flex align-items-center justify-content-end" href="#">
-                  <img class="header__top-icon" src="images/icons/address.webp" alt="address icon">
-                  <span class="header__top-link-text">Find a Store</span>
+              <div class="navbar__logo">
+                <a class="header__logo" href="#">
+                  <img class="header__logo-img" src="images/logo.webp" alt="logo">
                 </a>
+              </div>
+              <div class="navbar__menu">
+                <nav class="main-menu">
+                  <a href="#" class="main-menu__item has-submenu">
+                    Shop
+                  </a>
+                  <div class="main-menu__list">
+                    <a href="#" class="main-menu__subitem">
+                      DIABETES-FRIENDLY
+                    </a>
+                    <a href="#" class="main-menu__subitem">
+                      TAILORED NUTRITION
+                    </a>
+                    <a href="#" class="main-menu__subitem">
+                      EVERYDAY NUTRITION
+                    </a>
+                    <a href="#" class="main-menu__subitem">
+                      HIGH CALORIE NUTRITION
+                    </a>
+                    <a href="#" class="main-menu__subitem">
+                      HIGH Protein NUTRITION
+                    </a>
+                    <a href="#" class="main-menu__subitem main-menu__subitem_all">
+                      Shop all
+                    </a>
+                  </div>
+                  <a href="#" class="main-menu__item has-submenu">
+                    Rewards
+                  </a>
+                  <div class="main-menu__list">
+                    <a href="#" class="main-menu__subitem">
+                      BOOST® LOYALTY PROGRAM
+                    </a>
+                    <a href="#" class="main-menu__subitem">
+                      OFFERS
+                    </a>
+                  </div>
+                  <a href="#" class="main-menu__item has-submenu">
+                    Discovery
+                  </a>
+                  <div class="main-menu__list">
+                    <a href="#" class="main-menu__subitem">
+                      WHY BOOST®
+                    </a>
+                    <a href="#" class="main-menu__subitem">
+                      Blog
+                    </a>
+                    <a href="#" class="main-menu__subitem">
+                      Reciped
+                    </a>
+                    <a href="#" class="main-menu__subitem">
+                      Testimonials
+                    </a>
+                  </div>
+                  <a href="#" class="main-menu__item">
+                    FIND YOUR PROTEIN NUMBER
+                  </a>
+                  <div class="navbar__location find-location">
+                    <div class="find-location__map">
+                      Store Locator
+                    </div>
+                    <div class="find-location__number">
+                      Find your protein number
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div class="navbar__ui">
+                <div class="header__ui d-flex">
+                  <a href="#" class="header__ui-search header__ui-item">
+                    <div class="header__ui-item-header">
+                      <div class="header__ui-icon">
+                        <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                          alt="search-icon">
+                          <circle cx="11.2" cy="11.2" r="10.2" stroke="#E2281B" stroke-width="2" />
+                          <line x1="18.627" y1="18.3327" x2="27.587" y2="27.2927" stroke="#E2281B" stroke-width="2" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="header__ui-label">
+                      Search
+                    </div>
+                  </a>
+                  <a href="#" class="header__ui-account header__ui-item d-none d-md-block">
+                    <div class="header__ui-item-header">
+                      <div class="header__ui-icon">
+                        <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                          alt="user icon">
+                          <circle cx="14.5" cy="7.5" r="6.5" stroke="#E2281B" stroke-width="2" />
+                          <mask id="mask0_498_16603" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="13"
+                            width="30" height="15">
+                            <rect y="13" width="30" height="15" fill="#C4C4C4" />
+                          </mask>
+                          <g mask="url(#mask0_498_16603)">
+                            <circle cx="15" cy="28" r="14" stroke="#E2281B" stroke-width="2" />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="header__ui-label">
+                      Sign In
+                    </div>
+                  </a>
+                  <a href="#" class="header__ui-cart header__ui-item">
+                    <div class="header__ui-item-header">
+                      <div class="header__ui-icon">
+                        <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg"
+                          alt="cart icon">
+                          <path
+                            d="M1 1H6.6L7.95758 6.6M7.95758 6.6L10.8947 18.7156C11.0034 19.1641 11.405 19.48 11.8665 19.48H25.394C25.8645 19.48 26.2713 19.1521 26.3712 18.6924L28.7364 7.81243C28.8719 7.18913 28.3971 6.6 27.7593 6.6H7.95758Z"
+                            stroke="#E2281B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <circle cx="13.32" cy="25.6398" r="2.8" fill="#E2281B" />
+                          <circle cx="24.52" cy="25.6398" r="2.8" fill="#E2281B" />
+                        </svg>
 
-              </div>
-              <div class="col-lg-3 col-md-4 d-none d-md-block">
-                <a class="header__top-text header__top-link d-flex align-items-center justify-content-end" href="#">
-                  <img class="header__top-icon" src="images/icons/doctor.webp" alt="doctor icon">
-                  <span class="header__top-link-text">For Healthcare Professionals</span>
-                </a>
+                      </div>
+                      <div class="header__ui-count">3</div>
+                    </div>
+                    <div class="header__ui-label">
+                      Cart
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="container container-new">
-          <div class="row header__bottom justify-content-center align-items-center">
-            <div class="col-lg-1 d-block d-md-none">
-              <div class="burger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+        <div class="video">
+          <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+          <div class="video__overlay d-flex flex-column justify-content-center">
+            <div class="container">
+              <h3 class="video__title-small">
+                COMPLETE NUTRITION FOR
+              </h3>
+              <h2 class="video__title">
+                CONFIDENT AGING
+              </h2>
+              <p class="video__descr">
+                Nothing should keep you from living life to the fullest
+              </p>
+              <button type="button" class="btn btn-danger">
+                SHOP BOOST®
+              </button>
             </div>
-            <div class="col-lg-2 col-md-2">
-              <a class="header__logo" href="#">
-                <img class="header__logo-img" src="images/logo.webp" alt="logo">
-              </a>
-            </div>
-            <div class="col-lg-6 col-md-6 offset-lg-1 offset-md-0">
-              <nav class="header__menu">
-                <ul class="header__menu-list">
-                  <li class="header__menu-item header__submenu-btn">
-                    <a href="#" class="header__menu-link " data-tab="1">Shop</a>
+          </div>
 
-                    <div class="header__submenu" data-tab="1">
-                      <ul class="header__dropdown-list dropdown-list">
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="header__menu-item header__submenu-btn">
-                    <a href="#" class="header__menu-link " data-tab="2">rewards</a>
+          <!-- The HTML5 video element that will create the background video on the header -->
+          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="video/main-video.mp4" type="video/mp4">
+          </video>
 
-                    <div class="header__submenu" data-tab="2">
-                      <ul class="header__dropdown-list dropdown-list">
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="header__menu-item header__submenu-btn">
-                    <a href="#" class="header__menu-link " data-tab="3">Discovery</a>
-
-                    <div class="header__submenu" data-tab="3">
-                      <ul class="header__dropdown-list dropdown-list">
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li class="header__dropdown-item">
-                          <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="header__menu-item">
-                    <a href="#" class="header__menu-link">Blog</a>
-                  </li>
-                  <li class="header__menu-item">
-                    <a href="#" class="header__menu-link">recipes</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="col-lg-3 col-md-4 justify-content-end d-flex">
-              <div class="header__ui d-flex">
-                <a href="#" class="header__ui-search header__ui-item">
-                  <div class="header__ui-item-header">
-                    <div class="header__ui-icon">
-                      <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        alt="search-icon">
-                        <circle cx="11.2" cy="11.2" r="10.2" stroke="#E2281B" stroke-width="2" />
-                        <line x1="18.627" y1="18.3327" x2="27.587" y2="27.2927" stroke="#E2281B" stroke-width="2" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="header__ui-label">
-                    Search
-                  </div>
-                </a>
-                <a href="#" class="header__ui-account header__ui-item d-none d-md-block">
-                  <div class="header__ui-item-header">
-                    <div class="header__ui-icon">
-                      <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        alt="user icon">
-                        <circle cx="14.5" cy="7.5" r="6.5" stroke="#E2281B" stroke-width="2" />
-                        <mask id="mask0_498_16603" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="13"
-                          width="30" height="15">
-                          <rect y="13" width="30" height="15" fill="#C4C4C4" />
-                        </mask>
-                        <g mask="url(#mask0_498_16603)">
-                          <circle cx="15" cy="28" r="14" stroke="#E2281B" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="header__ui-label">
-                    Sign In
-                  </div>
-                </a>
-                <a href="#" class="header__ui-cart header__ui-item">
-                  <div class="header__ui-item-header">
-                    <div class="header__ui-icon">
-                      <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        alt="cart icon">
-                        <path
-                          d="M1 1H6.6L7.95758 6.6M7.95758 6.6L10.8947 18.7156C11.0034 19.1641 11.405 19.48 11.8665 19.48H25.394C25.8645 19.48 26.2713 19.1521 26.3712 18.6924L28.7364 7.81243C28.8719 7.18913 28.3971 6.6 27.7593 6.6H7.95758Z"
-                          stroke="#E2281B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <circle cx="13.32" cy="25.6398" r="2.8" fill="#E2281B" />
-                        <circle cx="24.52" cy="25.6398" r="2.8" fill="#E2281B" />
-                      </svg>
-
-                    </div>
-                    <div class="header__ui-count">3</div>
-                  </div>
-                  <div class="header__ui-label">
-                    Cart
-                  </div>
-                </a>
-              </div>
-            </div>
+          <div class="video__btn">
+            subscribe & get 10% off
           </div>
         </div>
       </header>
@@ -1055,7 +1069,7 @@
         </div>
       </main>
       <footer class="footer">
-        <div class="container container-new">
+        <div class="container">
           <div class="row footer__top">
             <div class="col-lg-3 col-md-12">
               <a href="#" class="footer__logo">

@@ -58,6 +58,7 @@ footer {
 }
 
 .btn {
+    --btn-color: #e0251b;
     cursor: pointer;
     border: none;
     text-decoration: none;
@@ -65,6 +66,19 @@ footer {
     display: inline-block;
     border-radius: 4px;
     text-align: center;
+
+    &:hover {
+        opacity: .7;
+    }
+
+    .btn-danger,
+    .btn-primary,
+    .btn-succes {
+        &:focus,
+        &:active {
+            box-shadow: none;
+        }
+    }
 
     &:focus {
         outline: none;
@@ -80,24 +94,31 @@ footer {
         text-align: center;
         font-weight: 400;
         color: $red;
-    
-        &:hover,
-        &:focus,
-        &:active,
-        &:visited {
-          background-color: $red;
-          color: #fff;
-          box-shadow: none;
-    
-          &:focus,
-          &:active {
-            box-shadow: none;
-          }
-        }
       }
 
     &-danger {
-        background-color: $red;
+        padding: 14px 15px;
+        width: 100%;
+        max-width: 240px;
+        text-align: center;
+        background-color: var(--btn-color);
+        letter-spacing: 1px;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):focus,
+    &:not(:disabled):not(.disabled):visited {
+        background-color: var(--btn-color);
+        box-shadow: none;
+        opacity: 1;
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+        color: #fff;
+        box-shadow: none;
     }
 }
 
