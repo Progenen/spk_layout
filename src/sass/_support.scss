@@ -45,7 +45,9 @@
 @include font-face('Roboto', '../fonts/Roboto/Roboto-RegularItalic', 400, italic, ttf);
 @include font-face('Roboto', '../fonts/Roboto/Roboto-Light', 300, normal, ttf);
 
+@include font-face('Oswald', '../fonts/Oswald/Oswald-ExtraLight', 200, normal, ttf);
 @include font-face('Oswald', '../fonts/Oswald/Oswald-Light', 300, normal, ttf);
+@include font-face('Oswald', '../fonts/Oswald/Oswald-Regular', 400, normal, ttf);
 @include font-face('Oswald', '../fonts/Oswald/Oswald-Medium', 500, normal, ttf);
 @include font-face('Oswald', '../fonts/Oswald/Oswald-Bold', bold, normal, ttf);
 @include font-face('Oswald', '../fonts/Oswald/Oswald-Regular', 400, normal, ttf);
@@ -53,11 +55,21 @@
 // Vars
 
 $color1: #E2281B;
+$dark-gray: #595959;
+$border-blue: #A0C0D9;
+$light-blue: #EAF1F5;
+$gray: #8598A3;
+$green: #009A40;
+$red: #E0251B;
 $fontSize1: 12px;
 $fontSize2: 14px;
 $fontSize3: 16px;
 $fontSize4: 18px;
 $sprite: '../svg/dest/stack/sprite.svg#';
+
+// Путь к спрайту для конкатенации
+
+$sprite: "../svg/dest/stack/sprite.svg#";
 
 
 // Mixins

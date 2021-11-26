@@ -55,8 +55,9 @@ function html() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
+        'src/JS/libs/bootstrap.min.js',
         'node_modules/slick-carousel/slick/slick.min.js',
-        'src/JS/libs/jquery.nice-select.min.js',
+        'node_modules/jquery-nice-select/js/jquery.nice-select.min.js',
         'src/JS/index.js'
     ])
     .pipe(concat('bundle.js'))
@@ -85,6 +86,25 @@ function images() {
         .pipe(dest(dir + '/images/'))
 }
 
+//video to dev/prod
+function video() {
+    return src('src/video/**/*')
+           .pipe(dest(dir + '/video/'))
+}
+
+// Спрайт для векторной графики
+function svgsprite() {
+    return src('src/svg/src/**/*')
+           .pipe(sprite({
+              mode: {
+                stack: {
+                    sprite: 'sprite.svg'  // sprite file name
+                }
+              },
+           }))
+           .pipe(dest(dir + '/svg/dest/'))
+  }
+
 // Удаление картинок в выходной папке, если те удалены в входящей | Deleting pictures in the output folder, if they were deleted in the input
 function cleanImg() {
     return del(dir + '/images/**/*', { force: true })
@@ -98,7 +118,6 @@ function cleanFonts() {
 
 // Просто перенос шрифтов | Just transferring fonts
 function fonts() {
-    console.log(dir);
     return src('src/fonts/**/*')
         .pipe(dest(dir + '/fonts/'))
 }
@@ -124,5 +143,6 @@ exports.cleanImg = cleanImg;
 exports.cleanFonts = cleanFonts;
 exports.fonts = fonts;
 exports.svgsprite = svgsprite;
+exports.video = video;
 
-exports.default = parallel(style, html, scripts, fonts, cleanFonts, svgsprite, images, cleanImg, browsersync, startWatch);
+exports.default = parallel(style, html, scripts, fonts, cleanFonts, svgsprite, images, video, cleanImg, browsersync, startWatch);
