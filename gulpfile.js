@@ -85,19 +85,6 @@ function images() {
         .pipe(dest(dir + '/images/'))
 }
 
-// Спрайт для векторной графики
-function svgsprite() {
-    return src('src/svg/src/**/*')
-           .pipe(sprite({
-              mode: {
-                stack: {
-                    sprite: 'sprite.svg'  // sprite file name
-                }
-              },
-           }))
-           .pipe(dest(dir + '/svg/dest/'))
-  }
-
 // Удаление картинок в выходной папке, если те удалены в входящей | Deleting pictures in the output folder, if they were deleted in the input
 function cleanImg() {
     return del(dir + '/images/**/*', { force: true })
