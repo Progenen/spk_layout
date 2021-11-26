@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initSimpleUi()
   initMenu()
+  initFilter()
   initFooter()
 
   function initSimpleUi() {
@@ -17,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function initMenu() {
-    //menu
 
     let items = $(".main-menu__item.has-submenu")
 
@@ -44,6 +44,20 @@ document.addEventListener('DOMContentLoaded', function () {
       if(window.outerWidth < 1200)
         $(this).toggleClass("active")
         $(".main-menu").slideToggle(500)
+    })
+  }
+
+  function initFilter() {
+
+    let fTrigger = $(".filter-trigger")
+    let filter = $(".filter-sidebar")
+
+    fTrigger.on("click", function(){
+      filter.fadeIn(300)
+    })
+
+    $(".filter-sidebar__overlay, .active-filters__close").on("click", function(){
+      filter.fadeOut(300)
     })
   }
 
