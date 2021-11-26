@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Chage btn place in home-found
     if (window.screen.width < 992) {
-        document.querySelector('.home-found__col').append(document.querySelector('.home-found__btn'));
+        if (document.querySelector('.home-found')) {
+          document.querySelector('.home-found__col').append(document.querySelector('.home-found__btn'));
+        }
     }
 
     // Home Blog Adaptive slider
@@ -43,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initMenu()
   initFilter()
   initFooter()
+  initSlider()
 
   function initSimpleUi() {
 
@@ -105,5 +108,16 @@ document.addEventListener('DOMContentLoaded', function () {
     $(".footer__title").on("click", function() {
       $(this).next().slideToggle(500)
     })
+  }
+
+  function initSlider() {
+
+    if(window.screen.width < 768) {
+      $("#reviewsMob").slick({
+        dots: true,
+        arrows: false,
+        slidesToShow: 1
+      })
+    }
   }
 });
