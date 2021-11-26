@@ -11,7 +11,6 @@ const del = require('del');
 const fileinclude = require('gulp-file-include');
 const sourcemaps = require('gulp-sourcemaps');
 const gulpIf = require('gulp-if');
-const webp = require('gulp-webp');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 
@@ -56,7 +55,9 @@ function html() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
-        'src/JS/libs/jquery.nice-select.min.js',
+        'src/JS/libs/bootstrap.min.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/jquery-nice-select/js/jquery.nice-select.min.js',
         'src/JS/index.js'
     ])
     .pipe(concat('bundle.js'))
@@ -81,7 +82,6 @@ function startWatch() {
 function images() {
     return src('src/images/**/*')
         .pipe(newer(dir + '/images'))
-        .pipe(webp())
         .pipe(gulpIf(!isDevelopment, imagemin())) // Оптимизируем картинки если режим разработки prod | We optimize pictures if the prod mode
         .pipe(dest(dir + '/images/'))
 }
@@ -146,4 +146,3 @@ exports.svgsprite = svgsprite;
 exports.video = video;
 
 exports.default = parallel(style, html, scripts, fonts, cleanFonts, svgsprite, images, video, cleanImg, browsersync, startWatch);
-

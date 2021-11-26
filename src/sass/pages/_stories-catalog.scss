@@ -1,0 +1,65 @@
+.stories-offer {
+    background-image: url('../../images/graphics/stories/stories-offer-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    &__text {
+        max-width: 678px;
+        margin: 17px auto 0 auto;
+    }
+
+    &__btn {
+        max-width: 356px;
+        margin: 44px auto 0 auto;
+    }
+
+}
+
+.stories-catalog {
+    padding-bottom: 50px;
+
+    &__col:nth-child(1) {
+        order: 0;
+    }
+    &__col:nth-child(2) {
+        order: 2;
+    }
+    &__col:nth-child(3) {
+        order: 3;
+    }
+    &__col:nth-child(4) {
+        order: 4;
+    }
+
+    &__btn {
+        background: transparent;
+        color: $color1;
+        display: flex;
+        margin: 63px auto 0 auto;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            color: $color1;
+        }
+        img {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+@media (max-width:576px){
+    .stories-catalog__btn {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:406px){
+    .stories-offer__btn {
+        max-width: none;
+    }
+}

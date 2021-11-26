@@ -1,5 +1,6 @@
 // Libs
 @import "libs/boostrap";
+@import "../../node_modules/slick-carousel/slick/slick.css";
 @import "libs/nice-select";
 
 // Main
@@ -14,8 +15,20 @@
 // Page Classes
 @import "pages/classes";
 
+// Page Home
+@import "pages/home";
+
 //Page Products
 @import "pages/products";
 
+// Page why
+@import "pages/why";
 
+// Page offers
+@import "pages/offers";
 
+// Page stories
+@import "pages/stories-catalog";
+
+// Page storie
+@import "pages/storie";

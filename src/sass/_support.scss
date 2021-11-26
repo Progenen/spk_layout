@@ -50,6 +50,7 @@
 @include font-face('Oswald', '../fonts/Oswald/Oswald-Regular', 400, normal, ttf);
 @include font-face('Oswald', '../fonts/Oswald/Oswald-Medium', 500, normal, ttf);
 @include font-face('Oswald', '../fonts/Oswald/Oswald-Bold', bold, normal, ttf);
+@include font-face('Oswald', '../fonts/Oswald/Oswald-Regular', 400, normal, ttf);
 
 // Vars
 
@@ -64,6 +65,7 @@ $fontSize1: 12px;
 $fontSize2: 14px;
 $fontSize3: 16px;
 $fontSize4: 18px;
+$sprite: '../svg/dest/stack/sprite.svg#';
 
 // Путь к спрайту для конкатенации
 
@@ -72,13 +74,18 @@ $sprite: "../svg/dest/stack/sprite.svg#";
 
 // Mixins
 
-@mixin title1 {
+@mixin title {
   font-family: Oswald;
-  font-size: 40px;
-  font-weight: regular;
   text-transform: uppercase;
 }
 
-@mixin title {
-
+@mixin btn {
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    &:focus {
+        outline: none;
+    }
 }
