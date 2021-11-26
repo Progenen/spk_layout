@@ -1,0 +1,131 @@
+.storie-profile {
+    padding: 68px 0 0 0;
+    background: #F6ECDD;
+
+    &__avatar {
+        width: 430px;
+        margin: 0 0 -68px 0;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__content {
+        padding: 47px 0 86px 40px;
+    }
+
+    &__name {
+    }
+
+    &__social-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0 0 27px 0;
+    }
+
+    &__social-item {
+        margin: 0 16px 0 0;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__social-link {
+    }
+
+    &__quotes {
+        padding: 24px 0 0 0;
+        font-size: 22px;
+        line-height: 34px;
+        position: relative;
+        z-index: 2;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 63px;
+            height: 49px;
+            top: 0;
+            left: -10px;
+            background-image: url("#{$sprite}quotes");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+        }
+    }
+}
+
+@media (max-width:1200px){
+    .storie-profile {
+        padding-bottom: 86px;
+        .row {
+            align-items: center;
+        }
+
+        &__avatar {
+            width: 100%;
+            margin: 0 0 auto 0;
+        }
+        &__content {
+            padding-top: 0;
+            padding: 0 0 0 0;
+        }
+    }
+}
+
+@media (max-width:992px){
+    .storie-profile {
+        padding-top: 78px;
+        padding-bottom: 83px;
+        &__avatar {
+            width: 100%;
+            max-height: 350px;
+            object-position: center -100px;
+            object-fit: cover;
+        }
+
+        &__content {
+            padding-top: 30px;
+        }
+
+        &__quotes {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width:769px){
+    .storie-profile {
+        padding-bottom: 41px;
+
+        &__content {
+            text-align: center;
+        }
+        
+        &__social-list {
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        &__quotes {
+            padding: 54px 0 0 0;
+            font-size: 20px;
+            line-height: 30px;
+            &::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media (max-width:576px){
+    .storie-profile {
+        
+    }
+}
