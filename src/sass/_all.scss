@@ -625,8 +625,12 @@ footer {
                 border-radius: 50%;
                 border: 1px solid #D5E1EA;
 
-                @include media-xl {
+                @include media-md {
                     transform: none;
+                    top: 0;
+                }
+
+                @include media-xl {
                     top: 2px;
                 }
             }
@@ -648,8 +652,12 @@ footer {
                 opacity: 0;
                 transition: transform .25s ease, opacity .25s ease;
 
-                @include media-xl {
+                @include media-md {
                     transform: scale(0.8);
+                    top: 7px;
+                }
+
+                @include media-xl {
                     top: 6px;
                 }
             }
@@ -667,8 +675,13 @@ footer {
                     opacity: 1;
                     transform: translateY(-50%) scale(1);
 
-                    @include media-xl {
+                    @include media-md {
+                        top: 4px;
                         transform: scale(1);
+                    }
+
+                    @include media-xl {
+                        top: 6px;
                     }
                 }
             }
