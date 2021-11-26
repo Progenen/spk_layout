@@ -11,7 +11,6 @@ const del = require('del');
 const fileinclude = require('gulp-file-include');
 const sourcemaps = require('gulp-sourcemaps');
 const gulpIf = require('gulp-if');
-const webp = require('gulp-webp');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 
@@ -82,7 +81,6 @@ function startWatch() {
 function images() {
     return src('src/images/**/*')
         .pipe(newer(dir + '/images'))
-        .pipe(webp())
         .pipe(gulpIf(!isDevelopment, imagemin())) // Оптимизируем картинки если режим разработки prod | We optimize pictures if the prod mode
         .pipe(dest(dir + '/images/'))
 }

@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.offer__alert').classList.add('offer__alert-hide');
     });
 
+    // Chage btn place in home-found
+    if (window.screen.width < 992) {
+        document.querySelector('.home-found__col').append(document.querySelector('.home-found__btn'));
+    }
+
     // Home Blog Adaptive slider
     if (window.screen.width < 1200) {
         if (document.querySelector('.home-blog__items')) {
