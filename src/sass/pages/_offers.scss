@@ -1,0 +1,231 @@
+.offers-offer {
+    text-align: center;
+    background-image: url('../../images/graphics/offers/offer-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding: 33px 0 28px 0;
+    &__title {
+        @include title;
+        font-size: 60px;
+        line-height: 65px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        max-width: 819px;
+        width: 100%;
+        font-size: 20px;
+        line-height: 24px;
+        margin: auto;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}
+
+.offers-subscription {
+    background: #F6ECDD;
+    padding: 25px 0 0 0;
+
+    &__text {
+        max-width: 616px;
+        width: 100%;
+    }
+
+    &__btn {
+        max-width: 232px;
+        color: #fff;
+    }
+}
+
+.offers-newsletter {
+    padding: 59px 0 57px 0;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__content {
+        text-align: center;
+        max-width: 532px;
+        width: 100%;
+        margin: auto;
+    }
+
+    &__text {
+        color: $color1;
+        margin: 28px 0 30px;
+    }
+
+    &__form {
+        height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        padding: 14px 20px;
+        height: 44px;
+        max-width: 332px;
+        width: 100%;
+    }
+
+    &__btn {
+        padding: 12px 0 13px;
+        height: 44px;
+        margin-left: 12px;
+    }
+}
+
+.offers-quiz {
+    background-image: url('../../images/graphics/home/take-quiz-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding: 35px 0 0 0;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__text {
+        max-width: 507px;
+        color: $color1;
+        margin: 28px 0 30px;
+    }
+
+    &__btn {
+        margin-bottom: 56px;
+    }
+
+    &__img {
+        width: 470px;
+        height: 415px;
+        object-position: bottom;
+    }
+
+}
+
+.offers-shipping {
+    padding: 60px 0 30px;
+
+    &__text {
+        max-width: 526px;
+        width: 100%;
+    }
+
+    &__img {
+        width: 690px;
+    }
+}
+
+
+
+
+
+@media (max-width:992px){
+    .offers-subscription {
+        &__img {
+            width: 80%;
+            display: block;
+            margin: 60px auto 0 auto;
+        }
+    }
+
+    .offers-newsletter {
+        position: relative;
+        &__img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            margin-bottom: 35px;
+        }
+    }
+
+    .offers-shipping__img {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
+    .offers-offer {
+        &__title {
+            font-size: 38px;
+        }
+    }
+
+    .offers-subscription {
+        padding: 55px 0 0 0;
+    }
+}
+
+@media (max-width:576px){
+    .offers-offer__text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .offers-subscription__img {
+        max-width: 360px;
+        width: 100%;
+    }
+    
+    .offers-newsletter {
+        position: relative;
+        padding-bottom: 352px;
+        &__img {
+            position: absolute;
+            width: 100%;
+            margin-top: 35px;
+            margin-bottom: 0;
+            height: 260px;
+            left: 0;
+        }
+
+        &__form {
+            max-width: 320px;
+            height: initial;
+            margin: auto;
+            flex-direction: column;
+        }
+
+        &__btn {
+            max-width: none;
+            margin: 20px 0 0 0;
+        }
+
+        &__input {
+            max-width: none;
+        }
+    }
+
+    .offers-quiz {
+        background-image: url('../images/graphics/offers/offers-quiz-bg-mob.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+    .offers-shipping {
+        padding-top: 0;
+        &__img {
+            width: 120%;
+            object-fit: cover;
+            object-position: center;
+            max-height: 360px;
+            margin-left: -30px;
+        }
+    }
+}
+
+@media (max-width:400px){
+    .offers-shipping__img {
+        max-height: 240px;
+    }
+}
