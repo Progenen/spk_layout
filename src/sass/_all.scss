@@ -64,6 +64,25 @@ footer {
         margin: auto;
     }
 }
+.offer-small {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    &__group {
+        margin: 0 0 50px 0;
+        text-align: center;
+    }
+
+    &__title {
+
+    }
+
+    &__text {
+        width: 100%;
+        margin: 9px auto 0 auto;
+    }
+}
 .btn {
     --btn-color: #e0251b;
     cursor: pointer;
