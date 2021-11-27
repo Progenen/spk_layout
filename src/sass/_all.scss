@@ -432,6 +432,7 @@ footer {
 }
 
 
+
 .node {
     padding: 85px 0 98px;
     background: #F6ECDD;
@@ -509,6 +510,12 @@ footer {
     .share-block__btn {
         margin-left: 121px;
     }
+    
+    .image-adaptive {
+        &__col {
+            padding: 0;
+        }
+    }
 }
 
 @media (max-width:992px){
@@ -569,9 +576,17 @@ footer {
             align-items: center;
         }
     }
-}
-.breadcrumbs {
 
+    .image-adaptive__img {
+        max-height: 400px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+.breadcrumbs {  
+    padding: 0;
+    margin: 20px 0;
     .breadcrumb {
         background-color: transparent;
 
@@ -764,6 +779,10 @@ footer {
         &__btn {
             max-width: none;
         }
+    }
+
+    .image-adaptive__col {
+        padding: 0;
     }
 }
 

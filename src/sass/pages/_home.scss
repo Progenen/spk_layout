@@ -554,9 +554,6 @@
 }
 
 @media (max-width:1200px){
-    .offer {
-        padding: 100px 0 120px 0;
-    }
 
     .explore-drinks {
         &__item {
@@ -607,7 +604,6 @@
 
 @media (max-width:769px){
     .offer {
-        padding: 80px 0 100px 0;
 
         &__btn {
             margin-top: 21px;
@@ -739,7 +735,6 @@
 
 @media (max-width:576px){
     .offer {
-        padding: 166px 29px 252px 29px;
         text-align: center;
         &::after {
             display: block;
