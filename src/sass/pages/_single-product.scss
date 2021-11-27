@@ -393,6 +393,16 @@
   }
 }
 
+.reviews-rating {
+
+  &_inline {
+
+    .review-rating__percents {
+      background-color: #fff;
+    }
+  }
+}
+
 .tabs-nav {
   justify-content: center;
 }
