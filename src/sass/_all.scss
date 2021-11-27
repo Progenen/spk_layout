@@ -333,6 +333,36 @@ footer {
     }
 }
 
+.offer {
+    position: relative;
+    color: #fff;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 59px;
+        background-image: url('../images/icons/scroll-alert.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 48px;
+        display: none;
+    }
+    &_small {
+        .offer__group {
+            margin: 0 0 50px 0;
+            text-align: center;
+        }
+    
+        .offer__text {
+            width: 100%;
+            margin: 9px auto 0 auto;
+        }
+    }
+}
+
 .offer-block {
     &__content {
         display: flex;
@@ -432,16 +462,12 @@ footer {
 }
 
 
-
 .node {
     padding: 85px 0 98px;
     background: #F6ECDD;
     text-align: center;
     &__title {
         margin-bottom: 48px;
-    }
-
-    &__text {
     }
 }
 
@@ -488,14 +514,8 @@ footer {
         margin: -25px 31px 0 0;
     }
 
-    &__group {
-    }
-
     &__title {
         margin: 0;
-    }
-
-    &__text {
     }
 
     &__btn {
@@ -732,6 +752,21 @@ footer {
                 }
             }
         }
+    }
+}
+
+.more-btn {
+    background: transparent;
+    color: $color1;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        color: $color1;
+    }
+    img {
+        margin-right: 10px;
     }
 }
 
