@@ -1,4 +1,4 @@
-.offer {
+.home-offer {
     position: relative;
     color: #fff;
     padding: 154px 0 191px 0;
@@ -15,17 +15,6 @@
         transform: translateX(-50%);
         bottom: 48px;
         display: none;
-    }
-    &__group-title {
-    }
-
-    &__posttitle {
-    }
-
-    &__title {
-    }
-
-    &__text {
     }
 
     &__btn {
@@ -53,7 +42,7 @@
             text-decoration: none;
             color: #595959;
         }
-        &.offer__alert-hide {
+        &.home-offer__alert-hide {
             transform: translateX(120%);
         }
     }
@@ -96,9 +85,6 @@
     padding: 81px 0 36.5px;
     &__top {
         margin: 0 0 5px 0;
-    }
-
-    &__title {
     }
 
     &__text {
@@ -266,9 +252,6 @@
         margin-left: auto;
     }
 
-    &__title {
-    }
-
     &__text {
         max-width: 492px;
         margin: 16px 0 0 0;
@@ -345,9 +328,6 @@
     padding: 108px 0 89px;
     background: #F4F8FA;
     text-align: center;
-    &__title {
-    }
-
     &__text {
         font-size: 30px;
         line-height: 44px;
@@ -384,9 +364,6 @@
         font-size: 16px;
         line-height: 24px;
         text-transform: uppercase;
-    }
-
-    &__item-text {
     }
 
     &__items {
@@ -520,10 +497,6 @@
         display: flex;
         justify-content: center;
     }
-
-    &__title {
-    }
-
     &__text {
         margin: 5px 0 0 0;
     }
@@ -565,9 +538,6 @@
 }
 
 @media (max-width:1200px){
-    .offer {
-        padding: 100px 0 120px 0;
-    }
 
     .explore-drinks {
         &__item {
@@ -617,8 +587,7 @@
 }
 
 @media (max-width:769px){
-    .offer {
-        padding: 80px 0 100px 0;
+    .home-offer {
 
         &__btn {
             margin-top: 21px;
@@ -749,11 +718,14 @@
 }
 
 @media (max-width:576px){
-    .offer {
-        padding: 166px 29px 252px 29px;
+    .home-offer {
+        padding-bottom: 252px;
         text-align: center;
         &::after {
             display: block;
+        }
+        &__btn {
+            margin: 21px auto 0 auto;
         }
     }
 
