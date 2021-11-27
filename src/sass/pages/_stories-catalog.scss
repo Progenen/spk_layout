@@ -17,6 +17,10 @@
         margin: 44px auto 0 auto;
     }
 
+    &__group {
+        margin: 112px 0 160px;
+    }
+
 }
 
 .stories-catalog {
@@ -36,18 +40,7 @@
     }
 
     &__btn {
-        background: transparent;
-        color: $color1;
-        display: flex;
         margin: 63px auto 0 auto;
-        align-items: center;
-        justify-content: center;
-        &:hover {
-            color: $color1;
-        }
-        img {
-            margin-right: 10px;
-        }
     }
 }
 
@@ -55,6 +48,9 @@
 @media (max-width:576px){
     .stories-catalog__btn {
         margin-top: 40px;
+    }
+    .stories-offer__group {
+        margin: 115px 0 235px;
     }
 }
 
