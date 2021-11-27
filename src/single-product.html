@@ -178,7 +178,7 @@
       </header>
       <main>
         <div class="single-product">
-          <div class="container">
+          <section class="container">
             <div class="row">
               <div class="breadcrumbs">
                 <nav aria-label="breadcrumb">
@@ -203,152 +203,469 @@
                   </div>
                   <div class="s-product-images__items">
                     <div class="s-product-images__image">
-                      <img src="images/single-product/product1.png" alt="boost image">
+                      <img src="images/single-product/product2.png" alt="boost image">
                     </div>
                     <div class="s-product-images__image">
-                      <img src="images/single-product/product1.png" alt="boost image">
+                      <img src="images/single-product/product3.png" alt="boost image">
                     </div>
                     <div class="s-product-images__image">
-                      <img src="images/single-product/product1.png" alt="boost image">
+                      <img src="images/single-product/product4.png" alt="boost image">
                     </div>
                     <div class="s-product-images__image">
                       <img src="images/single-product/product1.png" alt="boost image">
                     </div>
                   </div>
                 </div>
-                <div class="s-product-buy">
-                  <h1 class="s-product-buy__title">
-                    BOOST® High Protein
-                  </h1>
-                  <div class="s-product-buy__reviews">
-                    <div class="stars stars_4">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
+                <div class="s-product__info-block">
+                  <div class="s-product-buy">
+                    <h1 class="s-product-buy__title">
+                      BOOST® High Protein
+                    </h1>
+                    <div class="s-product-buy__reviews">
+                      <div class="stars stars_4">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <a href="#" class="red-link">
+                        319 Reviews
+                      </a>
                     </div>
-                    <a href="#">
-                      319 Reviews
-                    </a>
-                  </div>
-                  <p class="s-product-buy__descr">
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Met, consectetur
-                    <a href="#">
-                      Read more
-                    </a>
-                  </p>
-                  <div class="s-product-ui">
-                    <div class="s-product-ui__add-to-cart">
-                      <div class="form-check s-product__radio">
-                        <input class="form-check-input" type="radio" value="3" name="subscribe_and_save" id="subsSave"
-                          value="option1">
-                        <label class="form-check-label" for="subsSave">
-                          Subscribe & Save
-                        </label>
-                      </div>
-                      <div class="form-check s-product__radio">
-                        <input class="form-check-input" type="radio" value="3" name="subscribe_and_save"
-                          id="subsSave123" value="option1">
-                        <label class="form-check-label" for="subsSave123">
-                          One-Time Purchase
-                        </label>
-                      </div>
-                      <div class="product-additional__delivery-days product-additional__delivery-days_single">
-                        <select class="custom-select custom-select-sm" id="deliverDays2">
-                          <option selected>Delivery every 15 days </option>
-                          <option value="1">Delivery every 15 days </option>
-                          <option value="2">Delivery every 10 days </option>
-                          <option value="3">Delivery every 5 days </option>
-                        </select>
-                      </div>
-                      <div class="s-product-ui__price">
-                        <div class="price">
-                          <div class="price__old">
-                            $41.95
+                    <p class="s-product-buy__descr">
+                      Lorem ipsum dolor sit amet, consectetur
+                      adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Met, consectetur
+                      <a href="#" class="red-link">
+                        Read more
+                      </a>
+                    </p>
+                    <div class="s-product-ui">
+                      <div class="s-product-ui__add-to-cart">
+                        <div class="form-check s-product__radio">
+                          <input class="form-check-input" type="radio" value="3" name="subscribe_and_save" id="subsSave"
+                            value="option1">
+                          <label class="form-check-label form-check-label_big" for="subsSave">
+                            Subscribe & Save
+                          </label>
+                        </div>
+                        <div class="form-check s-product__radio">
+                          <input class="form-check-input" type="radio" value="3" name="subscribe_and_save"
+                            id="subsSave123" value="option1">
+                          <label class="form-check-label form-check-label_big" for="subsSave123">
+                            One-Time Purchase
+                          </label>
+                        </div>
+                        <div class="w-100 delivery-days">
+                          <select class="custom-select custom-select-sm" id="deliverDays2">
+                            <option selected>Delivery every 15 days </option>
+                            <option value="1">Delivery every 15 days </option>
+                            <option value="2">Delivery every 10 days </option>
+                            <option value="3">Delivery every 5 days </option>
+                          </select>
+                        </div>
+                        <div class="s-product-ui__price">
+                          <div class="price">
+                            <div class="price__old">
+                              $41.95
+                            </div>
+                            <div class="price__new">
+                              $37.7
+                            </div>
                           </div>
-                          <div class="price__new">
-                            $37.7
+                          <div class="counter">
+                            <div class="minus"></div>
+                            <input type="number" min="1" max="300" value="1">
+                            <div class="plus"></div>
+                          </div>
+                          <div class="s-product-ui__button">
+                            <button class="btn btn-danger btn-add-to-cart" type="button">
+                              Add to cart
+                            </button>
                           </div>
                         </div>
-                        <div class="counter">
-                          <div class="minus"></div>
-                          <input type="number" min="1" max="300">
-                          <div class="plus"></div>
+                      </div>
+                    </div>
+                    <div class="s-product__flavor labeled labeled_big flavor-list">
+                      <span class="label">
+                        Choose Flavor
+                      </span>
+                      <div class="flavor-list__items">
+                        <div class="flavor active flavor_choco">
+                          <span>Rich Chocolate</span>
                         </div>
-                        <div class="s-product-ui__button">
-                          <button class="btn btn-danger btn-add-to-cart" type="button">
-                            Add to cart
-                          </button>
+                        <div class="flavor flavor_creamy">
+                          <span>Creamy Strawberry</span>
+                        </div>
+                        <div class="flavor flavor_vanilla">
+                          <span>Very Vanilla</span>
+                        </div>
+                        <div class="flavor flavor_mocha">
+                          <span>Café Mocha</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="s-product__size labeled labeled_big sizes">
+                      <span class="label">
+                        Package size
+                      </span>
+                      <div class="sizes__items">
+                        <div class="sizes__item active">
+                          <span>
+                            6
+                          </span>
+                          <span>
+                            pack
+                          </span>
+                        </div>
+                        <div class="sizes__item">
+                          <span>
+                            24
+                          </span>
+                          <span>
+                            pack
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="s-product__flavor labeled">
-                    <span class="label">
-                      Choose Flavor
-                    </span>
-                    <div class="flavor-list">
-                      <div class="flavor flavor_choco">
-                        <span class="label">Flavor Reviewed</span>
-                        <span>Rich Chocolate</span>
-                      </div>
-                      <div class="flavor flavor_creamy">
-                        <span class="label">Flavor Reviewed</span>
-                        <span>Rich Chocolate</span>
-                      </div>
-                      <div class="flavor flavor_vanilla">
-                        <span class="label">Flavor Reviewed</span>
-                        <span>Rich Chocolate</span>
-                      </div>
-                      <div class="flavor flavor_mocha">
-                        <span class="label">Flavor Reviewed</span>
-                        <span>Rich Chocolate</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="s-product__size labeled sizes">
-                    <span class="label">
-                      Package size
-                    </span>
-                    <div class="sizes__items">
-                      <div class="sizes__item">
-                        <span>
-                          6
-                        </span>
-                        <span>
-                          pack
-                        </span>
-                      </div>
-                      <div class="sizes__item">
-                        <span>
-                          24
-                        </span>
-                        <span>
-                          pack
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <ul class="s-product__discount">
+                    <li>
+                      Free shipping on orders <b>$49.95 or more</b>
+                    </li>
+                    <li>
+                      Get it by <b>Thu, Sep 16</b>
+                    </li>
+                    <li>
+                      Subscribe and <b>save 10%</b> on every order <a href="#" class="red-link">Learn more</a>
+                    </li>
+                  </ul>
                 </div>
-                <ul class="s-product__discount">
-                  <li>
-                    Free shipping on orders <b>$49.95 or more</b>
-                  </li>
-                  <li>
-                    Get it by <b>Thu, Sep 16</b>
-                  </li>
-                  <li>
-                    Subscribe and <b>save 10%</b> on every order <a href="#">Learn more</a>
-                  </li>
-                </ul>
               </div>
               <div class="s-product__additional">
+                <div class="s-reviews">
+                  <div class="stats">
+                    <div class="reviews-stats">
+                      <h3 class="reviews-stats__num">
+                        4.6
+                      </h3>
+                      <div class="stars stars_4">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <p class="reviews-stats__info">
+                        Based On <b>2374</b> Reviews!
+                      </p>
+                    </div>
+                    <div class="reviews-rating">
+                      <div class="review-rating">
+                        <span class="review-rating__text">5 stars</span>
+                        <span class="review-rating__percents">
+                          <span class="review-rating__progress" style="width: 80%;"></span>
+                        </span>
+                        <span class="review-rating__text">80%</span>
+                      </div>
+                      <div class="review-rating">
+                        <span class="review-rating__text">4 stars</span>
+                        <span class="review-rating__percents">
+                          <span class="review-rating__progress" style="width: 33%;"></span>
+                        </span>
+                        <span class="review-rating__text">33%</span>
+                      </div>
+                      <div class="review-rating">
+                        <span class="review-rating__text">3 stars</span>
+                        <span class="review-rating__percents">
+                          <span class="review-rating__progress" style="width: 5%;"></span>
+                        </span>
+                        <span class="review-rating__text">5%</span>
+                      </div>
+                      <div class="review-rating">
+                        <span class="review-rating__text">2 stars</span>
+                        <span class="review-rating__percents">
+                          <span class="review-rating__progress"></span>
+                        </span>
+                        <span class="review-rating__text">-</span>
+                      </div>
+                      <div class="review-rating">
+                        <span class="review-rating__text">1 stars</span>
+                        <span class="review-rating__percents"></span>
+                        <span class="review-rating__text">-</span>
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="s-reviews__inline">
+                    <div class="review review_inline">
+                      <div class="review__author">
+                        <span>Stacey M.</span>
+                        <div class="stars stars_4 stars_small">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="review__date">
+                        19/02/2020
+                      </div>
+                      <div class="review__stars"></div>
+                      <div class="review__title">
+                        Taste great
+                      </div>
+                      <div class="review__descr">
+                        BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
+                        breakfast then I skip lunch and feel great through out the day.
+                      </div>
+                      <div class="review__reviewed labeled">
+                        <span class="label">Flavor Reviewed</span>
+                        <span>Rich Chocolate</span>
+                      </div>
+                    </div>
+                    <div class="review review_inline">
+                      <div class="review__author">
+                        <span>Matthew V.</span>
+                        <div class="stars stars_4 stars_small">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="review__date">
+                        19/02/2020
+                      </div>
+                      <div class="review__stars"></div>
+                      <div class="review__title">
+                        Taste great
+                      </div>
+                      <div class="review__descr">
+                        BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
+                        breakfast then I skip lunch and feel great through out the day.
+                      </div>
+                      <div class="review__reviewed labeled">
+                        <span class="label">Flavor Reviewed</span>
+                        <span>Rich Chocolate</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <ul class="nav nav-tabs tabs-nav" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab"
+                aria-controls="details" aria-selected="true">
+                PRODUCT DETAILS
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq"
+                aria-selected="false">
+                FAQs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info"
+                aria-selected="false">
+                Nutritional Information
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="rating-tab" data-toggle="tab" href="#rating" role="tab" aria-controls="rating"
+                aria-selected="false">
+                Ratings & Reviews
+              </a>
+            </li>
+          </ul>
+          <div class="container">
+            <div class="tab-content tabs" id="myTabContent">
+              <div class="tab-pane fade show active tab tab_details" id="details" role="tabpanel"
+                aria-labelledby="details-tab">
+                <p>
+                  BOOST® High Protein drink contains Vitamins C & D, Zinc, Iron and Selenium, key nutrients for IMMUNE
+                  SUPPORT.
+                </p>
+                <ul class="s-product-tab__list-simple">
+                  <li>
+                    No Artificial Colors and Sweeteners
+                  </li>
+                  <li>
+                    Gluten Free
+                  </li>
+                  <li>
+                    Suitable for Lactose Intolerance. (Not for individuals with galactosemia)
+                  </li>
+                </ul>
+                <div class="helpful-list">
+                  <div class="helpful-list__item">
+                    <h4>
+                      Muscle
+                    </h4>
+                    <p>
+                      20 g High-Quality
+                      Protein to help
+                      maintain muscle
+                    </p>
+                  </div>
+                  <div class="helpful-list__item">
+                    <h4>
+                      Bone
+                    </h4>
+                    <p>
+                      Calcium and Vitamin D,
+                      to support strong bones
+                    </p>
+                  </div>
+                  <div class="helpful-list__item">
+                    <h4>
+                      Energy
+                    </h4>
+                    <p>
+                      240 Nutrient-rich Calories with
+                      8 B-Vitamins to help convert
+                      food to energy
+                    </p>
+                  </div>
+                  <div class="helpful-list__item">
+                    <h4>
+                      Vitamins & Minerals
+                    </h4>
+                    <p>
+                      27 Vitamins & Minerals
+                      for nutrition you need each day
+                    </p>
+                  </div>
+                  <div class="helpful-list__item">
+                    <h4>
+                      Antioxidants
+                    </h4>
+                    <p>
+                      Vitamins C & E, and Selenium
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade tab tab_faq" id="faq" role="tabpanel"
+                aria-labelledby="faq-tab">
+                <div class="faq-item">
+                  <h3 class="faq-item__title">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?
+                  </h3>
+                  <div class="faq-item__descr">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <h3 class="faq-item__title">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?
+                  </h3>
+                  <div class="faq-item__descr">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <h3 class="faq-item__title">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?
+                  </h3>
+                  <div class="faq-item__descr">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <h3 class="faq-item__title">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?
+                  </h3>
+                  <div class="faq-item__descr">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="faq-btn">
+                  <button type="button" class="btn btn-outline-danger btn-load-more btn-lg">
+                    Load More
+                  </button>
+                </div>
+              </div>
+              <div class="tab-pane fade tab tab_info" id="info" role="tabpanel"
+                aria-labelledby="info-tab">
+                <div class="info-text">
+                  <h3>
+                    Ingredients
+                  </h3>
+                  <p>
+                    WATER, GLUCOSE SYRUP, MILK PROTEIN CONCENTRATE,
+                    SUGAR, VEGETABLE OIL (CANOLA, HIGH OLEIC SUNFLOWER, CORN),
+                    AND LESS THAN 2% OF SOY PROTEIN ISOLATE, CALCIUM CASEINATE,
+                    SODIUM CASEINATE, COCOA PROCESSED WITH ALKALI, VITAMINS AND MINERALS‡, SALT,
+                    CELLULOSE GEL AND GUM, CARRAGEENAN, STEVIA LEAF EXTRACT, NATURAL AND ARTIFICIAL FLAVOR
+                  </p>
+                  <h3>
+                    VITAMINS AND MINERALS
+                  </h3>
+                  <p>
+                    POTASSIUM CITRATE, MAGNESIUM CHLORIDE, CALCIUM PHOSPHATE,
+                    SODIUM ASCORBATE, MAGNESIUM PHOSPHATE, CHOLINE BITARTRATE,
+                    DL-ALPHA TOCOPHERYL ACETATE, POTASSIUM CHLORIDE, FERRIC
+                    PYROPHOSPHATE, ZINC SULFATE, NIACINAMIDE, MANGANESE SULFATE, CALCIUM PANTOTHENATE,
+                    PYRIDOXINE HYDROCHLORIDE, COPPER SULFATE, RIBOFLAVIN, THIAMINE
+                    HYDROCHLORIDE, VITAMIN A PALMITATE, FOLIC ACID, POTASSIUM IODIDE, SODIUM SELENATE,
+                    VITAMIN K1, CHROMIUM CHLORIDE, BIOTIN, VITAMIN D3, SODIUM MOLYBDATE, VITAMIN B12
+                  </p>
+                  <h3>
+                    Allergens
+                  </h3>
+                  <p>
+                    Contains Milk, Soy
+                  </p>
+                </div>
+                <div class="info-descr">
+                  <img src="images/single-product/nutritional-info.png" alt="info">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="rating" role="tabpanel" aria-labelledby="rating">
                 <div class="reviews">
                   <div class="d-flex align-items-center justify-content-between">
                     <div class="reviews-rating">
@@ -407,8 +724,56 @@
                       </button>
                     </div>
                   </div>
-                  <div class="reviews-sort"></div>
+                  <div class="reviews-sort">
+                    <div class="custom-field">
+                      <label for="sortReviews">Sort by</label>
+                      <select class="custom-select" id="sortReviews">
+                        <option selected>Rating</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                      </select>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="verifiedPurchases">
+                      <label class="form-check-label form-check-label_big" for="verifiedPurchases">
+                        Verified Purchases
+                      </label>
+                    </div>
+                  </div>
                   <div class="reviews-list">
+                    <div class="reviews-list__num">
+                      1–3 of 1251 Comments
+                    </div>
+                    <div class="review">
+                      <div class="review__author">
+                        <span>Stacey M.</span>
+                        <div class="stars stars_4 stars_small">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                      </div>
+                      <div class="review__date">
+                        19/02/2020
+                      </div>
+                      <div class="review__stars"></div>
+                      <div class="review__title">
+                        Taste great
+                      </div>
+                      <div class="review__descr">
+                        BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
+                        breakfast then I skip lunch and feel great through out the day.
+                      </div>
+                      <div class="review__reviewed labeled">
+                        <span class="label">Flavor Reviewed</span>
+                        <span>Rich Chocolate</span>
+                      </div>
+                    </div>
                     <div class="review">
                       <div class="review__author">
                         <span>Matthew V.</span>
@@ -432,746 +797,403 @@
                         breakfast then I skip lunch and feel great through out the day.
                       </div>
                       <div class="review__reviewed labeled">
-                        <label>Flavor Reviewed</label>
+                        <span class="label">Flavor Reviewed</span>
                         <span>Rich Chocolate</span>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <ul class="nav nav-tabs s-product__tabs-nav" id="myTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab"
-                    aria-controls="details" aria-selected="true">
-                    PRODUCT DETAILS
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq"
-                    aria-selected="false">
-                    FAQs
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info"
-                    aria-selected="false">
-                    Nutritional Information
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="rating-tab" data-toggle="tab" href="#rating" role="tab" aria-controls="rating"
-                    aria-selected="false">
-                    Ratings & Reviews
-                  </a>
-                </li>
-              </ul>
-              <div class="tab-content s-product-tabs" id="myTabContent">
-                <div class="tab-pane fade show active s-product-tab s-product-tab_details" id="details" role="tabpanel"
-                  aria-labelledby="details-tab">
-                  <p>
-                    BOOST® High Protein drink contains Vitamins C & D, Zinc, Iron and Selenium, key nutrients for IMMUNE
-                    SUPPORT.
-                  </p>
-                  <ul class="s-product-tab__list-simple">
-                    <li>
-                      No Artificial Colors and Sweeteners
-                    </li>
-                    <li>
-                      Gluten Free
-                    </li>
-                    <li>
-                      Suitable for Lactose Intolerance. (Not for individuals with galactosemia)
-                    </li>
-                  </ul>
-                  <div class="helpful-list">
-                    <div class="helpful-list__item">
-                      <h4>
-                        Muscle
-                      </h4>
-                      <p>
-                        20 g High-Quality
-                        Protein to help
-                        maintain muscle
-                      </p>
-                    </div>
-                    <div class="helpful-list__item">
-                      <h4>
-                        Bone
-                      </h4>
-                      <p>
-                        Calcium and Vitamin D,
-                        to support strong bones
-                      </p>
-                    </div>
-                    <div class="helpful-list__item">
-                      <h4>
-                        Energy
-                      </h4>
-                      <p>
-                        240 Nutrient-rich Calories with
-                        8 B-Vitamins to help convert
-                        food to energy
-                      </p>
-                    </div>
-                    <div class="helpful-list__item">
-                      <h4>
-                        Vitamins & Minerals
-                      </h4>
-                      <p>
-                        27 Vitamins & Minerals
-                        for nutrition you need each day
-                      </p>
-                    </div>
-                    <div class="helpful-list__item">
-                      <h4>
-                        Antioxidants
-                      </h4>
-                      <p>
-                        Vitamins C & E, and Selenium
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade s-product-tab s-product-tab_faq" id="faq" role="tabpanel"
-                  aria-labelledby="faq-tab">
-                  <div class="faq-item">
-                    <h3 class="faq-item__title">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?
-                    </h3>
-                    <div class="faq-item__descr">
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                      cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                      anim id est laborum. Duis aute irure dolor in reprehenderit in
-                      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui officia
-                      deserunt mollit anim id est laborum.Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu
-                      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
-                  <div class="faq-item">
-                    <h3 class="faq-item__title">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?
-                    </h3>
-                    <div class="faq-item__descr">
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                      cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                      anim id est laborum. Duis aute irure dolor in reprehenderit in
-                      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui officia
-                      deserunt mollit anim id est laborum.Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu
-                      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
-                  <div class="faq-item">
-                    <h3 class="faq-item__title">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?
-                    </h3>
-                    <div class="faq-item__descr">
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                      cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                      anim id est laborum. Duis aute irure dolor in reprehenderit in
-                      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui officia
-                      deserunt mollit anim id est laborum.Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu
-                      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
-                  <div class="faq-item">
-                    <h3 class="faq-item__title">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt?
-                    </h3>
-                    <div class="faq-item__descr">
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                      cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                      anim id est laborum. Duis aute irure dolor in reprehenderit in
-                      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui officia
-                      deserunt mollit anim id est laborum.Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu
-                      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
-                  <div class="faq-btn">
-                    <button type="button" class="btn btn-outline-danger btn-load-more btn-lg">
-                      Load More
-                    </button>
-                  </div>
-                </div>
-                <div class="tab-pane fade s-product-tab s-product-tab_info" id="info" role="tabpanel"
-                  aria-labelledby="info-tab">
-                  <div class="info-text">
-                    <h3>
-                      Ingredients
-                    </h3>
-                    <p>
-                      WATER, GLUCOSE SYRUP, MILK PROTEIN CONCENTRATE,
-                      SUGAR, VEGETABLE OIL (CANOLA, HIGH OLEIC SUNFLOWER, CORN),
-                      AND LESS THAN 2% OF SOY PROTEIN ISOLATE, CALCIUM CASEINATE,
-                      SODIUM CASEINATE, COCOA PROCESSED WITH ALKALI, VITAMINS AND MINERALS‡, SALT,
-                      CELLULOSE GEL AND GUM, CARRAGEENAN, STEVIA LEAF EXTRACT, NATURAL AND ARTIFICIAL FLAVOR
-                    </p>
-                    <h3>
-                      VITAMINS AND MINERALS
-                    </h3>
-                    <p>
-                      POTASSIUM CITRATE, MAGNESIUM CHLORIDE, CALCIUM PHOSPHATE,
-                      SODIUM ASCORBATE, MAGNESIUM PHOSPHATE, CHOLINE BITARTRATE,
-                      DL-ALPHA TOCOPHERYL ACETATE, POTASSIUM CHLORIDE, FERRIC
-                      PYROPHOSPHATE, ZINC SULFATE, NIACINAMIDE, MANGANESE SULFATE, CALCIUM PANTOTHENATE,
-                      PYRIDOXINE HYDROCHLORIDE, COPPER SULFATE, RIBOFLAVIN, THIAMINE
-                      HYDROCHLORIDE, VITAMIN A PALMITATE, FOLIC ACID, POTASSIUM IODIDE, SODIUM SELENATE,
-                      VITAMIN K1, CHROMIUM CHLORIDE, BIOTIN, VITAMIN D3, SODIUM MOLYBDATE, VITAMIN B12
-                    </p>
-                    <h3>
-                      Allergens
-                    </h3>
-                    <p>
-                      Contains Milk, Soy
-                    </p>
-                  </div>
-                  <div class="info-descr">
-                    <img src="images/single-product/nutritional-info.png" alt="info">
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="rating" role="tabpanel" aria-labelledby="rating">
-                  <div class="reviews">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <div class="reviews-rating">
-                        <div class="review-rating">
-                          <span class="review-rating__text">5 stars</span>
-                          <span class="review-rating__percents">
-                            <span class="review-rating__progress" style="width: 80%;"></span>
-                          </span>
-                          <span class="review-rating__text">80%</span>
-                        </div>
-                        <div class="review-rating">
-                          <span class="review-rating__text">4 stars</span>
-                          <span class="review-rating__percents">
-                            <span class="review-rating__progress" style="width: 33%;"></span>
-                          </span>
-                          <span class="review-rating__text">33%</span>
-                        </div>
-                        <div class="review-rating">
-                          <span class="review-rating__text">3 stars</span>
-                          <span class="review-rating__percents">
-                            <span class="review-rating__progress" style="width: 5%;"></span>
-                          </span>
-                          <span class="review-rating__text">5%</span>
-                        </div>
-                        <div class="review-rating">
-                          <span class="review-rating__text">2 stars</span>
-                          <span class="review-rating__percents">
-                            <span class="review-rating__progress"></span>
-                          </span>
-                          <span class="review-rating__text">-</span>
-                        </div>
-                        <div class="review-rating">
-                          <span class="review-rating__text">1 stars</span>
-                          <span class="review-rating__percents"></span>
-                          <span class="review-rating__text">-</span>
-                        </div>
-                      </div>
-                      <div class="reviews-stats">
-                        <h3 class="reviews-stats__num">
-                          4.6
-                        </h3>
-                        <div class="stars stars_4">
+                    <div class="review">
+                      <div class="review__author">
+                        <span>Matthew V.</span>
+                        <div class="stars stars_4 stars_small">
                           <span></span>
                           <span></span>
                           <span></span>
                           <span></span>
                           <span></span>
                         </div>
-                        <p class="reviews-stats__info">
-                          Based On <b>2374</b> Reviews!
-                        </p>
                       </div>
-                      <div class="write-review">
-                        <button type="button" class="btn btn-outline-danger btn-lg">
-                          Write a review
-                        </button>
+                      <div class="review__date">
+                        19/02/2020
                       </div>
-                    </div>
-                    <div class="reviews-sort">
-                      <div class="custom-field">
-                        <label for="sortReviews">Sort by</label>
-                        <select class="custom-select" id="sortReviews">
-                          <option selected>Rating</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                          <option value="4">Four</option>
-                          <option value="5">Five</option>
-                        </select>
+                      <div class="review__stars"></div>
+                      <div class="review__title">
+                        Taste great
                       </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="verifiedPurchases">
-                        <label class="form-check-label" for="verifiedPurchases">
-                          Verified Purchases
-                        </label>
+                      <div class="review__descr">
+                        BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
+                        breakfast then I skip lunch and feel great through out the day.
+                      </div>
+                      <div class="review__reviewed labeled flavor flavor_choco">
+                        <span class="label">Flavor Reviewed</span>
+                        <span>Rich Chocolate</span>
                       </div>
                     </div>
-                    <div class="reviews-list">
-                      <div class="reviews-list__num">
-                        1–3 of 1251 Comments
-                      </div>
-                      <div class="review">
-                        <div class="review__author">
-                          <span>Stacey M.</span>
-                          <div class="stars stars_4 stars_small">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </div>
-                        </div>
-                        <div class="review__date">
-                          19/02/2020
-                        </div>
-                        <div class="review__stars"></div>
-                        <div class="review__title">
-                          Taste great
-                        </div>
-                        <div class="review__descr">
-                          BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
-                          breakfast then I skip lunch and feel great through out the day.
-                        </div>
-                        <div class="review__reviewed labeled">
-                          <span class="label">Flavor Reviewed</span>
-                          <span>Rich Chocolate</span>
-                        </div>
-                      </div>
-                      <div class="review">
-                        <div class="review__author">
-                          <span>Matthew V.</span>
-                          <div class="stars stars_4 stars_small">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </div>
-                        </div>
-                        <div class="review__date">
-                          19/02/2020
-                        </div>
-                        <div class="review__stars"></div>
-                        <div class="review__title">
-                          Taste great
-                        </div>
-                        <div class="review__descr">
-                          BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
-                          breakfast then I skip lunch and feel great through out the day.
-                        </div>
-                        <div class="review__reviewed labeled">
-                          <span class="label">Flavor Reviewed</span>
-                          <span>Rich Chocolate</span>
-                        </div>
-                      </div>
-                      <div class="review">
-                        <div class="review__author">
-                          <span>Matthew V.</span>
-                          <div class="stars stars_4 stars_small">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </div>
-                        </div>
-                        <div class="review__date">
-                          19/02/2020
-                        </div>
-                        <div class="review__stars"></div>
-                        <div class="review__title">
-                          Taste great
-                        </div>
-                        <div class="review__descr">
-                          BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
-                          breakfast then I skip lunch and feel great through out the day.
-                        </div>
-                        <div class="review__reviewed labeled flavor flavor_choco">
-                          <span class="label">Flavor Reviewed</span>
-                          <span>Rich Chocolate</span>
-                        </div>
-                      </div>
-                      <div class="reviews-list__pagination">
-                        <nav aria-label="Page navigation example">
-                          <ul class="pagination">
-                            <li class="page-item"><a class="page-link page-link_prev" href="#"></a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#">8</a></li>
-                            <li class="page-item"><a class="page-link page-link_next" href="#"></a></li>
-                          </ul>
-                        </nav>
-                      </div>
+                    <div class="reviews-list__pagination">
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item"><a class="page-link page-link_prev" href="#"></a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">...</a></li>
+                          <li class="page-item"><a class="page-link" href="#">8</a></li>
+                          <li class="page-item"><a class="page-link page-link_next" href="#"></a></li>
+                        </ul>
+                      </nav>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="benefits">
-                <div class="benefit">
-                  <div class="benefit__image">
-                    <img src="images/single-product/benefit1.png" alt="benefit">
-                  </div>
-                  <h3 class="benefit__title">
-                    Benefit 1
-                  </h3>
-                  <p class="benefit__descr">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed eiusmod tempor incididunt ut.
-                  </p>
+            </div>
+            <div class="benefits">
+              <div class="benefit">
+                <div class="benefit__image">
+                  <img src="images/single-product/benefit1.png" alt="benefit">
                 </div>
-                <div class="benefit">
-                  <div class="benefit__image">
-                    <img src="images/single-product/benefit2.png" alt="benefit">
-                  </div>
-                  <h3 class="benefit__title">
-                    Benefit 2
-                  </h3>
-                  <p class="benefit__descr">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed eiusmod tempor incididunt ut.
-                  </p>
+                <h3 class="benefit__title">
+                  Benefit 1
+                </h3>
+                <p class="benefit__descr">
+                  Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed eiusmod tempor incididunt ut.
+                </p>
+              </div>
+              <div class="benefit">
+                <div class="benefit__image">
+                  <img src="images/single-product/benefit2.png" alt="benefit">
                 </div>
-                <div class="benefit benefit_reverse">
-                  <div class="benefit__image">
-                    <img src="images/single-product/benefit3.png" alt="benefit">
-                  </div>
-                  <h3 class="benefit__title">
-                    Benefit 3
-                  </h3>
-                  <p class="benefit__descr">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed eiusmod tempor incididunt ut.
-                  </p>
+                <h3 class="benefit__title">
+                  Benefit 2
+                </h3>
+                <p class="benefit__descr">
+                  Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed eiusmod tempor incididunt ut.
+                </p>
+              </div>
+              <div class="benefit benefit_reverse">
+                <div class="benefit__image">
+                  <img src="images/single-product/benefit3.png" alt="benefit">
                 </div>
-                <div class="benefit benefit_reverse">
-                  <div class="benefit__image">
-                    <img src="images/single-product/benefit4.png" alt="benefit">
-                  </div>
-                  <h3 class="benefit__title">
-                    Benefit 4
+                <h3 class="benefit__title">
+                  Benefit 3
+                </h3>
+                <p class="benefit__descr">
+                  Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed eiusmod tempor incididunt ut.
+                </p>
+              </div>
+              <div class="benefit benefit_reverse">
+                <div class="benefit__image">
+                  <img src="images/single-product/benefit4.png" alt="benefit">
+                </div>
+                <h3 class="benefit__title">
+                  Benefit 4
+                </h3>
+                <p class="benefit__descr">
+                  Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed eiusmod tempor incididunt ut.
+                </p>
+              </div>
+            </div>
+            <section class="banner banner_full">
+              <div class="banner__img">
+                <div class="banner__titles">
+                  <h3 class="banner__title">
+                    Find your product
                   </h3>
-                  <p class="benefit__descr">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed eiusmod tempor incididunt ut.
-                  </p>
+                  <h4 class="banner__subtitle">
+                    Get personalized recommendations
+                  </h4>
+                </div>
+                <div class="banner__link">
+                  <a href="#" target="_blank" class="banner__link-more">
+                    TAKE THE QUIZ
+                  </a>
                 </div>
               </div>
-              <section class="banner banner_full">
-                <div class="banner__img">
-                  <div class="banner__titles">
-                    <h3 class="banner__title">
-                      Find your product
-                    </h3>
-                    <h4 class="banner__subtitle">
-                      Get personalized recommendations
-                    </h4>
+              <div class="banner-bottom__links">
+                <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                    <div class="banner-bottom__link">
+                      Want an extra 20% off this season’s must-have styles? <a href="#">Refer A Friend!</a>
+                    </div>
                   </div>
-                  <div class="banner__link">
-                    <a href="#" target="_blank" class="banner__link-more">
-                      TAKE THE QUIZ
+                  <div class="col-md-12 col-lg-6">
+                    <div class="banner-bottom__link">
+                      Let us know how we’re doing. <a href="#">Give Feedback</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="compare">
+              <h2 class="compare__title">
+                Product Comparison
+              </h2>
+              <div class="compare-slider" id="compareSlider">
+                <div class="compare-slide">
+                  <div class="compare-slide__product">
+                    <img src="images/single-product/slide1.png" alt="slide product">
+                    <h3>
+                      BOOST MAX™ Women
+                    </h3>
+                    <div class="slide-stars">
+                      <div class="stars stars_4">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <span>4.2</span>
+                    </div>
+                    <a href="#" class="red-link">
+                      319 reviews
                     </a>
                   </div>
-                </div>
-                <div class="banner-bottom__links">
-                  <div class="row">
-                    <div class="col-md-12 col-lg-6">
-                      <div class="banner-bottom__link">
-                        Want an extra 20% off this season’s must-have styles? <a href="#">Refer A Friend!</a>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-lg-6">
-                      <div class="banner-bottom__link">
-                        Let us know how we’re doing. <a href="#">Give Feedback</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <div class="compare">
-                <h2 class="compare__title">
-                  Product Comparison
-                </h2>
-                <div class="compare-slider" id="compareSlider">
-                  <div class="compare-slide">
-                    <div class="compare-slide__product">
-                      <img src="images/single-product/slide1.png" alt="slide product">
+                  <div class="compare-slide__info">
+                    <div>
                       <h3>
-                        BOOST MAX™ Women
+                        For People Who
                       </h3>
-                      <div class="slide-stars">
-                        <div class="stars stars_4">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                        </div>
-                        <span>4.2</span>
-                      </div>
-                      <a href="#" class="red-link">
-                        319 reviews
-                      </a>
+                      <p>
+                        Want tailored nutrition
+                        for women with high protein
+                      </p>
                     </div>
-                    <div class="compare-slide__info">
-                      <div>
-                        <h3>
-                          For People Who
-                        </h3>
-                        <p>
-                          Want tailored nutrition 
-                          for women with high protein
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          30g
-                        </h3>
-                        <p>
-                          Protein Grams Per Serving
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          160
-                        </h3>
-                        <p>
-                          Calories Per Serving
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          Flavors
-                        </h3>
-                        <p>
-                          Rich Chocolate and Very Vanilla
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="compare-slide">
-                    <div class="compare-slide__product">
-                      <img src="images/single-product/slide2.png" alt="slide product">
+                    <div>
                       <h3>
-                        BOOST MAX™ Women
+                        30g
                       </h3>
-                      <div class="slide-stars">
-                        <div class="stars stars_4">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                        </div>
-                        <span>4.2</span>
-                      </div>
-                      <a href="#" class="red-link">
-                        196 reviews
-                      </a>
+                      <p>
+                        Protein Grams Per Serving
+                      </p>
                     </div>
-                    <div class="compare-slide__info">
-                      <div>
-                        <h3>
-                          For People Who
-                        </h3>
-                        <p>
-                          Prefer to add high protein powder mix
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          14g
-                        </h3>
-                        <p>
-                          Protein Grams Per Serving
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          270
-                        </h3>
-                        <p>
-                          Calories Per Serving
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          Flavors
-                        </h3>
-                        <p>
-                          Rich Chocolate
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="compare-slide">
-                    <div class="compare-slide__product">
-                      <img src="images/single-product/slide3.png" alt="slide product">
+                    <div>
                       <h3>
-                        BOOST MAX™ Women
+                        160
                       </h3>
-                      <div class="slide-stars">
-                        <div class="stars stars_4">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                        </div>
-                        <span>4.2</span>
-                      </div>
-                      <a href="#" class="red-link">
-                        319 reviews
-                      </a>
+                      <p>
+                        Calories Per Serving
+                      </p>
                     </div>
-                    <div class="compare-slide__info">
-                      <div>
-                        <h3>
-                          For People Who
-                        </h3>
-                        <p>
-                          Prefer to add high protein powder mix
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          14g
-                        </h3>
-                        <p>
-                          Protein Grams Per Serving
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          270
-                        </h3>
-                        <p>
-                          Calories Per Serving
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          Flavors
-                        </h3>
-                        <p>
-                          Rich Chocolate
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="compare-slide">
-                    <div class="compare-slide__product">
-                      <img src="images/single-product/slide4.png" alt="slide product">
+                    <div>
                       <h3>
-                        BOOST MAX™ Women
+                        Flavors
                       </h3>
-                      <div class="slide-stars">
-                        <div class="stars stars_4">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                        </div>
-                        <span>4.2</span>
-                      </div>
-                      <a href="#" class="red-link">
-                        196 reviews
-                      </a>
-                    </div>
-                    <div class="compare-slide__info">
-                      <div>
-                        <h3>
-                          For People Who
-                        </h3>
-                        <p>
-                          Prefer to add high protein powder mix
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          14g
-                        </h3>
-                        <p>
-                          Protein Grams Per Serving
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          270
-                        </h3>
-                        <p>
-                          Calories Per Serving
-                        </p>
-                      </div>
-                      <div>
-                        <h3>
-                          Flavors
-                        </h3>
-                        <p>
-                          Rich Chocolate
-                        </p>
-                      </div>
+                      <p>
+                        Rich Chocolate and Very Vanilla
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="instaline">
-                <img src="images/single-product/insta.png" alt="insta">
-                <span>
-                  @boostnutrition
-                </span>
-                <div class="instaline__tags">
-                  <a href="#">
-                    #BOOSTnutrition
-                  </a>
-                  <a href="#">
-                    #boostglucosecontrol
-                  </a>
-                  <a href="#">
-                    #BOOSTMobility
-                  </a>
+                <div class="compare-slide">
+                  <div class="compare-slide__product">
+                    <img src="images/single-product/slide2.png" alt="slide product">
+                    <h3>
+                      BOOST MAX™ Women
+                    </h3>
+                    <div class="slide-stars">
+                      <div class="stars stars_4">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <span>4.2</span>
+                    </div>
+                    <a href="#" class="red-link">
+                      196 reviews
+                    </a>
+                  </div>
+                  <div class="compare-slide__info">
+                    <div>
+                      <h3>
+                        For People Who
+                      </h3>
+                      <p>
+                        Prefer to add high protein powder mix
+                      </p>
+                    </div>
+                    <div>
+                      <h3>
+                        14g
+                      </h3>
+                      <p>
+                        Protein Grams Per Serving
+                      </p>
+                    </div>
+                    <div>
+                      <h3>
+                        270
+                      </h3>
+                      <p>
+                        Calories Per Serving
+                      </p>
+                    </div>
+                    <div>
+                      <h3>
+                        Flavors
+                      </h3>
+                      <p>
+                        Rich Chocolate
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div class="instaline-images">
-                  <div class="instaline-image">
-                    <img src="images/single-product/instaline.png" alt="instaline">
+                <div class="compare-slide">
+                  <div class="compare-slide__product">
+                    <img src="images/single-product/slide3.png" alt="slide product">
+                    <h3>
+                      BOOST MAX™ Women
+                    </h3>
+                    <div class="slide-stars">
+                      <div class="stars stars_4">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <span>4.2</span>
+                    </div>
+                    <a href="#" class="red-link">
+                      319 reviews
+                    </a>
                   </div>
-                  <div class="instaline-image">
-                    <img src="images/single-product/instaline2.png" alt="instaline">
+                  <div class="compare-slide__info">
+                    <div>
+                      <h3>
+                        For People Who
+                      </h3>
+                      <p>
+                        Prefer to add high protein powder mix
+                      </p>
+                    </div>
+                    <div>
+                      <h3>
+                        14g
+                      </h3>
+                      <p>
+                        Protein Grams Per Serving
+                      </p>
+                    </div>
+                    <div>
+                      <h3>
+                        270
+                      </h3>
+                      <p>
+                        Calories Per Serving
+                      </p>
+                    </div>
+                    <div>
+                      <h3>
+                        Flavors
+                      </h3>
+                      <p>
+                        Rich Chocolate
+                      </p>
+                    </div>
                   </div>
-                  <div class="instaline-image">
-                    <img src="images/single-product/instaline3.png" alt="instaline">
+                </div>
+                <div class="compare-slide">
+                  <div class="compare-slide__product">
+                    <img src="images/single-product/slide4.png" alt="slide product">
+                    <h3>
+                      BOOST MAX™ Women
+                    </h3>
+                    <div class="slide-stars">
+                      <div class="stars stars_4">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <span>4.2</span>
+                    </div>
+                    <a href="#" class="red-link">
+                      196 reviews
+                    </a>
                   </div>
-                  <div class="instaline-image">
-                    <img src="images/single-product/instaline4.png" alt="instaline">
-                  </div>
-                  <div class="instaline-image">
-                    <img src="images/single-product/instaline5.png" alt="instaline">
-                  </div>
-                  <div class="instaline-image">
-                    <img src="images/single-product/instaline6.png" alt="instaline">
+                  <div class="compare-slide__info">
+                    <div>
+                      <h3>
+                        For People Who
+                      </h3>
+                      <p>
+                        Prefer to add high protein powder mix
+                      </p>
+                    </div>
+                    <div>
+                      <h3>
+                        14g
+                      </h3>
+                      <p>
+                        Protein Grams Per Serving
+                      </p>
+                    </div>
+                    <div>
+                      <h3>
+                        270
+                      </h3>
+                      <p>
+                        Calories Per Serving
+                      </p>
+                    </div>
+                    <div>
+                      <h3>
+                        Flavors
+                      </h3>
+                      <p>
+                        Rich Chocolate
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <section class="section-instaline">
+            <div class="instaline">
+              <img src="images/single-product/insta.png" alt="insta">
+              <span>
+                @boostnutrition
+              </span>
+              <div class="instaline__tags">
+                <a href="#">
+                  #BOOSTnutrition
+                </a>
+                <a href="#">
+                  #boostglucosecontrol
+                </a>
+                <a href="#">
+                  #BOOSTMobility
+                </a>
+              </div>
+              <div class="instaline-images">
+                <div class="instaline-image">
+                  <img src="images/single-product/instaline.png" alt="instaline">
+                </div>
+                <div class="instaline-image">
+                  <img src="images/single-product/instaline2.png" alt="instaline">
+                </div>
+                <div class="instaline-image">
+                  <img src="images/single-product/instaline3.png" alt="instaline">
+                </div>
+                <div class="instaline-image">
+                  <img src="images/single-product/instaline4.png" alt="instaline">
+                </div>
+                <div class="instaline-image">
+                  <img src="images/single-product/instaline5.png" alt="instaline">
+                </div>
+                <div class="instaline-image">
+                  <img src="images/single-product/instaline6.png" alt="instaline">
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </div>
