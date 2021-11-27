@@ -1,7 +1,7 @@
 .offer {
     position: relative;
     color: #fff;
-    padding: 154px 0 191px 0;
+    padding: 0 0 191px 0;
     &::after {
         position: absolute;
         content: "";
@@ -15,17 +15,6 @@
         transform: translateX(-50%);
         bottom: 48px;
         display: none;
-    }
-    &__group-title {
-    }
-
-    &__posttitle {
-    }
-
-    &__title {
-    }
-
-    &__text {
     }
 
     &__btn {
