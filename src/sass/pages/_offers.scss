@@ -126,6 +126,17 @@
     }
 }
 
+.offers-products {
+    padding: 60px 0 70px 0;
+    &__title {
+        text-align: center;
+        margin: 0 0 42px 0;
+    }
+
+    &__btn {
+        text-align: center;
+    }
+}
 
 
 
@@ -228,6 +239,19 @@
             object-position: center;
             max-height: 360px;
             margin-left: -30px;
+        }
+    }
+}
+
+@media (max-width:576px){
+    .offers-products {
+        padding: 27px 0 50px 0;
+        border-top: 1px solid #E0E9EE;
+        &__title {
+            margin: 0 0 26px 0;
+        }
+        &__btn {
+            margin: 35px 0 0 0;
         }
     }
 }
