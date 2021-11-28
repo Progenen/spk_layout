@@ -657,10 +657,12 @@ footer {
         background-color: transparent;
 
         .breadcrumb-item {
-            
+            position: relative;
             a {
                 color: #000;
-
+                display: inline-block;
+                padding: 0 0 0 15px;
+                position: relative;
                 svg {
                     position: relative;
                     top: -3px;
@@ -670,6 +672,8 @@ footer {
             }
 
             + .breadcrumb-item:before {
+                position: absolute;
+                top: 0;
                 color: #808080;
             }
         }
@@ -798,6 +802,26 @@ footer {
                 }
             }
         }
+    }
+}
+
+.date {
+    display: flex;
+    align-items: center;
+
+    &__icon  {
+        width: 15px;
+        height: 16px;
+        margin: -3px 4px 0 0;
+        g {
+            opacity: 1;
+            fill: #A7A7A7;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 24px;
     }
 }
 
@@ -985,6 +1009,13 @@ footer {
 
     .image-adaptive__col {
         padding: 0;
+    }
+
+    .breadcrumbs .breadcrumb .breadcrumb-item a {
+        white-space: nowrap;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 

@@ -136,25 +136,7 @@
         margin: auto;
     }
 
-    &__item-date {
-        display: flex;
-        align-items: center;
-    }
-
-    &__item-date-icon  {
-        width: 15px;
-        height: 16px;
-        margin: -3px 4px 0 0;
-        g {
-            opacity: 1;
-            fill: #A7A7A7;
-        }
-    }
-
-    &__item-date-text {
-        font-size: 14px;
-        line-height: 24px;
-    }
+    
 
     &__item-body {
         height: 116px;
