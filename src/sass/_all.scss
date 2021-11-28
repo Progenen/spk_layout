@@ -64,6 +64,25 @@ footer {
         margin: auto;
     }
 }
+.offer-small {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    &__group {
+        margin: 0 0 50px 0;
+        text-align: center;
+    }
+
+    &__title {
+
+    }
+
+    &__text {
+        width: 100%;
+        margin: 9px auto 0 auto;
+    }
+}
 .btn {
     --btn-color: #e0251b;
     cursor: pointer;
@@ -216,6 +235,24 @@ footer {
     &_long {
         max-width: 232px;
     }
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.ghost-btn {
+    border: 2px solid #fff;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 13px 0;
+    text-align: center;
+    cursor: pointer;
     &:hover {
         color: #fff;
         text-decoration: none;
@@ -776,37 +813,6 @@ footer {
     }
     img {
         margin-right: 10px;
-    }
-}
-.breadcrumbs {
-
-    .breadcrumb {
-        margin: 20px 0;
-        padding: 0;
-        background-color: transparent;
-
-        .breadcrumb-item {
-            
-            a {
-                color: #000;
-
-                svg {
-                    position: relative;
-                    top: -3px;
-                    width: 15px;
-                    height: 18px;
-                }
-            }
-
-            + .breadcrumb-item:before {
-                color: #808080;
-            }
-        }
-        &_alt {
-            .breadcrumb-item a{
-                color: #fff;
-            }
-        }
     }
 }
 
