@@ -578,7 +578,7 @@ footer {
         .breadcrumb-item {
             
             a {
-                color: $dark-gray;
+                color: #000;
 
                 svg {
                     position: relative;
@@ -589,8 +589,14 @@ footer {
             }
 
             + .breadcrumb-item:before {
-                color: #DCDCDC;
+                color: #808080;
             }
+        }
+    }
+
+    &_alt {
+        .breadcrumb .breadcrumb-item a {
+            color: #fff;
         }
     }
 }
