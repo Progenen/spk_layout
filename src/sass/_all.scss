@@ -1063,6 +1063,11 @@ footer {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+    .col-vm-6 {
+        flex: 0 1 45%;
+        padding: 0 15px;
+    }
 }
 
 .labeled {
