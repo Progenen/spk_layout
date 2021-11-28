@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   
     // Offer alert event
-    if (document.querySelector('.offer__alert-close')) {
-      document.querySelector('.offer__alert-close').addEventListener('click', () => {
-        document.querySelector('.offer__alert').classList.add('offer__alert-hide');
+    if (document.querySelector('.home-offer__alert-close')) {
+      document.querySelector('.home-offer__alert-close').addEventListener('click', () => {
+        document.querySelector('.home-offer__alert').classList.add('home-offer__alert-hide');
       });
     }
 
