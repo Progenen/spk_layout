@@ -25,6 +25,33 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.share-block-mob-place').append(document.querySelector('.storie-share-block'));
       }
     }
+
+    // Adaptive in blogPage
+    if (document.querySelector(".blog-catalog__tabs")) {
+      if (window.screen.width < 768) {
+        const tabs = document.querySelector('.blog-catalog__tabs');
+        const tabsCurrent = document.querySelector('.blog-catalog__tabs-current');
+        const tabsLink = document.querySelectorAll('.blog-catalog__tabs-item');
+        const dropMenu = document.querySelector('.blog-catalog__tabs-dropdown-menu')
+
+        dropMenu.append(tabs);
+
+        for (let i = 0; i < tabsLink.length; i++ ){
+          tabsLink[i].classList.add('dropdown-item');
+          if (tabsLink[i].querySelector('a').classList.contains('active')) {
+            tabsCurrent.append(tabsLink[i].textContent);
+          }
+          tabsLink[i].addEventListener('click', () => {
+              tabsLink.forEach(element => {
+                element.classList.remove('active');
+              });
+              tabsCurrent.textContent = '';
+              tabsCurrent.append(tabsLink[i].textContent)
+              tabsLink[i].classList.add('active')
+          })
+        }
+      }
+    }
     
   
   initSimpleUi();

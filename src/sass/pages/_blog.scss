@@ -4,3 +4,284 @@
         max-width: 495px;
     }
 }
+.blog-catalog {
+    padding: 47px 0 55px 0;
+    .tab-pane.active {
+        display: flex;
+    }
+    &__tabs {
+        display: flex;
+        list-style: none;
+        margin: 0 0 10px 0;
+        justify-content: center;
+    }
+
+    &__tabs-item {
+        margin: 0 1px;
+    }
+
+    &__tabs-link {
+        padding: 10px 25px;
+        display: block;
+        border: 1px solid transparent;
+        color: #000;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 24px;
+        border-radius: 5px;
+        &.active {
+            color: $color1;
+            border-color: $color1;
+        }
+        &.active:hover {
+            color: $color1;
+        }
+        &:hover {
+            color: #000;
+        }
+    }
+
+    &__item {
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-decoration: none;
+        background-position: center;
+        height: 431px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+        z-index: 2;
+        position: relative;
+        margin: 33px 0 0 0;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            opacity: 0;
+            left: 0;
+            z-index: -1;
+            transition: .3s;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+            .blog-catalog__item-body {
+                background: none;
+                color: #fff;
+            }
+            .blog-catalog__item-body {
+                padding-top: 0;
+                padding-bottom: 0;
+                &::after {
+                    opacity: 0;
+                }
+            }
+            .blog-catalog__item-header {
+                padding-bottom: 6px;
+                &::before{
+                    opacity: 0;
+                }
+            }
+            .blog-catalog__item-footer {
+                display: block;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__item-footer {
+        padding: 0 20px 20px;
+        display: none;
+        transform: translateY(200%);
+    }
+
+    &__item-content {
+        padding: 0 20px;
+    }
+
+    &__item-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        padding-bottom: 30px;
+        transition: .2s;
+        height: 315px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transition: .2s;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(-180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+            transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+    }
+
+    &__item-btn {
+        max-width: 275px;
+        margin: auto;
+    }
+
+    &__item-date {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item-date-icon  {
+        width: 15px;
+        height: 16px;
+        margin: -3px 4px 0 0;
+        g {
+            opacity: 1;
+            fill: #A7A7A7;
+        }
+    }
+
+    &__item-date-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &__item-body {
+        height: 116px;
+        background-color: #F4F8FA;
+        margin: auto 0 0 0;
+        color: #000;
+        padding: 23px 20px 27px;
+        position: relative;
+        transition: .1s;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            width: 36px;
+            height: 28px;
+            background-image: url('../images/icons/quotes-blog.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }   
+    }
+
+    &__item-text {
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow-y: hidden;
+    }
+
+    &__item-title {
+        font-family: Oswald;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__item-bad-wrapper {
+        justify-content: flex-start;
+        margin: 20px 0 0 0;
+    }
+
+    &__item-bad {
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        color: #FFFFFF;
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 11px;
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+
+@media (max-width:992px){
+    .blog-catalog {
+        &__tabs-item {
+            margin: 0 2px;
+        }
+
+        &__tabs-link {
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width:768px){
+    .blog-catalog {
+        &__tabs-dropdown-menu {
+            width: 100%;
+            border-color: $color1;
+        }
+        &__tabs-link.active {
+            display: none;
+        }
+        &__tabs-item.active {
+            display: none;
+        }
+        &__tabs-current {
+            width: 100%;
+            padding: 10px 25px;
+            color: $color1;
+            border: 1px solid $color1;
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 24px;
+            border-radius: 5px;
+            position: relative;
+            &::after {  
+                content: "";
+                position: absolute;
+                width: 35px;
+                height: 15px;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url('#{$sprite}arrow-down-red');
+                background-size: auto;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}
+
+@media (max-width:576px){
+    .blog-catalog {
+        &__tabs-current::after {
+            width: 20px;
+            height: 12px;
+        }
+        &__tabs-dropdown-menu {
+            max-width: 320px;
+        }
+        &__tabs-current {
+            margin: 0 auto 10px auto;
+            max-width: 320px;
+        }
+        &__item {
+            max-width: 320px;
+            margin: 20px auto 0 auto;
+        }
+    }
+}

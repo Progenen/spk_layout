@@ -240,6 +240,24 @@ footer {
         text-decoration: none;
     }
 }
+.ghost-btn {
+    border: 2px solid #fff;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 13px 0;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
 
 .input-main {
     padding-top: 20px;
