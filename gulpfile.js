@@ -56,6 +56,7 @@ function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
         'src/JS/libs/popper.min.js',
+        'src/JS/libs/jquery.validate.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
         'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/jquery-nice-select/js/jquery.nice-select.min.js',

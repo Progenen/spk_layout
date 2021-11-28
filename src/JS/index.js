@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     
-  
   initSimpleUi();
   initMenu();
   initFooter();
@@ -188,6 +187,34 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+  function modal (modal, active) {
+    const modal = document.querySelector(modal);
+    const modalActive = document.querySelectorAll(active);
+
+    modalActive.forEach(element => {
+      element.addEventListener('click', () => {
+        if (!modal.classList.contains('show')) {
+          element.classList.add('active');
+          modal.classList.add('show');
+        } else {
+          element.classList.remove('active');
+          modal.classList.remove('show');
+        }
+      })
+    })
+    
+    modal.addEventListener('click', (e) => {
+      if (e.target != modal.querySelector('.modal__body')) {
+        modal.classList.remove('show');
+        modalActive.forEach(element => {
+          element.classList.remove('active')
+        });
+      }
+    })
+
+
+  }
 
   function initSimpleUi() {
 
