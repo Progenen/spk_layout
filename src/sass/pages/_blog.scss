@@ -41,6 +41,10 @@
         }
     }
 
+    &__more-btn {
+        margin: 57px 0 0 0;
+    }
+
     &__item {
         background-size: cover;
         background-repeat: no-repeat;
@@ -262,6 +266,10 @@
                 background-repeat: no-repeat;
                 background-position: center;
             }
+        }
+
+        &__more-btn {
+            margin: 40px 0 0 0;
         }
     }
 }

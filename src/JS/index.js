@@ -116,11 +116,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     
-  
-  initSimpleUi();
-  initMenu();
-  initFooter();
-
 
     function scrollBlock (block, stopBlock, padding) { 
 			if (document.querySelector(block)) {
