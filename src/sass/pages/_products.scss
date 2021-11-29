@@ -872,7 +872,7 @@
 
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 35px;
+    background-size: 26px;
     background-image: url("#{$sprite}red-star");
 
     &:not(:last-of-type) {
@@ -886,7 +886,7 @@
       width: 15px;
       height: 15px;
 
-      background-size: 23px;
+      background-size: 16px;
     }
   }
 }
