@@ -44,7 +44,7 @@
 
         background-repeat: no-repeat;
         background-position: left center;
-        background-size: 34px;
+        background-size: 46px;
       }
 
       &:first-of-type {
@@ -407,119 +407,6 @@
   justify-content: center;
 }
 
-.section-tabs {
-  padding-top: 75px;
+.tabs {
 
-  .nav-tabs {
-    border-top: 1px solid $border-blue;
-    border-bottom: 1px solid $border-blue;
-
-    .nav-link {
-      --tab-icon: #000;
-      display: flex;
-      align-items: center;
-      padding: 17px 45px;
-      border-left: none;
-      border-right: none;
-      border-top: none;
-      border-bottom: 5px solid transparent;
-      transition: border-color .25s ease;
-
-      font-family: "Oswald";
-      font-weight: 400;
-      font-size: 18px;
-
-      color: #000;
-
-      svg {
-        display: block;
-        width: 25px;
-        height: 24px;
-        margin-right: 12px;
-      }
-
-      &.active {
-        --tab-icon: #009A40;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        border-bottom: 5px solid $green;
-        color: $green;
-      }
-
-      &:hover {
-        border-left: none;
-        border-right: none;
-        border-top: none;
-      }
-    }
-  }
-
-  .tab {
-    padding-top: 45px;
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-
-      li {
-        margin-bottom: 5px;
-        padding-left: 27px;
-        background-repeat: no-repeat;
-        background-position: left center;
-        background-size: 18px auto;
-        background-image: url("#{$sprite}green-check");
-
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-}
-
-.helpful-list {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  margin: 11px 0 70px 0;
-
-  &__item {
-    width: calc(50% - 20px);
-    padding-left: 105px;
-    margin-top: 39px;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 74px auto;
-
-    &:first-of-type {
-      background-image: url("#{$sprite}helpful1");
-    }
-    &:nth-of-type(2) {
-      background-image: url("#{$sprite}helpful2");
-    }
-    &:nth-of-type(3) {
-      background-image: url("#{$sprite}helpful3");
-    }
-    &:nth-of-type(4) {
-      background-image: url("#{$sprite}helpful4");
-    }
-    &:nth-of-type(5) {
-      background-size: 69px;
-      background-image: url("#{$sprite}helpful5");
-    }
-  }
-
-  h4 {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
 }

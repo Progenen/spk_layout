@@ -1,5 +1,4 @@
 .storie-profile {
-    padding: 68px 0 0 0;
     background: #F6ECDD;
 
     &__avatar {
@@ -11,9 +10,6 @@
 
     &__content {
         padding: 47px 0 86px 40px;
-    }
-
-    &__name {
     }
 
     &__social-list {
@@ -33,9 +29,6 @@
     &__social-icon {
         width: 24px;
         height: 24px;
-    }
-
-    &__social-link {
     }
 
     &__quotes {
@@ -60,9 +53,70 @@
     }
 }
 
+.storie-text {
+    margin-top: 125px;
+    padding-bottom: 64px;
+    &__title {
+        font-family: Oswald;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 24px;
+    }
+}
+
+.storie-card-wrapper {
+    height: 591px;
+}
+
+.storie-share-block {
+    position: relative;
+    &__img {
+        position: absolute;
+        top: 50px;
+        right: 22px;
+    }
+
+    &__title {
+        position: relative;
+    }
+
+    &__btn {
+        margin-left: 0;
+    }
+}
+
+.storie-more {
+    background: #F4F8FA;
+    padding: 75px 0 64px 0;
+
+    &__title {
+        margin: 0;
+        text-align: center;
+    }
+
+    &__btn {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        display: block;
+        margin: 67px auto 0 auto;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color1;
+        &:hover {
+            color: $color1
+        }
+    }
+}
+
 @media (max-width:1200px){
     .storie-profile {
-        padding-bottom: 86px;
         .row {
             align-items: center;
         }
@@ -80,12 +134,11 @@
 
 @media (max-width:992px){
     .storie-profile {
-        padding-top: 78px;
         padding-bottom: 83px;
         &__avatar {
             width: 100%;
-            max-height: 350px;
-            object-position: center -100px;
+            max-height: 450px;
+            object-position: center -200px;
             object-fit: cover;
         }
 
@@ -97,12 +150,29 @@
             margin-top: 30px;
         }
     }
+
+    .storie-share-block {
+
+        &__group {
+            order: 1;
+        }
+
+        &__btn {
+            order: 2;
+        }
+
+        &__img {
+            position: relative;
+            order: 0;
+            right: 0;
+            top: 0;
+        }
+    }
 }
 
 @media (max-width:769px){
     .storie-profile {
-        padding-bottom: 41px;
-
+        
         &__content {
             text-align: center;
         }
@@ -110,6 +180,11 @@
         &__social-list {
             justify-content: center;
             margin-top: 10px;
+        }
+
+        &__avatar {
+            max-height: 350px;
+            object-position: center -100px;
         }
 
         &__quotes {
@@ -122,10 +197,16 @@
             }
         }
     }
+
+    .storie-text {
+        margin-top: 50px;
+    }
 }
 
 @media (max-width:576px){
-    .storie-profile {
-        
+    .storie-profile__avatar {
+        max-height: none;
+        object-position: center;
+        margin: 0;
     }
 }

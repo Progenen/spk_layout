@@ -124,18 +124,6 @@ function fonts() {
         .pipe(dest(dir + '/fonts/'))
 }
 
-// Спрайт для векторной графики
-function svgsprite() {
-    return src('src/svg/src/**/*')
-        .pipe(sprite({
-            mode: {
-                stack: {
-                    sprite: 'sprite.svg'  // sprite file name
-                }
-            },
-        }))
-        .pipe(dest(dir + '/svg/dest/'))
-}
 
 exports.browsersync = browsersync;
 exports.scripts = scripts;
