@@ -1,106 +1,364 @@
-.products {
-  display: none;
-  padding-bottom: 60px;
+.products-list {
+  position: relative;
+  top: -20px;
 
-  &__title {
-    margin-bottom: 45px;
-    font-family: "Oswald";
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 30px;
+  @include media-xl {
+    top: 0;
   }
 
-  .banner {
-    width: 100%;
+  &:before {
+    display: block;
 
-    &__img {
-      display: flex;
-      flex-direction: column;
-      min-height: 450px;
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-size: 100% auto;
-      background-image: url("../images/products-section.png");
-      background-color: $red;
+    position: relative;
+    left: -15px;
+    bottom: -1px;
+    z-index: 10;
+
+    width: calc(100% + 30px);
+    height: 1px;
+
+    background-color: #fff;
+
+    @media (min-width: 360px) and (max-width: 1199px) {
+      content: "";
     }
 
-    &__titles {
+    @include media-xl {
+      display: none;
+    }
+  }
+
+  [class*="col-"] {
+
+    @media (min-width: 360px) and (max-width: 767px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+
+      &:first-of-type {
+        
+        &:after {
+          display: block;
+          content: "";
+
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          width: 1px;
+          height: 20px;
+
+          background-color: #fff;
+        }
+      }
+
+      &:nth-of-type(2n) {
+        
+        .product {
+          border-left-color: transparent;
+
+          .product-select {
+            
+            .list {
+              right: 0;
+              left: auto;
+            }
+          }
+        }
+      }
+
+      &.col-banner {
+        
+        &:nth-child(odd) {
+          flex: 0 0 100%;
+          max-width: 100%;
+
+          .product {
+
+            &_banner {
+              min-height: 359px;
+              padding-left: 54px;
+              padding-right: 54px;
+              border-top: 5px solid $green;
+              border-right: none;
+              border-left: none;  
+              border-bottom: none;
+
+              background-image: url("../images/bottle-full-mob.png");
+              background-position: center bottom;
+              background-size: 100% auto;
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          flex: 0 0 50%;
+          max-width: 50%;
+
+          .product {
+
+            &_banner {
+              min-height: 475px;
+              padding-top: 39px;
+              padding-left: 20px;
+              padding-right: 20px;
+              border-right: none;
+              border-left: 5px solid $green;  
+              border-bottom: none;
+              height: 100%;
+
+              background-image: url("../images/bottle-half-mob.png");
+              background-position: center bottom;
+              background-size: 100% auto;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+
+      &:nth-of-type(2) {
+        &:after,
+        &:before {
+          display: block;
+          content: "";
+          z-index: 2;
+
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          width: 1px;
+          height: 20px;
+
+          background-color: #fff;
+        }
+
+        &:before {
+          left: -1px;
+          right: auto;
+        }
+
+        &:after {
+          right: -1px;
+          left: auto;
+        }
+      }
+
+      &:nth-of-type(3n - 1) {
+        
+        .product {
+          border-left: none;
+          border-right: none;
+        }
+      }
+
+      &.col-banner {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+
+        .product_banner {
+          min-height: 484px;
+        }
+      }
+    }
+
+    @media (min-width: 360px) and (max-width: 1199px) {
+      padding-left: 0;
+      padding-right: 0;
+
+      margin-bottom: -1px;
+
+      .product {
+        margin-bottom: 0;
+      }
+      
+    }
+  }
+}
+
+.banner {
+  width: calc(100% + 30px);
+  position: relative;
+  left: -15px;
+
+  @include media-lg {
+    left: 0;
+    width: 100%;
+  }
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    min-height: 245px;
+    background-repeat: no-repeat;
+    background-position: left 10px top 38%,left top;
+    background-size: 112px auto , 100% auto;
+    background-image: url("../images/products-section-mob-bottles.png"), 
+                      url("../images/products-section-mob.png");
+    background-color: $red;
+
+    @media (min-width: 360px) {
+      background-position: left 32px top 38%, right top;
+      background-size: 112px auto , 360px auto;
+    }
+
+    @include media-md {
+      background-image: url("../images/products-section-tab-bottles.png"), 
+                        url("../images/products-section.png");
+      background-size: 205px auto , 100% auto;
+      background-position: left 80px top 38%, right top;
+      min-height: 380px;
+    }
+
+    @include media-xl {
+      background-image: url("../images/products-section-desk-bottles.png")
+                        url("../images/products-section.png");
+      background-size: 264px auto, 100% auto;
+      min-height: 450px;
+    }
+  }
+
+  &__titles {
+    position: absolute;
+    top: 0;
+    right: 49px;
+
+    max-width: 44%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+
+
+    @include media-md {
+      max-width: 235px;
+      position: relative;
+      top: 0;
+      right: -80px;
+    }
+
+    @include media-xl {
+      max-width: max-content;
       position: relative;
       top: 110px;
       right: -80px;
-
-      max-width: max-content;
-
-      margin-left: auto;
-      margin-right: auto;
-
-      display: flex;
-      flex-direction: column;
     }
+  }
 
-    &__title {
-      text-transform: uppercase;
+  &__title {
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 200;
+    font-family: "Oswald";
+
+    @include media-md {
       font-size: 45px;
       line-height: 50px;
-      font-weight: 200;
-      font-family: "Oswald";
     }
+  }
 
-    &__subtitle {
-      font-weight: bold;
+  &__subtitle {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+
+    @include media-md {
       font-size: 25px;
       line-height: 30px;
     }
+  }
 
-    &__link {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-top: auto;
+  &__link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    @include media-xl {
       margin-bottom: 45px;
+    }
+  }
 
-      text-align: center;
+  &__link-more {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+
+    transition: opacity .25s ease;
+
+    &:hover {
+      opacity: .7;
     }
 
-    &__link-more {
-      display: flex;
-      align-items: center;
-      font-size: 20px;
-      font-weight: bold;
-      color: #fff;
-      text-transform: uppercase;
+    &:focus {
+      opacity: 1;
+    }
 
-      transition: opacity .25s ease;
+    &:after {
+      display: block;
+      content: "";
 
-      &:hover {
-        opacity: .7;
-      }
+      width: 35px;
+      height: 15px;
 
-      &:focus {
-        opacity: 1;
-      }
+      margin-left: 5px;
 
-      &:after {
-        display: block;
-        content: "";
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 35px auto;
+      background-image: url("#{$sprite}section-arrow-right");
+    }
+  }
+}
 
-        width: 35px;
-        height: 15px;
+.products {
+  padding-bottom: 30px;
 
-        margin-left: 5px;
+  @include media-xl {
+    padding-bottom: 60px;
+  }
 
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 35px auto;
-        background-image: url("#{$sprite}section-arrow-right");
-      }
+  &__title {
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+
+    @include media-xl {
+      font-size: 50px;
+      margin-bottom: 45px;
     }
   }
 
   .banner-bottom {
 
     &__links {
-      margin-top: 30px;
+      margin-top: 15px;
+      display: none;
+
+      @include media-md {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+      }
+
+      @include media-lg {
+        margin-top: 30px;
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   
     &__link {
@@ -110,6 +368,10 @@
       text-align: center;
       font-size: 14px;
       line-height: 30px;
+
+      @include media-md {
+        margin-top: 15px;
+      }
   
       a {
         font-weight: 300;
@@ -122,15 +384,20 @@
 
 .product {
   position: relative;
-  margin-bottom: 30px;
-  padding: 30px 25px;
+  margin-bottom: 15px;
+  padding: 15px;
   border: 1px solid #E0E9EE;
   background: linear-gradient(to bottom, rgba(244, 248, 250, 0) 0%, rgba(244, 248, 250, 0) 47.4%, #F4F8FA 100%);
 
+  @include media-xl {
+    margin-bottom: 30px;
+    padding: 30px 25px;
+  }
+
   .badge {
     position: absolute;
-    right: 20px;
-    top: 83px;
+    right: -5px;
+    top: 0;
 
     padding: 0 0 0 3px;
     width: 48px;
@@ -157,22 +424,45 @@
 
   &__name {
     font-size: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     min-height: 40px;
     max-height: 40px;
     text-align: center;
     line-height: 20px;
     font-family: "Oswald";
+    font-weight: 400;
+
+    @include media-xl {
+      margin-bottom: 25px;
+    }
   }
 
   &__img {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 25px;
 
+    width: 100%;
+    height: 133px;
+
+    @include media-xl {
+      height: 150px;
+    }
+
     img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
       display: block;
       margin: 0 auto;
       max-width: 100%;
@@ -180,20 +470,32 @@
   }
 
   &_banner {
-    padding-top: 55px;
+    padding-top: 30px;
 
-    min-height: 591px;
+    min-height: 579px;
     background-image: url("../images/product_banner.png");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
+
+    border-left: 5px solid $green;
+
+    @include media-xl {
+      border-left: 1px solid #e0e9ee;
+      padding-top: 55px;
+    }
   }
 
   &__title {
     max-width: 259px;
     color: $green;
-    font-size: 30px;
+    font-size: 24px;
     font-family: "Oswald";
     font-weight: 700;
+
+    @include media-md {
+      font-size: 30px;
+    }
   }
 
   &__learn-more {
@@ -238,9 +540,13 @@
 }
 
 .product-select {
-  $border-blue: #D5E1EA;
+  $border-blue: $border-light;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+
+  @include media-xl {
+    margin-bottom: 25px;
+  }
 
   &__num {
     position: absolute;
@@ -265,23 +571,35 @@
     float: none;
     z-index: 7;
     height: 42px;
-    padding: 0 15px;
+    padding: 0 10px;
     border-radius: 5px;
     border: 1px solid $border-blue;
+    font-size: 12px;
 
     background-repeat: no-repeat;
     background-position: right 15px center;
     background-image: url("#{$sprite}select-arrow-down");
     background-size: 16px;
 
+    @include media-xl {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 14px;
+    }
+
     .list {
       z-index: 5;
-      top: 88%;
+      top: 90%;
       width: 100%;
+      min-width: 210px;
       border: 1px solid $border-blue;
       box-shadow: none;
 
       border-radius: 0 0 4px 4px;
+
+      @include media-md {
+        top: 88%;
+      }
     }
 
     &:after {
@@ -339,74 +657,76 @@
   label {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 10px;
+
+    @include media-md {
+      flex-direction: row;
+    }
+
+    @include media-xl {
+      font-size: 14px;
+    }
   }
 
   &__price-val {
     position: relative;
     top: -1px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
+
+    @include media-xl {
+      font-size: 16px;
+    }
   }
+}
 
-  &__delivery-days {
+.delivery-days {
 
-    @extend .product-select;
-    margin-bottom: 12px;
+  @extend .product-select;
+  margin-bottom: 12px;
 
-    select {
-      height: 40px;
+  select {
+    height: 40px;
+    padding-left: 34px;
+    font-size: 12px;
+    background-image: url("#{$sprite}delivery-box"), url("#{$sprite}default-select");
+    background-position: left center ,right 5px center;
+    background-size: 38px, 20px;
+
+    max-width: 370px;
+
+    @include media-xl {
       padding-left: 34px;
       font-size: 14px;
-      background-image: url("#{$sprite}delivery-box"), url("#{$sprite}default-select");
       background-position: left center ,right 5px center;
-      background-size: 38px ,20px;
     }
   }
 }
 
 .product-buttons {
-  margin-top: 28px;
+  margin-top: 15px;
   text-align: center;
 
-  .btn-add-to-cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10px 15px;
-
-    width: 100%;
-    color: #fff;
-
-    font-size: 16px;
-    font-weight: 500;
-
-    text-align: center;
-
-    &:before {
-        display: block;
-        content: "";
-        margin-right: 5px;
-
-        width: 22px;
-        height: 22px;
-
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url("#{$sprite}btn-basket");
-        background-size: 34px;
-    }
+  @include media-xl {
+    margin-top: 28px;
   }
 
   .btn-link {
     margin-top: 12px;
     font-size: 14px;
+    padding-top: 0;
+    padding-bottom: 0;
     line-height: 14px;
     font-weight: 500;
     color: $red;
 
     transition: opacity, .25s ease;
+
+    @include media-xl {
+      font-size: 12px;
+    }
 
     &:hover {
       text-decoration: none;
@@ -418,11 +738,39 @@
 .load-more {
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 75px;
+  margin-bottom: 38px;
+
+  @include media-xl {
+    margin-bottom: 75px;
+  }
 }
 
 .reviews {
-   margin-top: 100px;
+  margin-top: 35px;
+
+   > div:not(:last-of-type) {
+     display: none;
+   }
+
+   @include media-md {
+     margin-top: 50px;
+
+     > div:not(:last-of-type) {
+        display: flex;
+      }
+   }
+
+   @include media-xl {
+    margin-top: 100px;
+   }
+
+   .write-review {
+     display: none;
+
+     @include media-xl {
+       display: block;
+     }
+   }
 }
 
 .review-rating {
@@ -461,15 +809,40 @@
 
 .reviews-stats {
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
-  align-items: center;
-
+  position: relative;
   margin: 0 auto;
+  padding-left: 100px;
+
+  .stars {
+    margin-right: auto;
+  }
+
+  @include media-xl {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0;
+
+    .stars {
+      margin-right: 0;
+    }
+  }
 
   &__num {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 55px;
     line-height: 55px;
     font-weight: bold;
+
+    @include media-xl {
+      position: static;
+      transform: none;
+    }
   }
 
   &__info {
@@ -499,8 +872,12 @@
 
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 43px;
+    background-size: 35px;
     background-image: url("#{$sprite}red-star");
+
+    &:not(:last-of-type) {
+      margin-right: 3px;
+    }
   }
 
   &_small {
@@ -509,15 +886,12 @@
       width: 15px;
       height: 15px;
 
-      margin-right: 3px;
-
-      background-size: 30px;
+      background-size: 23px;
     }
   }
 }
 
 .reviews-sort {
-  display: flex;
   align-items: center;
   justify-content: space-between;
 
@@ -551,6 +925,11 @@
 }
 
 .reviews-list {
+  display: none;
+
+  @include media-md {
+    display: block;
+  }
 
   &__num {
     padding-bottom: 10px;
@@ -604,9 +983,8 @@
   &__reviewed {
     max-width: 180px;
     margin-top: 20px;
-    border-radius: 9px;
-    border: 1px solid $border-blue;
     min-height: 52px;
+
     padding: 13px 10px 9px 46px;
     
     background-repeat: no-repeat;
@@ -614,12 +992,88 @@
     background-repeat: no-repeat;
     background-size: 30px;
     background-image: url("../images/chocolate.png");
+    background-color: #fff;
 
     span {
       display: inline-block;
       font-size: 14px;
       margin-top: 4px;
     }
+  }
+}
+
+.reviews-mob {
+
+  @include media-md {
+    display: none;
+  }
+
+  &__title {
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 70px;
+    margin: 35px 0 17px;
+  }
+}
+
+.review-mob {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding-bottom: 30px;
+
+  text-align: center;
+
+  background-color: #F4F8FA;
+
+  &__img {
+    background-color: #fff;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 5px 5px 0px 0px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Oswald";
+    font-weight: 700;
+    margin-bottom: 10px;
+
+    &::before {
+      display: block;
+      content: "";
+      margin: 35px auto 15px;
+
+      width: 35px;
+      height: 29px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url("#{$sprite}review-mob");
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 17px;
+    margin-bottom: 15px;
+  }
+
+  &__author {
+    text-transform: uppercase;
+    margin-right: 10px;
   }
 }
 

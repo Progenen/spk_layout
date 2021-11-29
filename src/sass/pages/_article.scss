@@ -271,13 +271,17 @@
         margin-top: 50px;
         font-weight: 700;
     }
+    
 }
 
 .article-more {
     border-top: 1px solid #D5E1EA;
     padding: 75px 0 64px 0;
-    text-align: center;
+    &__title {
+        text-align: center;
+    }
     &__btn {
+        text-align: center;
         font-weight: 700;
         margin: 50px 0 0 0;
     }

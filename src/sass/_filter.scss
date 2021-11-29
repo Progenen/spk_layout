@@ -1,32 +1,309 @@
-.filter-field {
+.filter-trigger {
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  padding: 8px 14px;
+  border: 1px solid #000;
+  text-transform: uppercase;
 
-  label {
-    text-transform: uppercase;
-  }
-
-  select {
-    height: 45px;
-    padding: 0 15px;
-    border: 1px solid $border-blue;
-    border-radius: 10px;
-    font-size: 16px;
-
-    background-repeat: no-repeat;
-    background-position: right 18px center;
-    background-size: 14px;
-    background-image: url("#{$sprite}arrow-down-blue");
-  }
-
-  &:after {
+  &:before {
     display: block;
     content: "";
-    margin-top: 20px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #D5E1EA;
+
+    width: 17px;
+    height: 17px;
+
+    margin-right: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    background-image: url("#{$sprite}filters");
+  }
+
+  @include media-xl {
+    display: none;
+  }
+}
+
+.filter-field {
+
+  &_sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-xl {
+      display: block;
+    }
+
+    .items-found {
+      color: #8898A5;
+      font-size: 12px;
+
+      @include media-xl {
+        display: none;
+      }
+    }
+
+    label {
+      display: none;
+      text-transform: uppercase;
+
+      @include media-xl {
+        display: block;
+      }
+    }
+  
+    select {
+      padding: 0;
+      border-radius: 10px;
+      font-size: 14px;
+      padding-right: 22px;
+
+      max-width: max-content;
+      margin-left: auto;
+      border: none;
+  
+      background-repeat: no-repeat;
+      background-position: right 0 center;
+      background-size: 14px;
+      background-image: url("#{$sprite}arrow-down");
+
+      @include media-xl {
+        border: 1px solid $border-blue;
+        padding: 0 15px;
+        height: 45px;
+        font-size: 16px;
+        max-width: 100%;
+
+        background-position: right 18px center;
+        background-image: url("#{$sprite}arrow-down-blue");
+      }
+    }
+  
+    &:after {
+      display: block;
+      content: "";
+      margin-top: 20px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid $border-light;
+    }
+  }
+}
+
+.filter-found {
+  margin: 0 -15px;
+  overflow-x: auto;
+  display: flex;
+  align-items: flex-start;
+
+  @include media-xl {
+    display: none;
+  }
+}
+
+.found-item {
+  position: relative;
+  margin-right: 10px;
+
+  &:first-of-type {
+    margin-left: 15px;
+  }
+
+  &:last-of-type {
+    margin-right: 15px;
+  }
+
+  &__img {
+    position: relative;
+
+    min-width: 203px;
+    max-width: 203px;
+    max-height: 120px;
+    min-height: 120px;
+
+    border-radius: 4px;
+    overflow: hidden;
+    
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    color: #fff;
+
+    max-width: max-content;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: #813490;
+    letter-spacing: .5px;
+
+    transform: skewX(-10deg);
+
+    span {
+      display: inline-block;
+      transform: skewX(10deg);
+    }
+  }
+}
+
+.filter-sidebar {
+  display: none;
+
+  @include media-xl {
+    display: block;
+  }
+
+  @media (max-width: 1199px) {
+    position: fixed;
+    z-index: 500;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    &__overlay {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: rgba(#fff, .7);
+      backdrop-filter: blur(5px);
+    }
+    
+    &__elements {
+      padding: 15px 22px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 297px;
+      height: 100%;
+      z-index: 550;
+      background-color: #fff;
+      box-shadow: -7px 0px 4px rgba(12, 10, 36, 0.15);
+
+      max-height: 100%;
+      overflow-y: auto;
+    }
+
+    &.active {
+      display: block;
+
+      animation-name: showFilter;
+      animation-fill-mode: forwards;
+      animation-duration: .6s;
+      animation-timing-function: ease-out;
+    }
+  }
+
+  &__button {
+
+    .btn {
+      font-size: 14px;
+      line-height: 14px;
+
+      width: 100%;
+      max-width: 100%;
+
+      margin-top: 40px;
+    }
+  }
+}
+
+.filter-quick {
+  margin: 20px -15px 25px -15px;
+
+  @include media-xl {
+    display: none;
+  }
+
+  &__title {
+    padding-left: 15px;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    overflow-x: auto;
+  }
+
+  .active-filter {
+    background-color: #fff;
+
+    &:hover {
+      background-color: #EAF1F5;
+    }
+
+    &:first-of-type {
+      margin-left: 15px;
+    }
+
+    &:last-of-type {
+      margin-right: 15px;
+    }
   }
 }
 
 .active-filters {
+
+  &__close {
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 47px;
+    height: 47px;
+
+    background-color: #EAF1F5;
+
+    @include media-xl {
+      display: none;
+    }
+
+    &:before {
+      display: block;
+      content: "";
+
+      width: 20px;
+      height: 20px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 25px;
+      background-image: url("#{$sprite}close-black");
+    }
+
+    span {
+      font-size: 9px;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
 
   &__info {
     display: flex;
@@ -62,7 +339,15 @@
     display: flex;
     align-items: center;
 
+    margin-right: 40px;
+    font-size: 14px;
+
     cursor: pointer;
+
+    @include media-xl {
+      margin-right: 0;
+      font-size: 16px;
+    }
 
     &:before {
       display: block;
@@ -126,7 +411,11 @@
 }
 
 .filter-type {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+
+  @include media-xl {
+    margin-bottom: 35px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -135,17 +424,20 @@
   &__name {
     position: relative;
 
-    padding: 10px 0;
+    padding: 5px 0;
     margin-bottom: 17px;
 
     text-transform: uppercase;
     letter-spacing: 1px;
-
-    border-top: 1px solid #D5E1EA;
-    border-bottom: 1px solid #D5E1EA;
     
     color: $gray;
     cursor: pointer;
+
+    @include media-xl {
+      padding: 10px 0;
+      border-top: 1px solid $border-light;
+      border-bottom: 1px solid $border-light;
+    }
 
     &.active:after {
       transform: rotate(180deg);
@@ -157,7 +449,7 @@
 
       position: absolute;
       right: 15px;
-      top: 18px;
+      top: 11px;
 
       width: 17px;
       height: 9px;
@@ -165,6 +457,10 @@
       background-position: center;
       background-size: 18px auto;
       background-image: url("#{$sprite}arrow-up");
+
+      @include media-xl {
+        top: 18px;
+      }
     }
   }
 

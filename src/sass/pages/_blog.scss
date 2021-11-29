@@ -50,12 +50,12 @@
         background-repeat: no-repeat;
         text-decoration: none;
         background-position: center;
-        height: 431px;
+        min-height: 431px;
         color: #fff;
         display: flex;
         flex-direction: column;
         width: 100%;
-        overflow: hidden;
+        overflow-y: hidden;
         z-index: 2;
         position: relative;
         margin: 33px 0 0 0;

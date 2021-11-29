@@ -23,7 +23,7 @@ function browsersync() {
     browserSync.init({
         server: {
             baseDir: dir,
-            index: "products.html"
+            index: "single-product.html"
         }
     });
 }

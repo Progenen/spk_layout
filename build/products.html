@@ -196,12 +196,20 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-3">
-                <h2 class="products__title">
-                  Products
-                </h2>
+              <div class="col-xl-3">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h2 class="products__title">
+                    Products
+                  </h2>
+                  <div class="filter-trigger">
+                    Filters
+                  </div>
+                </div>
                 <div class="filter" id="filter">
-                  <div class="filter-field">
+                  <div class="filter-field filter-field_sort">
+                    <div class="items-found">
+                      18 items found
+                    </div>
                     <label for="sortByRating">
                       SORT BY
                     </label>
@@ -212,17 +220,33 @@
                       <option value="3">Three</option>
                     </select>
                   </div>
-
-                  <div class="active-filters">
-                    <div class="active-filters__info">
-                      <div class="active-filters__caption">
-                        FILTERS (1)
+                  <div class="filter-found">
+                    <div class="found-item">
+                      <div class="found-item__img">
+                        <img src="../images/found1.png" alt="found">
                       </div>
-                      <div class="active-filters__clear-all">
-                        Clear all
+                      <div class="found-item__caption">
+                        <span>
+                          Everyday Nutrition
+                        </span>
                       </div>
                     </div>
-                    <div class="active-filters__items">
+                    <div class="found-item">
+                      <div class="found-item__img">
+                        <img src="../images/found2.png" alt="found">
+                      </div>
+                      <div class="found-item__caption">
+                        <span>
+                          Everyday Nutrition
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-quick">
+                    <h3 class="filter-quick__title">
+                      Quick filters
+                    </h3>
+                    <div class="d-flex filter-quick__list">
                       <div class="active-filter">
                         <div class="active-filter__name">
                           Everyday Nutrition
@@ -231,113 +255,157 @@
                       </div>
                       <div class="active-filter">
                         <div class="active-filter__name">
-                          Everyday Nutrition
+                          Everyday
+                        </div>
+                        <div class="active-filter__close">+</div>
+                      </div>
+                      <div class="active-filter">
+                        <div class="active-filter__name">
+                          Tomorrow
                         </div>
                         <div class="active-filter__close">+</div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="filter-types">
-                    <div class="filter-type">
-                      <div class="filter-type__name">
-                        Flavors
-                      </div>
-                      <div class="filter-type__list">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="berry">
-                          <label class="form-check-label" for="berry">
-                            Berry
-                          </label>
+                  <div class="filter-sidebar">
+                    <div class="filter-sidebar__overlay"></div>
+                    <div class="filter-sidebar__elements">
+                      <div class="active-filters">
+                        <div class="active-filters__info">
+                          <div class="active-filters__caption">
+                            FILTERS (1)
+                          </div>
+                          <div class="active-filters__clear-all">
+                            Clear all
+                          </div>
+                          <div class="active-filters__close">
+                            <span>
+                              close
+                            </span>
+                          </div>
                         </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="chocolate">
-                          <label class="form-check-label" for="chocolate">
-                            Chocolate
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="orange">
-                          <label class="form-check-label" for="orange">
-                            Orange
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="Peach">
-                          <label class="form-check-label" for="Peach">
-                            Peach
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="strawberry">
-                          <label class="form-check-label" for="strawberry">
-                            Strawberry
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="Vanilla">
-                          <label class="form-check-label" for="Vanilla">
-                            Vanilla
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="varietyPack">
-                          <label class="form-check-label" for="varietyPack">
-                            Variety Pack
-                          </label>
+                        <div class="active-filters__items">
+                          <div class="active-filter">
+                            <div class="active-filter__name">
+                              Everyday Nutrition
+                            </div>
+                            <div class="active-filter__close">+</div>
+                          </div>
+                          <div class="active-filter">
+                            <div class="active-filter__name">
+                              Everyday Nutrition
+                            </div>
+                            <div class="active-filter__close">+</div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="filter-type">
-                      <div class="filter-type__name">
-                        Category
+                      <div class="filter-types">
+                        <div class="filter-type">
+                          <div class="filter-type__name">
+                            Flavors
+                          </div>
+                          <div class="filter-type__list">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="berry">
+                              <label class="form-check-label" for="berry">
+                                Berry
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="chocolate">
+                              <label class="form-check-label" for="chocolate">
+                                Chocolate
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="orange">
+                              <label class="form-check-label" for="orange">
+                                Orange
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="Peach">
+                              <label class="form-check-label" for="Peach">
+                                Peach
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="strawberry">
+                              <label class="form-check-label" for="strawberry">
+                                Strawberry
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="Vanilla">
+                              <label class="form-check-label" for="Vanilla">
+                                Vanilla
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="varietyPack">
+                              <label class="form-check-label" for="varietyPack">
+                                Variety Pack
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-type">
+                          <div class="filter-type__name">
+                            Category
+                          </div>
+                          <div class="filter-type__list">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="cat1">
+                              <label class="form-check-label" for="cat1">
+                                Clear Liquid Nutrition
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="cat2">
+                              <label class="form-check-label" for="cat2">
+                                Diabetes nutrition
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="cat3">
+                              <label class="form-check-label" for="cat3">
+                                Everyday Nutrition
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="cat4">
+                              <label class="form-check-label" for="cat4">
+                                High Calorie
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="cat5">
+                              <label class="form-check-label" for="cat5">
+                                High Protein
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="cat6">
+                              <label class="form-check-label" for="cat6">
+                                Specialized Nutrition
+                              </label>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="filter-type__list">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="cat1">
-                          <label class="form-check-label" for="cat1">
-                            Clear Liquid Nutrition
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="cat2">
-                          <label class="form-check-label" for="cat2">
-                            Diabetes nutrition
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="cat3">
-                          <label class="form-check-label" for="cat3">
-                            Everyday Nutrition
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="cat4">
-                          <label class="form-check-label" for="cat4">
-                            High Calorie
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="cat5">
-                          <label class="form-check-label" for="cat5">
-                            High Protein
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="cat6">
-                          <label class="form-check-label" for="cat6">
-                            Specialized Nutrition
-                          </label>
-                        </div>
+                      <div class="filter-sidebar__button d-lg-none">
+                        <button type="button" class="btn btn-danger">
+                          Apply Filters
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-9">
+              <div class="col-xl-9">
                 <div class="products-list">
                   <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-12 col-xs-6 col-sm-6 col-md-4">
                       <div class="product">
                         <h4 class="product__name">
                           BOOST® Original
@@ -364,13 +432,15 @@
                               <input class="form-check-input" type="radio" value="1" name="subscribe_and_save"
                                 id="subsSave" value="option1">
                               <label class="form-check-label" for="subsSave">
-                                Subscribe & Save 10%
+                                <span class="product-additional__label-val">
+                                  Subscribe & Save 10%
+                                </span>
                                 <span class="product-additional__price-val">
                                   $37.7
                                 </span>
                               </label>
                             </div>
-                            <div class="product-additional__delivery-days">
+                            <div class="delivery-days">
                               <select class="custom-select custom-select-sm" id="deliverDays1">
                                 <option selected>Delivery every 15 days </option>
                                 <option value="1">Delivery every 15 days </option>
@@ -396,7 +466,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-12 col-xs-6 col-sm-6 col-md-4">
                       <div class="product">
                         <h4 class="product__name">
                           BOOST Plus®
@@ -422,13 +492,15 @@
                               <input class="form-check-input" type="radio" value="2" name="subscribe_and_save"
                                 id="subsSave3" value="option1">
                               <label class="form-check-label" for="subsSave3">
-                                Subscribe & Save 10%
+                                <span class="product-additional__label-val">
+                                  Subscribe & Save 10%
+                                </span>
                                 <span class="product-additional__price-val">
                                   $37.7
                                 </span>
                               </label>
                             </div>
-                            <div class="product-additional__delivery-days">
+                            <div class="delivery-days">
                               <select class="custom-select custom-select-sm" id="deliverDays2">
                                 <option selected>Delivery every 15 days </option>
                                 <option value="1">Delivery every 15 days </option>
@@ -454,7 +526,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-12 col-xs-6 col-sm-6 col-md-4">
                       <div class="product">
                         <h4 class="product__name">
                           BOOST Glucose Control® MAX 30g Protein
@@ -480,13 +552,15 @@
                               <input class="form-check-input" type="radio" value="3" name="subscribe_and_save"
                                 id="subsSave5" value="option1">
                               <label class="form-check-label" for="subsSave5">
-                                Subscribe & Save 10%
+                                <span class="product-additional__label-val">
+                                  Subscribe & Save 10%
+                                </span>
                                 <span class="product-additional__price-val">
                                   $37.7
                                 </span>
                               </label>
                             </div>
-                            <div class="product-additional__delivery-days">
+                            <div class="delivery-days">
                               <select class="custom-select custom-select-sm" id="deliverDays3">
                                 <option selected>Delivery every 15 days </option>
                                 <option value="1">Delivery every 15 days </option>
@@ -512,7 +586,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-12 col-xs-6 col-sm-6 col-md-4">
                       <div class="product">
                         <h4 class="product__name">
                           BOOST® Original
@@ -539,13 +613,15 @@
                               <input class="form-check-input" type="radio" value="1" name="subscribe_and_save"
                                 id="subsSaveA" value="option1">
                               <label class="form-check-label" for="subsSaveA">
-                                Subscribe & Save 10%
+                                <span class="product-additional__label-val">
+                                  Subscribe & Save 10%
+                                </span>
                                 <span class="product-additional__price-val">
                                   $37.7
                                 </span>
                               </label>
                             </div>
-                            <div class="product-additional__delivery-days">
+                            <div class="delivery-days">
                               <select class="custom-select custom-select-sm" id="deliverDays1">
                                 <option selected>Delivery every 15 days </option>
                                 <option value="1">Delivery every 15 days </option>
@@ -571,7 +647,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-12 col-xs-6 col-sm-6 col-md-4">
                       <div class="product">
                         <h4 class="product__name">
                           BOOST Plus®
@@ -597,13 +673,15 @@
                               <input class="form-check-input" type="radio" value="2" name="subscribe_and_save"
                                 id="subsSave3" value="option1">
                               <label class="form-check-label" for="subsSave3">
-                                Subscribe & Save 10%
+                                <span class="product-additional__label-val">
+                                  Subscribe & Save 10%
+                                </span>
                                 <span class="product-additional__price-val">
                                   $37.7
                                 </span>
                               </label>
                             </div>
-                            <div class="product-additional__delivery-days">
+                            <div class="delivery-days">
                               <select class="custom-select custom-select-sm" id="deliverDays2">
                                 <option selected>Delivery every 15 days </option>
                                 <option value="1">Delivery every 15 days </option>
@@ -629,7 +707,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-12 col-xs-6 col-sm-6 col-md-4">
                       <div class="product">
                         <h4 class="product__name">
                           BOOST Glucose Control® MAX 30g Protein
@@ -655,13 +733,15 @@
                               <input class="form-check-input" type="radio" value="3" name="subscribe_and_save"
                                 id="subsSave5" value="option1">
                               <label class="form-check-label" for="subsSave5">
-                                Subscribe & Save 10%
+                                <span class="product-additional__label-val">
+                                  Subscribe & Save 10%
+                                </span>
                                 <span class="product-additional__price-val">
                                   $37.7
                                 </span>
                               </label>
                             </div>
-                            <div class="product-additional__delivery-days">
+                            <div class="delivery-days">
                               <select class="custom-select custom-select-sm" id="deliverDays3">
                                 <option selected>Delivery every 15 days </option>
                                 <option value="1">Delivery every 15 days </option>
@@ -687,7 +767,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-12 col-xs-6 col-sm-6 col-md-4">
                       <div class="product">
                         <h4 class="product__name">
                           BOOST® Original
@@ -714,13 +794,15 @@
                               <input class="form-check-input" type="radio" value="1" name="subscribe_and_save"
                                 id="subsSaveA" value="option1">
                               <label class="form-check-label" for="subsSaveA">
-                                Subscribe & Save 10%
+                                <span class="product-additional__label-val">
+                                  Subscribe & Save 10%
+                                </span>
                                 <span class="product-additional__price-val">
                                   $37.7
                                 </span>
                               </label>
                             </div>
-                            <div class="product-additional__delivery-days">
+                            <div class="delivery-days">
                               <select class="custom-select custom-select-sm" id="deliverDays1">
                                 <option selected>Delivery every 15 days </option>
                                 <option value="1">Delivery every 15 days </option>
@@ -746,7 +828,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-12 col-xs-6 col-sm-6 col-md-4">
                       <div class="product">
                         <h4 class="product__name">
                           BOOST Plus®
@@ -772,13 +854,15 @@
                               <input class="form-check-input" type="radio" value="2" name="subscribe_and_save"
                                 id="subsSave3" value="option1">
                               <label class="form-check-label" for="subsSave3">
-                                Subscribe & Save 10%
+                                <span class="product-additional__label-val">
+                                  Subscribe & Save 10%
+                                </span>
                                 <span class="product-additional__price-val">
                                   $37.7
                                 </span>
                               </label>
                             </div>
-                            <div class="product-additional__delivery-days">
+                            <div class="delivery-days">
                               <select class="custom-select custom-select-sm" id="deliverDays2">
                                 <option selected>Delivery every 15 days </option>
                                 <option value="1">Delivery every 15 days </option>
@@ -804,7 +888,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-12 col-xs-6 col-sm-6 col-md-4 col-banner">
                       <div class="product product_banner">
                         <h4 class="product__title">
                           Save 10% + free shippig when you subscribe
@@ -814,223 +898,338 @@
                         </a>
                       </div>
                     </div>
-                    <div class="col-12">
-                      <div class="load-more">
-                        <button type="button" class="btn btn-outline-danger btn-lg">
-                          Load More
-                        </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="load-more">
+                      <button type="button" class="btn btn-outline-danger btn-load-more btn-lg">
+                        Load More
+                      </button>
+                    </div>
+                    <section class="banner">
+                      <div class="banner__img">
+                        <div class="banner__titles">
+                          <h3 class="banner__title">
+                            Find your product
+                          </h3>
+                          <h4 class="banner__subtitle">
+                            Get personalized recommendations
+                          </h4>
+                        </div>
+                        <div class="banner__link">
+                          <a href="#" target="_blank" class="banner__link-more">
+                            TAKE THE QUIZ
+                          </a>
+                        </div>
                       </div>
-                      <section class="banner">
-                        <div class="banner__img">
-                          <div class="banner__titles">
-                            <h3 class="banner__title">
-                              Find your product
-                            </h3>
-                            <h4 class="banner__subtitle">
-                              Get personalized recommendations
-                            </h4>
-                          </div>
-                          <div class="banner__link">
-                            <a href="#" target="_blank" class="banner__link-more">
-                              TAKE THE QUIZ
-                            </a>
-                          </div>
-                        </div>
-                        <div class="banner-bottom__links">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="banner-bottom__link">
-                                Want an extra 20% off this season’s must-have styles? <a href="#">Refer A Friend!</a>
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="banner-bottom__link">
-                                Let us know how we’re doing. <a href="#">Give Feedback</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                      <div class="reviews">
+                      <div class="banner-bottom__links">
                         <div class="row">
-                          <div class="col-md-4">
-                            <div class="reviews-rating">
-                              <div class="review-rating">
-                                <span class="review-rating__text">5 stars</span>
-                                <span class="review-rating__percents">
-                                  <span class="review-rating__progress" style="width: 80%;"></span>
-                                </span>
-                                <span class="review-rating__text">80%</span>
-                              </div>
-                              <div class="review-rating">
-                                <span class="review-rating__text">4 stars</span>
-                                <span class="review-rating__percents">
-                                  <span class="review-rating__progress" style="width: 33%;"></span>
-                                </span>
-                                <span class="review-rating__text">33%</span>
-                              </div>
-                              <div class="review-rating">
-                                <span class="review-rating__text">3 stars</span>
-                                <span class="review-rating__percents">
-                                  <span class="review-rating__progress" style="width: 5%;"></span>
-                                </span>
-                                <span class="review-rating__text">5%</span>
-                              </div>
-                              <div class="review-rating">
-                                <span class="review-rating__text">2 stars</span>
-                                <span class="review-rating__percents">
-                                  <span class="review-rating__progress"></span>
-                                </span>
-                                <span class="review-rating__text">-</span>
-                              </div>
-                              <div class="review-rating">
-                                <span class="review-rating__text">1 stars</span>
-                                <span class="review-rating__percents"></span>
-                                <span class="review-rating__text">-</span>
-                              </div>
+                          <div class="col-md-12 col-lg-6">
+                            <div class="banner-bottom__link">
+                              Want an extra 20% off this season’s must-have styles? <a href="#">Refer A Friend!</a>
                             </div>
                           </div>
-                          <div class="col-md-8">
-                            <div class="d-flex justify-content-between">
-                              <div class="reviews-stats">
-                                <h3 class="reviews-stats__num">
-                                  4.6
-                                </h3>
-                                <div class="stars stars_4">
-                                  <span></span>
-                                  <span></span>
-                                  <span></span>
-                                  <span></span>
-                                  <span></span>
-                                </div>
-                                <p class="reviews-stats__info">
-                                  Based On <b>2374</b> Reviews!
-                                </p>
-                              </div>
-                              <div class="write-review">
-                                <button type="button" class="btn btn-outline-danger btn-lg">
-                                  Write a review
-                                </button>
-                              </div>
+                          <div class="col-md-12 col-lg-6">
+                            <div class="banner-bottom__link">
+                              Let us know how we’re doing. <a href="#">Give Feedback</a>
                             </div>
                           </div>
                         </div>
-                        <div class="reviews-sort">
-                          <div class="custom-field">
-                            <label for="sortReviews">Sort by</label>
-                            <select class="custom-select" id="sortReviews">
-                              <option selected>Rating</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                              <option value="4">Four</option>
-                              <option value="5">Five</option>
-                            </select>
+                      </div>
+                    </section>
+                    <div class="reviews">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div class="reviews-rating">
+                            <div class="review-rating">
+                              <span class="review-rating__text">5 stars</span>
+                              <span class="review-rating__percents">
+                                <span class="review-rating__progress" style="width: 80%;"></span>
+                              </span>
+                              <span class="review-rating__text">80%</span>
+                            </div>
+                            <div class="review-rating">
+                              <span class="review-rating__text">4 stars</span>
+                              <span class="review-rating__percents">
+                                <span class="review-rating__progress" style="width: 33%;"></span>
+                              </span>
+                              <span class="review-rating__text">33%</span>
+                            </div>
+                            <div class="review-rating">
+                              <span class="review-rating__text">3 stars</span>
+                              <span class="review-rating__percents">
+                                <span class="review-rating__progress" style="width: 5%;"></span>
+                              </span>
+                              <span class="review-rating__text">5%</span>
+                            </div>
+                            <div class="review-rating">
+                              <span class="review-rating__text">2 stars</span>
+                              <span class="review-rating__percents">
+                                <span class="review-rating__progress"></span>
+                              </span>
+                              <span class="review-rating__text">-</span>
+                            </div>
+                            <div class="review-rating">
+                              <span class="review-rating__text">1 stars</span>
+                              <span class="review-rating__percents"></span>
+                              <span class="review-rating__text">-</span>
+                            </div>
                           </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="verifiedPurchases">
-                            <label class="form-check-label" for="verifiedPurchases">
-                              Verified Purchases
-                            </label>
+                          <div class="reviews-stats">
+                            <h3 class="reviews-stats__num">
+                              4.6
+                            </h3>
+                            <div class="stars stars_4">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </div>
+                            <p class="reviews-stats__info">
+                              Based On <b>2374</b> Reviews!
+                            </p>
+                          </div>
+                          <div class="write-review">
+                            <button type="button" class="btn btn-outline-danger btn-lg">
+                              Write a review
+                            </button>
                           </div>
                         </div>
-                        <div class="reviews-list">
-                          <div class="reviews-list__num">
-                            1–3 of 1251 Comments
-                          </div>
-                          <div class="review">
-                            <div class="review__author">
-                              <span>Stacey M.</span>
-                              <div class="stars stars_4 stars_small">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                              </div>
-                            </div>
-                            <div class="review__date">
-                              19/02/2020
-                            </div>
-                            <div class="review__stars"></div>
-                            <div class="review__title">
-                              Taste great
-                            </div>
-                            <div class="review__descr">
-                              BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
-                              breakfast then I skip lunch and feel great through out the day.
-                            </div>
-                            <div class="review__reviewed labeled">
-                              <label>Flavor Reviewed</label>
-                              <span>Rich Chocolate</span>
-                            </div>
-                          </div>
-                          <div class="review">
-                            <div class="review__author">
-                              <span>Matthew V.</span>
-                              <div class="stars stars_4 stars_small">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                              </div>
-                            </div>
-                            <div class="review__date">
-                              19/02/2020
-                            </div>
-                            <div class="review__stars"></div>
-                            <div class="review__title">
-                              Taste great
-                            </div>
-                            <div class="review__descr">
-                              BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
-                              breakfast then I skip lunch and feel great through out the day.
-                            </div>
-                            <div class="review__reviewed labeled">
-                              <label>Flavor Reviewed</label>
-                              <span>Rich Chocolate</span>
+                      <div class="reviews-sort">
+                        <div class="custom-field">
+                          <label for="sortReviews">Sort by</label>
+                          <select class="custom-select" id="sortReviews">
+                            <option selected>Rating</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                            <option value="5">Five</option>
+                          </select>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="verifiedPurchases">
+                          <label class="form-check-label" for="verifiedPurchases">
+                            Verified Purchases
+                          </label>
+                        </div>
+                      </div>
+                      <div class="reviews-list">
+                        <div class="reviews-list__num">
+                          1–3 of 1251 Comments
+                        </div>
+                        <div class="review">
+                          <div class="review__author">
+                            <span>Stacey M.</span>
+                            <div class="stars stars_4 stars_small">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
                             </div>
                           </div>
-                          <div class="review">
-                            <div class="review__author">
-                              <span>Matthew V.</span>
-                              <div class="stars stars_4 stars_small">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                              </div>
-                            </div>
-                            <div class="review__date">
-                              19/02/2020
-                            </div>
-                            <div class="review__stars"></div>
-                            <div class="review__title">
-                              Taste great
-                            </div>
-                            <div class="review__descr">
-                              BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
-                              breakfast then I skip lunch and feel great through out the day.
-                            </div>
-                            <div class="review__reviewed labeled">
-                              <label>Flavor Reviewed</label>
-                              <span>Rich Chocolate</span>
+                          <div class="review__date">
+                            19/02/2020
+                          </div>
+                          <div class="review__stars"></div>
+                          <div class="review__title">
+                            Taste great
+                          </div>
+                          <div class="review__descr">
+                            BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
+                            breakfast then I skip lunch and feel great through out the day.
+                          </div>
+                          <div class="review__reviewed labeled">
+                            <span class="label">Flavor Reviewed</span>
+                            <span>Rich Chocolate</span>
+                          </div>
+                        </div>
+                        <div class="review">
+                          <div class="review__author">
+                            <span>Matthew V.</span>
+                            <div class="stars stars_4 stars_small">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
                             </div>
                           </div>
-                          <div class="reviews-list__pagination">
-                            <nav aria-label="Page navigation example">
-                              <ul class="pagination">
-                                <li class="page-item"><a class="page-link page-link_prev" href="#"></a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">...</a></li>
-                                <li class="page-item"><a class="page-link" href="#">8</a></li>
-                                <li class="page-item"><a class="page-link page-link_next" href="#"></a></li>
-                              </ul>
-                            </nav>
+                          <div class="review__date">
+                            19/02/2020
+                          </div>
+                          <div class="review__stars"></div>
+                          <div class="review__title">
+                            Taste great
+                          </div>
+                          <div class="review__descr">
+                            BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
+                            breakfast then I skip lunch and feel great through out the day.
+                          </div>
+                          <div class="review__reviewed labeled">
+                            <span class="label">Flavor Reviewed</span>
+                            <span>Rich Chocolate</span>
+                          </div>
+                        </div>
+                        <div class="review">
+                          <div class="review__author">
+                            <span>Matthew V.</span>
+                            <div class="stars stars_4 stars_small">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </div>
+                          </div>
+                          <div class="review__date">
+                            19/02/2020
+                          </div>
+                          <div class="review__stars"></div>
+                          <div class="review__title">
+                            Taste great
+                          </div>
+                          <div class="review__descr">
+                            BOOST Glucose Control® MAX I love the chocolate flavor. I drink one in the morning for
+                            breakfast then I skip lunch and feel great through out the day.
+                          </div>
+                          <div class="review__reviewed labeled flavor flavor_choco">
+                            <span class="label">Flavor Reviewed</span>
+                            <span>Rich Chocolate</span>
+                          </div>
+                        </div>
+                        <div class="reviews-list__pagination">
+                          <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                              <li class="page-item"><a class="page-link page-link_prev" href="#"></a></li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"><a class="page-link" href="#">...</a></li>
+                              <li class="page-item"><a class="page-link" href="#">8</a></li>
+                              <li class="page-item"><a class="page-link page-link_next" href="#"></a></li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reviews-mob">
+                      <h3 class="reviews-mob__title">
+                        Testimonials
+                      </h3>
+                      <div id="reviewsMob">
+                        <div class="review-mob">
+                          <div class="review-mob__img">
+                            <img src="images/review-mob.png" alt="author">
+                          </div>
+                          <h4 class="review-mob__title">
+                            Tasty and nutritional drink
+                          </h4>
+                          <div class="review-mob__text">
+                            I’ve been looking to change up my drink regime 
+                            to balance out vitamins and protein for complete nutrition. 
+                            This Boost chocolate drink is delicious! I feel good drinking it 
+                            knowing that I’m getting complete nutrition. The biggest shining star 
+                            is the low sugar, which rounds out the drink. The taste is 
+                            rich and the texture is smooth. If you’re looking for complete 
+                            nutrition, grab a Boost. Getting my vitamins and minerals in, all 
+                            while keeping protein up and sugar down is easy with this drink!
+                          </div>
+                          <div class="review-mob__author">
+                            Brenda B.
+                          </div>
+                          <div class="stars stars_small stars_4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="review-mob">
+                          <div class="review-mob__img">
+                            <img src="images/review-mob.png" alt="author">
+                          </div>
+                          <h4 class="review-mob__title">
+                            Tasty and nutritional drink
+                          </h4>
+                          <div class="review-mob__text">
+                            I’ve been looking to change up my drink regime 
+                            to balance out vitamins and protein for complete nutrition. 
+                            This Boost chocolate drink is delicious! I feel good drinking it 
+                            knowing that I’m getting complete nutrition. The biggest shining star 
+                            is the low sugar, which rounds out the drink. The taste is 
+                            rich and the texture is smooth. If you’re looking for complete 
+                            nutrition, grab a Boost. Getting my vitamins and minerals in, all 
+                            while keeping protein up and sugar down is easy with this drink!
+                          </div>
+                          <div class="review-mob__author">
+                            Brenda B.
+                          </div>
+                          <div class="stars stars_small stars_4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="review-mob">
+                          <div class="review-mob__img">
+                            <img src="images/review-mob.png" alt="author">
+                          </div>
+                          <h4 class="review-mob__title">
+                            Tasty and nutritional drink
+                          </h4>
+                          <div class="review-mob__text">
+                            I’ve been looking to change up my drink regime 
+                            to balance out vitamins and protein for complete nutrition. 
+                            This Boost chocolate drink is delicious! I feel good drinking it 
+                            knowing that I’m getting complete nutrition. The biggest shining star 
+                            is the low sugar, which rounds out the drink. The taste is 
+                            rich and the texture is smooth. If you’re looking for complete 
+                            nutrition, grab a Boost. Getting my vitamins and minerals in, all 
+                            while keeping protein up and sugar down is easy with this drink!
+                          </div>
+                          <div class="review-mob__author">
+                            Brenda B.
+                          </div>
+                          <div class="stars stars_small stars_4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="review-mob">
+                          <div class="review-mob__img">
+                            <img src="images/review-mob.png" alt="author">
+                          </div>
+                          <h4 class="review-mob__title">
+                            Tasty and nutritional drink
+                          </h4>
+                          <div class="review-mob__text">
+                            I’ve been looking to change up my drink regime 
+                            to balance out vitamins and protein for complete nutrition. 
+                            This Boost chocolate drink is delicious! I feel good drinking it 
+                            knowing that I’m getting complete nutrition. The biggest shining star 
+                            is the low sugar, which rounds out the drink. The taste is 
+                            rich and the texture is smooth. If you’re looking for complete 
+                            nutrition, grab a Boost. Getting my vitamins and minerals in, all 
+                            while keeping protein up and sugar down is easy with this drink!
+                          </div>
+                          <div class="review-mob__author">
+                            Brenda B.
+                          </div>
+                          <div class="stars stars_small stars_4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                           </div>
                         </div>
                       </div>
@@ -1043,6 +1242,7 @@
         </div>
       </main>
     </div>
+    
     <footer class="footer">
       <div class="container">
         <div class="row footer__top">
@@ -1231,7 +1431,7 @@
           </div>
         </div>
       </div>
-    </footer>
+  </footer>
   </div>
 
   <script src="JS/bundle.js"></script>

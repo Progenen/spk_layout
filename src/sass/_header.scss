@@ -184,6 +184,7 @@
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+
   &__map,
   &__number {
     width: 100%;
@@ -570,8 +571,8 @@
 
     @include media-xl {
       width: calc(50% - 10px);
-      padding-right: 35px;
-      padding-left: 35px;
+      padding-right: 30px;
+      padding-left: 30px;
 
       &:first-of-type {
         border-top: 1px solid #f4f4f4;

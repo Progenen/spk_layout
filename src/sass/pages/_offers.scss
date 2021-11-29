@@ -229,6 +229,10 @@
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center bottom;
+        &__img {
+            width: 450px;
+            height: 322px;
+        }
     }
 
     .offers-shipping {
