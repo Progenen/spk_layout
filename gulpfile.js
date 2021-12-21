@@ -1,6 +1,6 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 const browserSync = require('browser-sync');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass');                                      
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const sprite       = require('gulp-svg-sprite');
@@ -16,14 +16,14 @@ const concat = require('gulp-concat');
 
 
 const isDevelopment = process.env.NODE_ENV == 'development' ? true : false; // Check work mode | Смотрим какой режим разработки выбран
-const dir = isDevelopment ? 'dist' : 'build'; // Output folder dev = dist, prod = build | Папка с конечными файлами если dev то папка будет dist, если prod то build
+const dir = 'dist'; // Output | Папка с конечными файлами
 
 // Launch app on localhost | Запускаем приложение на локальном хостинге
 function browsersync() {
     browserSync.init({
         server: {
             baseDir: dir,
-            index: "single-product.html"
+            index: "index.html"
         }
     });
 }
@@ -54,16 +54,12 @@ function html() {
 // Сборка JS модулей с помощью webpack | Building JS modules using webpack
 function scripts() {
     return src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'src/JS/libs/popper.min.js',
-        'src/JS/libs/jquery.validate.min.js',
-        'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        'node_modules/slick-carousel/slick/slick.min.js',
-        'node_modules/jquery-nice-select/js/jquery.nice-select.min.js',
         'src/JS/index.js'
     ])
+    .pipe(gulpIf(isDevelopment, sourcemaps.init())) // Инициализация source-maps (Работает только в режиме разработки) | Source-maps initialization (Only works in development mode)
     .pipe(concat('bundle.js'))
     .pipe(uglify())
+    .pipe(gulpIf(isDevelopment, sourcemaps.write())) // Запись source-maps (Работает только в режиме разработки) | Source-maps entry (Only works in development mode)
     .pipe(dest(dir + '/JS/'))
 }
 

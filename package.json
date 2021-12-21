@@ -1,6 +1,6 @@
 {
-  "name": "project-a",
-  "version": "1.2.0",
+  "name": "project-name",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -35,7 +35,7 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
-    "build": "cross-env NODE_ENV=production gulp"
+    "prod": "cross-env NODE_ENV=production gulp"
   },
   "author": "",
   "license": "ISC",
