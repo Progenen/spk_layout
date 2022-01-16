@@ -24,10 +24,11 @@ npm run build
 <h2>Tasks</h2>
 
 <ul>
-  <li>Minifies images and converts them to webp</li>
+  <li>Image minification without quality loss</li>
   <li>Converts sass code to css and minifies it</li>
   <li>Automatically places cross-browser prefixes</li>
-  <li>Builds JS modules using webpack</li>
+  <li>Creating a source-map for JS and CSS files (only in development mode)</li>
+  <li>Creating svg sprites</li>
 </ul>
   
 <h2>Dependicies and libs</h2>
