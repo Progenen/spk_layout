@@ -9,6 +9,32 @@
   @return $string;
 }
 
+
+// Перевод из px в rem
+
+@function rem($size) {
+  @return calc($size / 14)+rem
+}
+
+@mixin adaptiveValue($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+      #{$property}: $startSize + px;
+      @media (max-width:#{$maxWidthContainer + px}){
+          #{$property} : calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+      }
+  } @else if type==2 {
+      #{$property}: $startSize + px;
+      @media (max-width:#{$maxWidthContainer + px}){
+          #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+      }
+  } @else {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+}
+
+// Быстрое подключение шрифтов 
+
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
   $src: null;
 
