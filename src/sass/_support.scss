@@ -65,9 +65,15 @@
 }
 
 // Fonts
-@include font-face('Roboto', '../fonts/Roboto/Roboto-Bold', bold, normal, ttf);
+@include font-face('Rubik', '../fonts/Rubik/Rubik-Regular', 400, normal, ttf);
+@include font-face('Rubik', '../fonts/Rubik/Rubik-Light', 300, normal, ttf);
+@include font-face('Rubik', '../fonts/Rubik/Rubik-Medium', 500, normal, ttf);
 
 // Vars
+
+$color1: #133A67;
+$color2: #13293B;
+$color3: #EE3E84;
 
 // Путь к спрайту для конкатенации
 
