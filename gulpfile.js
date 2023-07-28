@@ -13,6 +13,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulpIf = require('gulp-if');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const webpack = require('webpack-stream');
 
 const isDevelopment = process.env.NODE_ENV == 'development' ? true : false; // Check work mode | Смотрим какой режим разработки выбран
 const dir = 'dist'; // Output | Папка с конечными файлами
@@ -50,16 +51,36 @@ function html() {
         .pipe(dest(dir + '/'))
 }
 
-// Сборка JS модулей с помощью webpack | Building JS modules using webpack
+// // Сборка JS модулей с помощью webpack | Building JS modules using webpack
+// function scripts() {
+//     return src([
+//         'src/JS/libs/**/*.js',
+//         'src/JS/index.js'
+//     ])
+//         .pipe(gulpIf(isDevelopment, sourcemaps.init())) // Инициализация source-maps (Работает только в режиме разработки) | Source-maps initialization (Only works in development mode)
+//         .pipe(concat('bundle.js'))
+//         .pipe(uglify())
+//         .pipe(gulpIf(isDevelopment, sourcemaps.write())) // Запись source-maps (Работает только в режиме разработки) | Source-maps entry (Only works in development mode)
+//         .pipe(dest(dir + '/JS/'))
+// }
+
 function scripts() {
-    return src([
-        'src/JS/libs/**/*.js',
-        'src/JS/index.js'
-    ])
-        .pipe(gulpIf(isDevelopment, sourcemaps.init())) // Инициализация source-maps (Работает только в режиме разработки) | Source-maps initialization (Only works in development mode)
-        .pipe(concat('bundle.js'))
-        .pipe(uglify())
-        .pipe(gulpIf(isDevelopment, sourcemaps.write())) // Запись source-maps (Работает только в режиме разработки) | Source-maps entry (Only works in development mode)
+    return src('src/js/*/**.js')
+        .pipe(webpack({
+            mode: isDevelopment ? 'development' : 'production',
+            entry: './src/js/index.js',
+            output: {
+                filename: 'bundle.js'
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.css$/,
+                        use: ['style-loader', 'css-loader'], 
+                    }
+                ],
+            },
+        }))
         .pipe(dest(dir + '/JS/'))
 }
 

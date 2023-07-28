@@ -40,23 +40,3 @@ a {
 footer {
     flex: 0 0 auto;
 }
-
-.btn {
-    display: block;
-    text-decoration: none;
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    &--red {
-        background-color: $color1;
-        color: #Fff;
-    }
-    &--white {
-        background-color: transparent;
-        color: #000;
-        border: 2xp solid #000;
-    }
-}
