@@ -1,4 +1,4 @@
-const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series, parallel, tree } = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass')(require('sass'));                                
 const cleanCSS = require('gulp-clean-css');
@@ -6,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const sprite = require('gulp-svg-sprite');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
 const newer = require('gulp-newer');
 const del = require('del');
 const fileinclude = require('gulp-file-include');
@@ -91,9 +92,11 @@ function startWatch() {
     watch(['src/**/*.html'], html);
     watch(['src/**/*.html']).on('change', browserSync.reload);
     watch(['src/images/**/*'], images);
-    watch(['src/svg/src/**/*'], svgsprite);
+    watch(['src/svg/src/mono/*'], svgspriteMono);
+    watch(['src/svg/src/multi/*'], svgspriteMulti);
     watch(['src/fonts/**/*'], fonts);
-    watch(['src/svg/src/**/*'], svgsprite)
+    watch(['src/svg/src/mono/*'], svgspriteMono);
+    watch(['src/svg/src/multi/*'], svgspriteMulti);
 }
 
 
@@ -101,7 +104,13 @@ function startWatch() {
 function images() {
     return src('src/images/**/*')
         .pipe(newer(dir + '/images'))
-        .pipe(gulpIf(!isDevelopment, imagemin())) // Оптимизируем картинки если режим разработки prod | We optimize pictures if the prod mode
+        .pipe(webp({
+            quality: 100,
+            sns: 100,
+            filter: 100,
+            sharpness: 7,
+            method: 6,
+        })) // Оптимизируем картинки если режим разработки prod | We optimize pictures if the prod mode
         .pipe(dest(dir + '/images/'))
 }
 
@@ -112,36 +121,41 @@ function video() {
 }
 
 // Спрайт для векторной графики
-function svgsprite() {
-    return src('src/svg/src/**/*')
+function svgspriteMono() {
+    return src('src/svg/stack/mono/*')
         .pipe(sprite({
             shape: {
-                dimension: {
-                    maxWidth: 500,
-                    maxHeight: 500
-                },
                 spacing: {
                     padding: 0
                 },
                 transform: [{
                     "svgo": {
                         "plugins": [
-                            { removeViewBox: false },
-                            { removeUnusedNS: false },
-                            { removeUselessStrokeAndFill: true },
-                            { cleanupIDs: false },
-                            { removeComments: true },
-                            { removeEmptyAttrs: true },
-                            { removeEmptyText: true },
-                            { collapseGroups: true },
-                            { removeAttrs: { attrs: '(fill|stroke|style)' } }
+                            { removeAttrs: { attrs: ['class', 'data-name', 'fill', 'stroke', 'color'] }}
                         ]
                     }
                 }]
             },
             mode: {
                 stack: {
-                    sprite: 'sprite.svg'  // sprite file name
+                    sprite: 'spriteMono.svg'  // sprite file name
+                }
+            },
+        }))
+        .pipe(dest(dir + '/svg/dest/'))
+}
+
+function svgspriteMulti() {
+    return src('src/svg/stack/multi/*')
+        .pipe(sprite({
+            shape: {
+                spacing: {
+                    padding: 0
+                },
+            },
+            mode: {
+                stack: {
+                    sprite: 'spriteMulti.svg'  // sprite file name
                 }
             },
         }))
@@ -150,7 +164,7 @@ function svgsprite() {
 
 // Удаление картинок в выходной папке, если те удалены в входящей | Deleting pictures in the output folder, if they were deleted in the input
 function cleanImg() {
-    return del(dir + '/images/**/*', { force: true })
+    return del(dir + '/images/**/*{.png, .jpg, .webp}', { force: true })
 }
 
 // Удаление шрифтов в выходной папке, если те удалены в входящей | Deleting fonts in the output folder, if they were deleted in the input
@@ -173,7 +187,8 @@ exports.html = html;
 exports.cleanImg = cleanImg;
 exports.cleanFonts = cleanFonts;
 exports.fonts = fonts;
-exports.svgsprite = svgsprite;
+exports.svgspriteMulti = svgspriteMulti;
+exports.svgspriteMono = svgspriteMono;
 exports.video = video;
 
-exports.default = parallel(style, html, scripts, fonts, cleanFonts, svgsprite, images, video, cleanImg, browsersync, startWatch);
+exports.default = parallel(style, html, scripts, fonts, cleanFonts, svgspriteMono, svgspriteMulti, images, video, cleanImg, browsersync, startWatch);
