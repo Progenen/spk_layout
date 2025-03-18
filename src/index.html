@@ -1,5 +1,865 @@
-@@include('./parts/header.html')
+@@include('./parts/header.html', {
+    "class": "header-new--fixed"
+})
 <main>
+    <section class="offer">
+        <div class="offer__bg">
+            <video class="offer__bg-video offer__bg-video--desk" src="video/offer-video-bg.mp4" autoplay muted loop></video>
+            <video class="offer__bg-video offer__bg-video--mob" src="video/offer-video-bg-mob.mp4" autoplay muted loop></video>
+        </div>
+        <div class="offer__wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="offer__content">
+                            <h2 class="offer__title">
+                                Оказываем поддержку ключевым направлениям развития в регионе
+                            </h2>
+                            <a href="#" class="offer__btn btn btn--yellow btn--lg">
+                                Связаться с нами
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @@include("./parts/news.html")
+    <section class="support">
+        <div class="container">
+            <div class="main-block main-block row">
+                <div class="col-lg-12">
+                    <h2>
+                        Поддерживаем малый и средний бизнес
+                    </h2>
+                    <p>
+                        Предоставляем в пользование <a href="#">индустриальную зону</a>, выделяем <a
+                            href="#">инвестиционные преференции</a> и <a href="#">финансирование</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row cards-row support__items-row">
+                <div class="col-lg-12">
+                    <div class="support__items">
+                        <div class="support__item">
+                            <div class="triangle-top-left"></div>
+                            <div class="triangle-top-right"></div>
+                            <div class="triangle-bottom-right"></div>
+                            <div class="support__item-inner">
+                                <img src="images/content/support/support-img1.webp" alt="">
+                                <h3>аренда помещений в административном комплексе</h3>
+                                <p>
+                                    Водопровод, электричество, газ, канализация, вентиляция
+                                </p>
+                            </div>
+                            <a class="support__item-link" href="#"></a>
+                        </div>
+                        <div class="support__item">
+                            <div class="triangle-top-left"></div>
+                            <div class="triangle-top-right"></div>
+                            <div class="triangle-bottom-right"></div>
+                            <div class="support__item-inner">
+                                <img src="images/content/support/support-img2.webp" alt="">
+                                <h3>Низкие тарифы на энергоресурсы</h3>
+                                <p>
+                                    Как правило, тарифы ниже на 20–30% рынка
+                                </p>
+                            </div>
+                            <a class="support__item-link" href="#"></a>
+                        </div>
+                        <div class="support__item">
+                            <div class="triangle-top-left"></div>
+                            <div class="triangle-top-right"></div>
+                            <div class="triangle-bottom-right"></div>
+                            <div class="support__item-inner">
+                                <img src="images/content/support/support-img3.webp" alt="">
+                                <h3>готовая инженерная инфраструктура</h3>
+                                <p>
+                                    Водопровод, электричество, газ, канализация
+                                </p>
+                            </div>
+                            <a class="support__item-link" href="#"></a>
+                        </div>
+                        <div class="support__item">
+                            <div class="triangle-top-left"></div>
+                            <div class="triangle-top-right"></div>
+                            <div class="triangle-bottom-right"></div>
+                            <div class="support__item-inner">
+                                <img src="images/content/support/support-img4.webp" alt="">
+                                <h3>Кредиты</h3>
+                                <p>
+                                    на сумму до 155 млн тенге сроком до 15 лет
+                                </p>
+                            </div>
+                            <a class="support__item-link" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="assets">
+        <div class="container">
+            <div class="main-block row">
+                <div class="col-lg-12">
+                    <h2>Управляем активами</h2>
+                </div>
+            </div>
+            <div class="assets__items cards-row row">
+                <div class="assets__item card col-xxl-3 col-xl-4 col-lg-6 col-md-6">
+                    <div class="assets__item-inner card__inner">
+                        <div class="triangle-top-left"></div>
+                        <div class="triangle-top-right"></div>
+                        <div class="triangle-bottom-right"></div>
+                        <img src="images/content/assets/assets-img1.webp" alt="">
+                        <div class="assets__item-text">
+                            <h3>
+                                инвестируем
+                            </h3>
+                            <p>
+                                Субсидии, программы гарантирования и гранты, долгосрочное лизинговое финансирование,
+                                кредитование
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="assets__item card col-xxl-3 col-xl-4 col-lg-6 col-md-6">
+                    <div class="assets__item-inner card__inner">
+                        <div class="triangle-top-left"></div>
+                        <div class="triangle-top-right"></div>
+                        <div class="triangle-bottom-right"></div>
+                        <img src="images/content/assets/assets-img2.webp" alt="">
+                        <div class="assets__item-text">
+                            <h3>
+                                Модернизируем МжД
+                            </h3>
+                            <p>
+                                Улучшаем состояние многоквартирных домов: ремонтируем лифты, инженерные системы, крыши,
+                                меняем окна в подъездах
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="assets__item card col-xxl-3 col-xl-4 col-lg-6 col-md-6">
+                    <div class="assets__item-inner card__inner">
+                        <div class="triangle-top-left"></div>
+                        <div class="triangle-top-right"></div>
+                        <div class="triangle-bottom-right"></div>
+                        <img src="images/content/assets/assets-img3.webp" alt="">
+                        <div class="assets__item-text">
+                            <h3>
+                                Управляем стабфондом
+                            </h3>
+                            <p>
+                                Стабилизируем цены на социально значимые продукты
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="assets__item card col-xxl-3 col-xl-4 col-lg-6 col-md-6">
+                    <div class="assets__item-inner card__inner">
+                        <div class="triangle-top-left"></div>
+                        <div class="triangle-top-right"></div>
+                        <div class="triangle-bottom-right"></div>
+                        <img src="images/content/assets/assets-img4.webp" alt="">
+                        <div class="assets__item-text">
+                            <h3>
+                                реализуем «Ауыл аманаты»
+                            </h3>
+                            <p>
+                                Предоставляем микрокредиты сельскому населению для повышения их доходов
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects">
+        <div class="container">
+            <div class="row cards-row">
+                <div class="col-lg-6 card">
+                    <div class="projects__img card__inner">
+                        <div class="triangle-top-left"></div>
+                        <div class="triangle-top-right"></div>
+                        <img src="images/content/projects/projects-img.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="projects__content main-block">
+                        <h2>
+                            Реализуем и сопровождаем проекты
+                        </h2>
+                        <p>
+                            Комплексом мероприятий повысим информационную доступность проекта для инвесторов, поможем
+                            получить поддержку банков, инвесторов и государственных учреждений, снизим риски
+                            при реализации проекта
+                        </p>
+                        <a href="#" class="projects__btn btn">
+                            подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="questions">
+        <div class="container">
+            <div class="triangle-top-left"></div>
+            <div class="triangle-top-right"></div>
+            <div class="questions__row cards-row row">
+                <div class="questions__col questions__col--left col-xl-6">
+                    <div class="questions__content main-block">
+                        <h2>
+                            Сообщите о своём проекте или Задавайте вопросы
+                        </h2>
+                        <p>
+                            Также можно написать на электронную почту <a href="#">spk.aktobe@mail.ru</a> или позвонить
+                            <a href="#">+7 (7132) 74 20 94</a>
+                        </p>
+                        <a href="#" class="questions__btn btn btn--yellow btn--lg">
+                            Связаться с нами
+                        </a>
+                    </div>
+                </div>
+                <div class="questions__col questions__col--right col-xl-6">
+                    <img src="images/content/questions/questions-img.webp"
+                        data-img-mob="images/content/questions/questions-img-mob.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info">
+        <div class="container">
+            <div class="info__row info__row--products cards-row row">
+                <div class="info__col col-xxl-4 col-md-6 col-12 main-block">
+                    <div class="info__col-inner info__col-inner--main"
+                        style="background-image: url('images/content/info/info-img1.webp');"
+                        data-bg-mob="images/content/info/info-img1-mob.webp">
+                        <h2>
+                            обеспечение Продовольственной безопасности
+                        </h2>
+                    </div>
+                </div>
+                <div class="info__col col-xxl-3 col-md-6 col-12">
+                    <div class="info__col-inner info__col-inner--summ"
+                        style="background-image: url('images/content/info/info-img2.webp');"
+                        data-bg-mob="images/content/info/info-img2-mob.webp">
+                        <div class="triangle-top-left d-none d-md-block"></div>
+                        <div class="triangle-top-right d-block d-md-none "></div>
+                        <div class="info__col-title info__col-title--sm">
+                            <span>4.5 </span> млрд тенге
+                        </div>
+                        <div class="info__col-descr">
+                            выделено
+                        </div>
+                    </div>
+                </div>
+                <div class="info__col col-xxl-3 col-md-6 col-12">
+                    <div class="info__col-inner">
+                        <div class="info__col-title info__col-title--sm">
+                            <span>9</span>
+                        </div>
+                        <div class="info__col-descr">
+                            видов социально-значимых продуктов закуплено
+                        </div>
+                        <div class="info__tags">
+                            <span class="info__tags-item">
+                                Картофель
+                            </span>
+                            <span class="info__tags-item">
+                                Морковь
+                            </span>
+                            <span class="info__tags-item">
+                                Лук
+                            </span>
+                            <span class="info__tags-item">
+                                Капуста
+                            </span>
+                            <span class="info__tags-item">
+                                Мука
+                            </span>
+                            <span class="info__tags-item">
+                                Рис
+                            </span>
+                            <span class="info__tags-item">
+                                Сахар
+                            </span>
+                            <span class="info__tags-item">
+                                Гречневая крупа
+                            </span>
+                            <span class="info__tags-item">
+                                Подсолнечное масло
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info__col col-xxl-2 col-md-6 col-12">
+                    <div class="info__col-inner info__col-inner--subjects">
+                        <svg class="info__col-icon" xmlns="http://www.w3.org/2000/svg" width="235" height="40"
+                            viewBox="0 0 235 40" fill="none">
+                            <rect x="232.5" width="2" height="40" fill="#EBBC2E" />
+                            <rect x="203.5" width="2" height="40" fill="#EBBC2E" />
+                            <rect x="174.5" width="2" height="40" fill="#EBBC2E" />
+                            <rect x="145.5" width="2" height="40" fill="#EBBC2E" />
+                            <rect x="116.5" width="2" height="40" fill="#EBBC2E" />
+                            <rect x="87.5" width="2" height="40" fill="#EBBC2E" />
+                            <rect x="58.5" width="2" height="40" fill="#EBBC2E" />
+                            <rect x="29.5" width="2" height="40" fill="#EBBC2E" />
+                            <rect x="0.5" width="2" height="40" fill="#EBBC2E" />
+                        </svg>
+                        <div class="info__col-title info__col-title--lg">
+                            <span>9</span>
+                        </div>
+                        <div class="info__col-descr">
+                            субъектов предпринимательства профинансировано
+                        </div>
+                        <div class="triangle-bottom-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info__row info__row--buildings cards-row row">
+                <div class="info__col col-xxl-4 col-lg-6 main-block">
+                    <div class="info__col-inner info__col-inner--main"
+                        style="background-image: url('images/content/info/info-img3.webp');">
+                        <h2>
+                            Жилищный фонд
+                        </h2>
+                    </div>
+                </div>
+                <div class="info__col col-xxl-4 col-lg-6">
+                    <div class="info__col-inner" style="background-image: url('images/content/info/info-img4.webp');">
+                        <div class="triangle-top-right"></div>
+                        <div class="info__col-title info__col-title--lg info__col-title--row">
+                            <span>149</span>
+                            <div class="info__col-descr info__col-descr--lg">
+                                объектов модернизировано с 2021 года
+                            </div>
+                        </div>
+                        <div class="info__col-stats">
+                            <div class="info__col-stats-item">
+                                <span>94 лифта </span>
+                                <div class="info__col-stats-icon">
+                                    <svg width="278" height="86" viewBox="0 0 278 86" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="275.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="245.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="215.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="185.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="155.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="125.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="95.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="65.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="35.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="265.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="235.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="205.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="175.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="145.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="115.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="85.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="55.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="25.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="255.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="225.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="195.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="165.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="135.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="105.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="75.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="45.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="15.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="5.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="270.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="240.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="210.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="180.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="150.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="120.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="90.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="60.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="30.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="260.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="230.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="200.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="170.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="140.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="110.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="80.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="50.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="20.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="250.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="220.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="190.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="160.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="130.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="100.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="70.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="40.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="10.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="0.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="275.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="245.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="215.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="185.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="155.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="125.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="95.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="65.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="35.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="265.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="235.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="205.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="175.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="145.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="115.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="85.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="55.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="25.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="255.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="225.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="195.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="165.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="135.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="105.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="75.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="45.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="15.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="5.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="270.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="240.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="210.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="180.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="150.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="120.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="90.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="60.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="30.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="260.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="230.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="200.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="170.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="140.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="110.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="80.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="50.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="20.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="250.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="220.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="190.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="160.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="130.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="100.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="70.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="40.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="10.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="0.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="114" height="56" viewBox="0 0 114 56"
+                                        fill="none">
+                                        <rect x="113.177" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="100.83" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="88.4834" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="76.1372" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="63.7905" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="51.4438" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="39.0972" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="26.7505" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="14.4043" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="109.061" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="96.7148" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="84.3687" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="72.022" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="59.6753" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="47.3286" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="34.9819" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="22.6353" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="10.2886" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="104.946" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="92.5991" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="80.2529" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="67.9062" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="55.5596" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="43.2129" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="30.8667" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="18.52" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="6.17334" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="2.05762" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="111.119" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="98.7725" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="86.4258" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="74.0791" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="61.7329" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="49.3862" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="37.04" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="24.6934" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="12.3467" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="107.004" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="94.6572" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="82.3105" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="69.9639" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="57.6172" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="45.2705" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="32.9243" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="20.5776" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="8.23145" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="102.888" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="90.5415" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="78.1948" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="65.8481" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="53.5015" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="41.1553" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="28.8086" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="16.4619" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="4.11523" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="113.177" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="100.83" y="29.9536" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="88.4834" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="76.1372" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="63.7905" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="51.4438" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="39.0972" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="26.7505" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="14.4043" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="109.061" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="96.7148" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="84.3687" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="72.022" y="29.9536" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="59.6753" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="47.3286" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="34.9819" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="22.6353" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="10.2886" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="104.946" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="92.5991" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="80.2529" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="67.9062" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="55.5596" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="43.2129" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="30.8667" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="18.52" y="29.9536" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="6.17334" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="2.05762" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="111.119" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="98.7725" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="86.4258" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="74.0791" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="61.7329" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="49.3862" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="37.04" y="29.9536" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                        <rect x="24.6934" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="12.3467" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="107.004" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="94.6572" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="82.3105" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="69.9639" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="57.6172" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="45.2705" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="32.9243" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="20.5776" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="8.23145" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="102.888" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="90.5415" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="78.1948" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="65.8481" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="53.5015" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="41.1553" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="28.8086" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="16.4619" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect x="4.11523" y="29.9536" width="0.823105" height="26.0466"
+                                            fill="#EBBC2E" />
+                                        <rect y="29.9536" width="0.823105" height="26.0466" fill="#EBBC2E" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="info__col-stats-item">
+                                <span>
+                                    41 МЖД
+                                </span>
+                                <div class="info__col-stats-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="103" height="86" viewBox="0 0 103 86"
+                                        fill="none">
+                                        <rect x="100.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="75.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="50.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="25.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="90.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="65.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="40.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="15.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="80.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="55.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="30.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="5.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="0.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="95.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="70.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="45.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="20.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="85.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="60.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="35.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="10.5" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="100.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="75.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="50.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="25.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="90.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="65.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="40.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="15.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="80.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="55.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="30.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="5.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="95.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="70.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="45.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="20.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="85.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="60.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="35.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                        <rect x="10.5" y="46" width="2" height="40" fill="#EBBC2E" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="57" viewBox="0 0 42 57"
+                                        fill="none">
+                                        <rect x="41.1763" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="30.8823" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="20.5879" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="10.2944" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="37.0586" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="26.7651" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="16.4707" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="6.17627" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="32.9414" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="22.647" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="12.353" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="2.05859" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="39.1177" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="28.8237" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="18.5293" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="8.23486" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="35" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="24.7056" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="14.4121" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="4.11768" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="41.1763" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="30.8823" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="20.5879" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="10.2944" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="37.0586" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="26.7651" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="16.4707" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="6.17627" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="32.9414" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="22.647" y="30.4883" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="12.353" y="30.4883" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="2.05859" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="39.1177" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="28.8237" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="18.5293" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="8.23486" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="35" y="30.4883" width="0.823529" height="26.5116" fill="#EBBC2E" />
+                                        <rect x="24.7056" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="14.4121" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                        <rect x="4.11768" y="30.4883" width="0.823529" height="26.5116"
+                                            fill="#EBBC2E" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info__grid col-xxl-4 col-lg-8">
+                    <div class="info__grid-col">
+                        <img src="images/content/info/info-img5.webp" alt="">
+                    </div>
+                    <div class="info__grid-col info__col">
+                        <div class="info__col-inner">
+                            <div class="info__tags">
+                                <span class="info__tags-item">
+                                    Актобе
+                                </span>
+                                <span class="info__tags-item">
+                                    Алга
+                                </span>
+                                <span class="info__tags-item">
+                                    Хромтау
+                                </span>
+                                <span class="info__tags-item">
+                                    Кандыагаш
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info__grid-col info__col">
+                        <div class="info__col-inner">
+                            <div class="triangle-bottom-right"></div>
+                            <div class="info__col-title info__col-title--lg">
+                                <span>2.8 </span> млрд тенге
+                            </div>
+                            <div class="info__col-descr info__col-descr--lg">
+                                сумма осуществления программы
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="corruption">
+        <div class="container">
+            <div class="corruption__row cards-row card__inner row">
+                <div class="triangle-top-right"></div>
+                <div class="triangle-bottom-right"></div>
+                <div class="triangle-top-left"></div>
+                <div class="col-xxl-5 col-xl-4 col-lg-12 main-block">
+                    <h2>
+                        Противодействие коррупции
+                    </h2>
+                </div>
+                <div class="col-xxl-3 col-xl-4 col-lg-6">
+                    <div class="corruption__item">
+                        <svg>
+                            <use xlink:href='svg/dest/stack/spriteMulti.svg#antikor'></use>
+                        </svg>
+                        <div class="corruption__item-text">
+                            <a href="#">1414</a>
+                            <span>Горячая линия Антикор</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6">
+                    <div class="corruption__item">
+                        <svg>
+                            <use xlink:href='svg/dest/stack/spriteMulti.svg#complains'></use>
+                        </svg>
+                        <div class="corruption__item-text">
+                            <a href="#">+7 (7132) 97 24 96</a>
+                            <span>Комплаенс-служба</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <div class="container">
+            <div class="row main-block">
+                <div class="col-lg-12">
+                    <h2>
+                        Наши партнёры
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="partners__slider">
+                        <div class="swiper-wrapper">
+                            <div class="partners__slide swiper-slide">
+                                <div class="partners__slide-inner">
+                                    <img src="images/content/partners/partners-img1.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="partners__slide swiper-slide">
+                                <div class="partners__slide-inner">
+                                    <img src="images/content/partners/partners-img2.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="partners__slide swiper-slide">
+                                <div class="partners__slide-inner">
+                                    <img src="images/content/partners/partners-img3.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="partners__slide swiper-slide">
+                                <div class="partners__slide-inner">
+                                    <img src="images/content/partners/partners-img4.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="partners__slide swiper-slide">
+                                <div class="partners__slide-inner">
+                                    <img src="images/content/partners/partners-img5.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="partners__slide swiper-slide">
+                                <div class="partners__slide-inner">
+                                    <img src="images/content/partners/partners-img6.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 </div>
 @@include('./parts/footer.html')

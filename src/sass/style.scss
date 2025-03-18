@@ -1,13 +1,16 @@
 
 
 // Libs
-@import "libs/itc-slider.css";
 @import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+@import "../../node_modules/swiper/swiper-bundle.css";
 
 // Main
 @import "support";
 @import "all";
 @import "script-classes";
 @import "header";
+@import "main";
+@import "blocks/breadcrumbs"; 
+@import "blocks/news";
 @import "footer";
 @import "media";
